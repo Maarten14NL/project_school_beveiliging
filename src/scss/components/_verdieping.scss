@@ -23,4 +23,12 @@
         grid-template-columns: repeat(126, 5px);
         grid-template-rows: repeat(70, 5px);
     }
+    &__2 {
+        grid-template-columns: repeat(200, 5px);
+        grid-template-rows: repeat(110, 5px);
+    }
+    &__3 {
+        grid-template-columns: repeat(40, 5px);
+        grid-template-rows: repeat(110, 5px);
+    }
 }
