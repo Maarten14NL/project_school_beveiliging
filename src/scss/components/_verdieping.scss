@@ -4,8 +4,16 @@
 .fill{
   background-color: gray;
 }
+.lokaal {
+    border: 1px solid black;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .verdieping {
     display: grid;
+    justify-content: center;
     &__0 {
         grid-template-columns: repeat(127, 5px);
         grid-template-rows: repeat(62, 5px);
