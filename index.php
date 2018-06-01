@@ -11,11 +11,14 @@
     <title></title>
     <link rel="stylesheet" href="dest/css/app.css">
     <script src="dest/js/jquery.min.js"></script>
+    <script src="dest/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dest/css/bootstrap.min.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<button class="btn">hallo test</button>
 
     <div class="tab-content">
       <div class="tab-pane active" id="panel-623188">

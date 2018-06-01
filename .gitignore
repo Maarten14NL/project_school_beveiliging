@@ -1,2 +1,5 @@
 node_modules
 include/database.php
+gulpfile.js
+package.json
+package-lock.json
