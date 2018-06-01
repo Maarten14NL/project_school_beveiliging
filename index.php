@@ -9,10 +9,10 @@ include 'include/session.php';
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="dest/css/app.css">
     <script src="dest/js/jquery.min.js"></script>
     <script src="dest/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="dest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dest/css/app.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -114,6 +114,114 @@ include 'include/session.php';
             <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam">
             <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord">
             <button type="button" class="btn btn-lg btn-primary login">inloggen</button>
+          </div>
+
+          <div class="user-level user-level_1 hidden">
+            <div class="user-navigation">
+              <div class="options level_1 option_1">Gebruiker Toevoegen</div>
+              <div class="options level_1 option_2">Gebruiker Verwijderen</div>
+              <div class="options level_1 option_3">Account Instellingen</div>
+            </div>
+            <div class="user-body">
+              <div class="view view_1-1">
+                <input class="form-control" type="text" placeholder="Gebruikersnaam">
+                <input class="form-control" type="text" placeholder="Wachtwoord">
+                <select class="form-control" placeholder="Gebruikerslevel">
+                  <option>Student</option>
+                  <option>Docent</option>
+                </select>
+                <div class="btn btn-secondary btn-block">Gebruiker Toevoegen</div>
+              </div>
+              <div class="view view_1-2 hidden">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">GebruikersNaam</th>
+                      <th scope="col">GebruikersLevel</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Docent</td>
+                      <td>Docent</td>
+                      <td><button type="button" class="btn btn-primary">Verwijderen</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="view view_1-3 hidden">
+              </div>
+            </div>
+          </div>
+          <div class="user-level user-level_2 hidden">
+            <div class="user-navigation">
+              <div class="options level_2 option_1">Scenario's kiezen</div>
+              <div class="options level_2 option_2">Scenario's maken</div>
+              <div class="options level_2 option_3">Scenario's aanpassen</div>
+              <div class="options level_2 option_4">Scenario's verwijderen</div>
+            </div>
+            <div class="user-body">
+              <div class="view view_2-1">
+                <select class="form-control" placeholder="Gebruikerslevel">
+                  <option>Brand</option>
+                  <option>Gaslek</option>
+                </select>
+                <button type="button" class="btn btn-primary">scenario maken</button>
+              </div>
+              <div class="view view_2-2 hidden">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+                <input class="form-control" type="text">
+              </div>
+              <div class="view view_2-3 hidden">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Naam van scenario</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Docent</td>
+                      <td><button type="button" class="btn btn-primary">aanpassen</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="view view_2-4 hidden">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Naam van scenario</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Docent</td>
+                      <td><button type="button" class="btn btn-primary">verwijderen</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="user-level user-level_3 hidden">
+            
           </div>
         </div>
     </div>
