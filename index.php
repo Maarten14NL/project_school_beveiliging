@@ -18,6 +18,13 @@ include 'include/session.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="login-status-container">
+      <div class="login-status">U bent nog niet ingelogd</div>
+      <button type="button" class="btn btn-primary logout hidden">uitloggen</button>
+    </div>
+  </nav>
     <!-- <button class="btn">hallo test</button> -->
     <div class="row">
         <div class="col-6 container-left">
@@ -103,6 +110,11 @@ include 'include/session.php';
             </div>
         </div>
         <div class="col">
+          <div class="login-container">
+            <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam">
+            <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord">
+            <button type="button" class="btn btn-lg btn-primary login">inloggen</button>
+          </div>
         </div>
     </div>
 
