@@ -19,8 +19,26 @@
 </head>
 <body>
 <button class="btn">hallo test</button>
+    <!-- <div class="verdieping verdieping__0">
 
+<<<<<<< HEAD
     <div class="tab-content">
+=======
+    </div> -->
+    <div class="verdieping verdieping__1">
+        <div class="L118"></div>
+        <div class="L116"></div>
+        <div class="L114"></div>
+        <div class="L113"></div>
+    </div>
+    <div class="verdieping verdieping__2">
+
+    </div>
+    <div class="verdieping verdieping__3">
+
+    </div>
+    <!-- <div class="tab-content"> -->
+>>>>>>> a5944929063ed89288ecf12436df6f3e613babf3
       <div class="" id="panel-623188">
         <div class="row">
           <div id="plattegrond1">

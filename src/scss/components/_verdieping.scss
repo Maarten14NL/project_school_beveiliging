@@ -1,0 +1,33 @@
+.verdieping {
+    display: grid;
+    &__0 {
+        grid-template-columns: repeat(144, 5px);
+        grid-template-rows: repeat(60, 5px);
+    }
+    &__1 {
+        grid-template-columns: repeat(126, 5px);
+        grid-template-rows: repeat(70, 5px);
+    }
+}
+.L118 {
+    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.L114 {
+    background-color: red;
+    grid-column-start: 12;
+    grid-column-end: 16;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+.L116 {
+    background-color: blue;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    z-index: 2;
+}
