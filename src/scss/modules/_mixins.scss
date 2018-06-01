@@ -1,0 +1,5 @@
+@mixin create-keyframe($str) {
+    @keyframes #{$str} {
+        @content;
+    }
+}
