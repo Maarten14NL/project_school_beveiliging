@@ -20,10 +20,10 @@
 <body>
 <button class="btn">hallo test</button>
 
-    <!-- <div class="tab-content"> -->
+    <div class="tab-content">
       <div class="" id="panel-623188">
         <div class="row">
-          <!-- <div id="plattegrond1">
+          <div id="plattegrond1">
             <div id="verdieping0-1">
               <a href="#"><div id="entrance" class="Basic2">Ingang</div></a>
               <a href="#"><div id="L020" class="Basic">0.20</div></a>
@@ -43,7 +43,7 @@
               <a href="#"><div id="L008" class="Basic">0.08</div></a>
               <a href="#"><div id="L006" class="Basic">0.06</div></a>
             </div>
-            <div id="verdieping0-3">
+            <div id="verdieping0-3" class="verdieping0-3">
               <a href="#"><div id="L002c" class="Basic">0.02c</div></a>
               <a href="#"><div id="L002b" class="Basic">0.02b</div></a>
               <a href="#"><div id="L002d" class="Basic">0.02d</div></a>
@@ -60,7 +60,7 @@
               <a href="#"><div id="L001" class="Basic">0.01</div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
       <div class=" " id="panel-338653">
         <div class="row">

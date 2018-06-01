@@ -11,6 +11,12 @@
   font-weight: bold;
 }
 
+#verdieping0-3{
+  float: left;
+  margin-top: -100px;
+  margin-left: 290px;
+
+}
 
 #plattegrond1{
   margin-top: 15%;
@@ -318,8 +324,8 @@
   height: 80px;
   background-color: lightgray;
   /*margin*/
-  margin-top: -77px;
-  margin-left: -180px;
+  margin-top: -160px;
+  margin-left: 180px;
   /*Border*/
   border-top: 1px solid black;
   border-bottom: 1px solid black;
