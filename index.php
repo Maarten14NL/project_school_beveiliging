@@ -20,15 +20,7 @@
 <body>
 <button class="btn">hallo test</button>
 
-<<<<<<< HEAD
     <!-- <div class="verdieping verdieping__0">
-        <div class="L118 lokaal"></div>
-        <div class="L116 lokaal"></div>
-        <div class="L114 lokaal"></div>
-        <div class="empty-1 lokaal"></div>
-    </div> -->
-=======
-    <div class="verdieping verdieping__0">
         <div class="ingang"></div>
         <div class="L020 lokaal"></div>
         <div class="L018 lokaal"></div>
@@ -52,13 +44,28 @@
         <div class="L001B lokaal"></div>
         <div class="L001A lokaal"></div>
         <div class="L001 lokaal"></div>
-    </div>
->>>>>>> 4f643d7d1b59821ad0ae470ca61e030b50cad296
+    </div> -->
     <div class="verdieping verdieping__1">
-        <div class="L118 lokaal"></div>
-        <div class="L116 lokaal"></div>
-        <div class="L114 lokaal"></div>
-        <div class="empty-1 lokaal"></div>
+        <div class="L118 lokaal">1.18</div>
+        <div class="L116 lokaal">1.16</div>
+        <div class="L114 lokaal">1.14</div>
+        <div class="v1-empty-1 lokaal">--</div>
+        <div class="L112 lokaal">1.12</div>
+        <div class="L108 lokaal">1.08</div>
+        <div class="L106 lokaal">1.06</div>
+        <div class="L104 lokaal">1.04</div>
+        <div class="L102 lokaal">1.02</div>
+        <div class="v1-empty-2 lokaal">--</div>
+        <div class="L101a lokaal">1.01a</div>
+        <div class="L101 lokaal">1.01</div>
+        <div class="L103 lokaal">1.03</div>
+        <div class="L105 lokaal">1.05</div>
+        <div class="L105a lokaal">1.05a</div>
+        <div class="L107 lokaal">1.07</div>
+        <div class="L109 lokaal">1.09</div>
+        <div class="L111 lokaal">1.11</div>
+        <div class="L113 lokaal">1.13</div>
+        <div class="v1-filler-1 filler"></div>
     </div>
     <div class="verdieping verdieping__2">
 

@@ -1,5 +1,16 @@
-@import 'verdieping0';
+.lokaal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #d3d3d3;
+    z-index: 1;
+}
 @import 'verdieping1';
+.filler {
+    background-color: #a9a9a9;
+    z-index: -1;
+}
 .verdieping {
     display: grid;
     &__0 {
