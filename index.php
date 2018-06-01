@@ -18,18 +18,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<button class="btn">hallo test</button>
+<!-- <button class="btn">hallo test</button> -->
 
-<<<<<<< HEAD
-    <!-- <div class="verdieping verdieping__0">
-        <div class="L118 lokaal"></div>
-        <div class="L116 lokaal"></div>
-        <div class="L114 lokaal"></div>
-        <div class="empty-1 lokaal"></div>
-    </div> -->
-=======
     <div class="verdieping verdieping__0">
-        <div class="ingang"></div>
+        <div class="fill1 fill"></div>
+        <div class="fill2 fill"></div>
+        <div class="ingang lokaal"></div>
         <div class="L020 lokaal"></div>
         <div class="L018 lokaal"></div>
         <div class="L016 lokaal"></div>
@@ -51,20 +45,41 @@
         <div class="L001D lokaal"></div>
         <div class="L001B lokaal"></div>
         <div class="L001A lokaal"></div>
-        <div class="L001 lokaal"></div>
+        <div class="L0E1 lokaal"></div>
     </div>
->>>>>>> 4f643d7d1b59821ad0ae470ca61e030b50cad296
+
     <div class="verdieping verdieping__1">
         <div class="L118 lokaal"></div>
         <div class="L116 lokaal"></div>
         <div class="L114 lokaal"></div>
         <div class="empty-1 lokaal"></div>
     </div>
+    
     <div class="verdieping verdieping__2">
 
     </div>
-    <div class="verdieping verdieping__3">
 
+    <div class="verdieping verdieping__3">
+        <div class="fill3 fill"></div>
+        <div class="L316 lokaal"></div>
+        <div class="L315 lokaal"></div>
+        <div class="L314 lokaal"></div>
+        <div class="L313 lokaal"></div>
+        <div class="L312 lokaal"></div>
+        <div class="L311 lokaal"></div>
+        <div class="L310 lokaal"></div>
+        <div class="L309 lokaal"></div>
+        <div class="L308 lokaal"></div>
+        <div class="L307 lokaal"></div>
+        <div class="L306 lokaal"></div>
+        <div class="L305 lokaal"></div>
+        <div class="L304 lokaal"></div>
+        <div class="L303 lokaal"></div>
+        <div class="L302 lokaal"></div>
+        <div class="L301 lokaal"></div>
+        <div class="L3E1 lokaal"></div>
+        <div class="L3E2 lokaal"></div>
+        <div class="L3E3 lokaal"></div>
     </div>
 
     <script src="dest/js/main.js" charset="utf-8"></script>

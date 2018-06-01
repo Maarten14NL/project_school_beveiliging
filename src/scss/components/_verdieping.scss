@@ -1,13 +1,21 @@
 @import 'verdieping0';
 @import 'verdieping1';
+@import 'verdieping3';
+.fill{
+  background-color: gray;
+}
 .verdieping {
     display: grid;
     &__0 {
-        grid-template-columns: repeat(144, 5px);
-        grid-template-rows: repeat(60, 5px);
+        grid-template-columns: repeat(127, 5px);
+        grid-template-rows: repeat(62, 5px);
     }
     &__1 {
         grid-template-columns: repeat(126, 5px);
         grid-template-rows: repeat(70, 5px);
+    }
+    &__3 {
+        grid-template-columns: repeat(34, 5px);
+        grid-template-rows: repeat(96, 5px);
     }
 }
