@@ -27,7 +27,7 @@ include 'include/session.php';
                 <div class="menu-item floor_2">Verdieping 2</div>
                 <div class="menu-item floor_3">Verdieping 3</div>
             </div>
-            <div class="verdieping verdieping__0 hidden">
+            <div class="verdieping verdieping__0">
                 <div class="fill1 filler"></div>
                 <div class="fill2 filler"></div>
                 <div class="ingang lokaal">Ingang</div>
@@ -76,10 +76,10 @@ include 'include/session.php';
                 <div class="L113 lokaal">1.13</div>
                 <div class="v1-filler-1 filler"></div>
             </div>
-            <div class="verdieping verdieping__2">
+            <div class="verdieping verdieping__2 hidden">
 
             </div>
-            <div class="verdieping verdieping__3">
+            <div class="verdieping verdieping__3 hidden">
                 <div class="fill3 filler"></div>
                 <div class="L316 lokaal">3.16</div>
                 <div class="L315 lokaal">3.15</div>
