@@ -1,0 +1,33 @@
+.lokaal {
+    border: 1px solid black;
+}
+.L118 {
+    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: 41;
+    grid-row-start: 13;
+    grid-row-end: 33;
+}
+.L114 {
+    background-color: red;
+    grid-column-start: 41;
+    grid-column-end: 57;
+    grid-row-start: 1;
+    grid-row-end: 31;
+}
+.L116 {
+    background-color: blue;
+    grid-column-start: 34;
+    grid-column-end: 41;
+    grid-row-start: 25;
+    grid-row-end: 34;
+    z-index: 2;
+}
+.empty-1 {
+    background-color: blue;
+    grid-column-start: 41;
+    grid-column-end: 48;
+    grid-row-start: 25;
+    grid-row-end: 34;
+    z-index: 2;
+}

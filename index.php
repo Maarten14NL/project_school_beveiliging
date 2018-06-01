@@ -21,16 +21,16 @@
 <button class="btn">hallo test</button>
 
     <div class="verdieping verdieping__0">
-        <div class="L118"></div>
-        <div class="L116"></div>
-        <div class="L114"></div>
-        <div class="L113"></div>
+        <div class="L118 lokaal"></div>
+        <div class="L116 lokaal"></div>
+        <div class="L114 lokaal"></div>
+        <div class="empty-1 lokaal"></div>
     </div>
     <div class="verdieping verdieping__1">
-        <div class="L118"></div>
-        <div class="L116"></div>
-        <div class="L114"></div>
-        <div class="L113"></div>
+        <div class="L118 lokaal"></div>
+        <div class="L116 lokaal"></div>
+        <div class="L114 lokaal"></div>
+        <div class="empty-1 lokaal"></div>
     </div>
     <div class="verdieping verdieping__2">
 
