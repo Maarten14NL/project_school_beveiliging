@@ -20,47 +20,49 @@
 <body>
 <button class="btn">hallo test</button>
 
-    <div class="tab-content">
-      <div class="tab-pane active" id="panel-623188">
-        <div id="plattegrond1">
-          <div id="verdieping0-1">
-            <a href="#"><div id="entrance" class="Basic2">Ingang</div></a>
-            <a href="#"><div id="L020" class="Basic">0.20</div></a>
-            <a href="#"><div id="L016" class="Basic">0.16</div></a>
-            <a href="#"><div id="L014" class="Basic">0.14</div></a>
-            <div id="opvulling1"></div>
-            <a href="#"><div id="L018" class="Basic">0.18</div></a>
-            <div id="opvulling2"></div>
-            <div id="opvulling3"></div>
-            <a href="#"><div id="L007" class="Basic">0.07</div></a>
+    <!-- <div class="tab-content"> -->
+      <div class="" id="panel-623188">
+        <div class="row">
+          <!-- <div id="plattegrond1">
+            <div id="verdieping0-1">
+              <a href="#"><div id="entrance" class="Basic2">Ingang</div></a>
+              <a href="#"><div id="L020" class="Basic">0.20</div></a>
+              <a href="#"><div id="L016" class="Basic">0.16</div></a>
+              <a href="#"><div id="L014" class="Basic">0.14</div></a>
+              <div id="opvulling1"></div>
+              <a href="#"><div id="L018" class="Basic">0.18</div></a>
+              <div id="opvulling2"></div>
+              <div id="opvulling3"></div>
+              <a href="#"><div id="L007" class="Basic">0.07</div></a>
+            </div>
+            <div id="verdieping0-2">
+              <a href="#"><div id="L010" class="Basic">0.10</div></a>
+              <a href="#"><div id="L012" class="Basic">0.12</div></a>
+              <div id="opvulling4"></div>
+              <a href="#"><div id="L004" class="Basic">0.04</div></a>
+              <a href="#"><div id="L008" class="Basic">0.08</div></a>
+              <a href="#"><div id="L006" class="Basic">0.06</div></a>
+            </div>
+            <div id="verdieping0-3">
+              <a href="#"><div id="L002c" class="Basic">0.02c</div></a>
+              <a href="#"><div id="L002b" class="Basic">0.02b</div></a>
+              <a href="#"><div id="L002d" class="Basic">0.02d</div></a>
+              <a href="#"><div id="L002a" class="Basic">0.02a</div></a>
+              <div id="opvulling5"></div>
+              <a href="#"><div id="L005a" class="Basic">0.05a</div></a>
+              <a href="#"><div id="L005b" class="Basic">0.05b</div></a>
+              <a href="#"><div id="L003" class="Basic">0.03</div></a>
+              <a href="#"><div id="L001e" class="Basic">0.01e</div></a>
+              <a href="#"><div id="L001d" class="Basic">0.01d</div></a>
+              <div id="opvulling6"></div>
+              <a href="#"><div id="L001a" class="Basic">0.01a</div></a>
+              <a href="#"><div id="L001b" class="Basic">0.01b</div></a>
+              <a href="#"><div id="L001" class="Basic">0.01</div>
+            </div>
           </div>
-          <div id="verdieping0-2">
-            <a href="#"><div id="L010" class="Basic">0.10</div></a>
-            <a href="#"><div id="L012" class="Basic">0.12</div></a>
-            <div id="opvulling4"></div>
-            <a href="#"><div id="L004" class="Basic">0.04</div></a>
-            <a href="#"><div id="L008" class="Basic">0.08</div></a>
-            <a href="#"><div id="L006" class="Basic">0.06</div></a>
-          </div>
-          <div id="verdieping0-3">
-            <a href="#"><div id="L002c" class="Basic">0.02c</div></a>
-            <a href="#"><div id="L002b" class="Basic">0.02b</div></a>
-            <a href="#"><div id="L002d" class="Basic">0.02d</div></a>
-            <a href="#"><div id="L002a" class="Basic">0.02a</div></a>
-            <div id="opvulling5"></div>
-            <a href="#"><div id="L005a" class="Basic">0.05a</div></a>
-            <a href="#"><div id="L005b" class="Basic">0.05b</div></a>
-            <a href="#"><div id="L003" class="Basic">0.03</div></a>
-            <a href="#"><div id="L001e" class="Basic">0.01e</div></a>
-            <a href="#"><div id="L001d" class="Basic">0.01d</div></a>
-            <div id="opvulling6"></div>
-            <a href="#"><div id="L001a" class="Basic">0.01a</div></a>
-            <a href="#"><div id="L001b" class="Basic">0.01b</div></a>
-            <a href="#"><div id="L001" class="Basic">0.01</div>
-          </div>
-        </div>
+        </div> -->
       </div>
-      <div class="tab-pane" id="panel-338653">
+      <div class=" " id="panel-338653">
         <div class="row">
           <div id="plattegrond2">
             <a href="#"><div id="L118" class="Basic">1.18</div></a>
@@ -91,7 +93,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane" id="panel-445566">
+      <div class=" " id="panel-445566">
         <div class="row">
           <div id="plattegrond3">
             <a href="#"><div id="L216" class="Basic">2.16</div></a>
@@ -131,7 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane" id="panel-556234">
+      <div class=" " id="panel-556234">
         <div class="row">
           <div id="plattegrond4">
               <a href="#"><div id="L302" class="Basic">3.02</div></a>
