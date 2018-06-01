@@ -15,7 +15,7 @@ var path = require('path'),
     folders = require('gulp-folders'),
     pathToFolder = 'src/js';
 
-var proxyStr = 'http://localhost/scenarioCreator/';
+var proxyStr = 'http://localhost/ScenarioCreator/';
 
 // json object to specify folders and files it watches
 var srcs = {

@@ -1,0 +1,335 @@
+/* Room Layout css */
+#plattegrond4{
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+#L316{
+  float: left;
+  width: 80px;
+  height: 35px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 373px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L314{
+  float: left;
+  width: 80px;
+  height: 35px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 339px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L315{
+  float: left;
+  width: 80px;
+  height: 65px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 407px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L312{
+  float: left;
+  width: 80px;
+  height: 35px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 305px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L313{
+  float: left;
+  width: 65px;
+  height: 65px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 407px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L311{
+  float: left;
+  width: 65px;
+  height: 69px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 339px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L310{
+  float: left;
+  width: 80px;
+  height: 65px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 241px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L309{
+  float: left;
+  width: 65px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 290px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L308{
+  float: left;
+  width: 80px;
+  height: 65px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 177px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L307{
+  float: left;
+  width: 65px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 241px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L306{
+  float: left;
+  width: 32px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 98px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L305{
+  float: left;
+  width: 65px;
+  height: 70px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 172px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L304{
+  float: left;
+  width: 65px;
+  height: 30px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 69px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
+  line-height: 200%;
+}
+
+#L303{
+  float: left;
+  width: 65px;
+  height: 30px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 69px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
+  line-height: 200%;
+}
+
+#L302{
+  float: left;
+  width: 80px;
+  height: 70px;
+  background-color: lightgray;
+  /*Margin*/
+
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L301{
+  float: left;
+  width: 90px;
+  height: 70px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -1px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#opvulling23{
+  float: left;
+  width: 45px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -138px;
+  margin-top: 98px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#opvulling24{
+  float: left;
+  width: 39px;
+  height: 28px;
+  background-color: darkgray;
+  /*Margin*/
+  margin-left: -104px;
+  margin-top: 70px;
+  /*Border*/
+}
+
+#opvulling25{
+  float: left;
+  width: 28px;
+  height: 50px;
+  background-color: darkgray;
+  /*Margin*/
+  margin-left: -93px;
+  margin-top: 98px;
+  /*Border*/
+}
+
+#opvulling26{
+  float: left;
+  width: 65px;
+  height: 75px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -65px;
+  margin-top: 98px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#opvulling27{
+  float: left;
+  width: 104px;
+  height: 29px;
+  background-color: darkgray;
+  /*Margin*/
+  margin-left: -169px;
+  margin-top: 148px;
+  /*Border*/
+  border-left: 1px solid black;
+}
+
+#opvulling28{
+  float: left;
+  width: 24px;
+  height: 250px;
+  background-color: darkgray;
+  /*Margin*/
+  margin-left: -89px;
+  margin-top: 177px;
+  /*Border*/
+}
+
+#opvulling29{
+  float: left;
+  width: 24px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-left: -89px;
+  margin-top: 422px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

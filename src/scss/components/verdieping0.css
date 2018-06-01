@@ -1,0 +1,408 @@
+/* Room Layout css */
+.Basic{
+  line-height: 300%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Basic2{
+  line-height: 300%;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+#plattegrond1{
+  margin-top: 15%;
+}
+
+#verdieping0-1{
+  float: left;
+  max-width: 290px;
+}
+
+#verdieping0-2{
+  float: left;
+}
+
+#opvulling1{
+  float: left;
+  width: 80px;
+  height: 78px;
+  background-color: darkgray;
+  margin-top: -9.5%;
+  /*Border*/
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+#opvulling2{
+  float: left;
+  width: 159px;
+  height: 50px;
+  background-color: darkgray;
+}
+
+#opvulling3{
+  float: left;
+  width: 240px;
+  height: 50px;
+  background-color: darkgray;
+  /*Margin*/
+  margin-top: -0.5px;
+  /*Border*/
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#opvulling4{
+  float: left;
+  width: 20px;
+  height: 80.8px;
+  background-color: darkgray;
+  /*margin*/
+  margin-top: 0.8%;
+  margin-left: -5.5%;
+  /*Border*/
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+#opvulling5{
+  float: left;
+  width: 300px;
+  height: 60px;
+  background-color: darkgray;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#opvulling6{
+  float: left;
+  width: 40px;
+  height: 90px;
+  background-color: darkgray;
+  /*Margin*/
+  margin-top: 59px;
+  margin-left: -40px;
+  /*Border*/
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+#entrance{
+  float: left;
+  width: 80px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 2%;
+  /*Border*/
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L020{
+  float: left;
+  width: 50px;
+  height: 77px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 2%;
+
+  /*Border*/
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L018{
+  float: left;
+  width: 51px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+
+
+  /*Border*/
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L016{
+  float: left;
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 1%;
+
+  /*Border*/
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L014{
+  float: left;
+  width: 80px;
+  height: 80px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 1%;
+
+  /*Border*/
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L012{
+  float: left;
+  width: 100px;
+  height: 80px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: -21.5%;
+  margin-left: -22.3%;
+
+  /*Border*/
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L010{
+  float: left;
+  width: 80px;
+  height: 80.5px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 3px;
+
+  /*Border*/
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L008{
+  float: left;
+  width: 40px;
+  height: 51px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 9%;
+  margin-left: -22.1%;
+  /*Border*/
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L007{
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: -1px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L006{
+  float: left;
+  width: 40px;
+  height: 51px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 9%;
+  margin-left: -11%;
+  /*Border*/
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L005a{
+  float: left;
+  width: 80px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 49px;
+  margin-left: -300px;
+  /*Border*/
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#L005b{
+  float: left;
+  width: 80px;
+  height: 50px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 99px;
+  margin-left: -300px;
+  /*Border*/
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L004{
+  float: left;
+  width: 80px;
+  height: 109px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: -21.4%;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L003{
+  float: left;
+  width: 80px;
+  height: 100px;
+  background-color: lightgray;
+  /*Margin*/
+  margin-top: 49px;
+  margin-left: -220px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L002a{
+  float: left;
+  width: 70px;
+  height: 60px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: -60px;
+  margin-left: 230px;
+  /*Border*/
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#L002b{
+  float: left;
+  width: 70px;
+  height: 100px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: -160px;
+  margin-left: 230px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#L002c{
+  float: left;
+  width: 50px;
+  height: 80px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: -77px;
+  margin-left: -180px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L002d{
+  float: left;
+  width: 50px;
+  height: 82px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: -82px;
+  margin-left: 180px;
+  /*Border*/
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+#L001{
+  float: left;
+  width: 45px;
+  height: 50px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: -1px;
+  margin-left: -45px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L001a{
+  float: left;
+  width: 45px;
+  height: 50px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: 49px;
+  /*Border*/
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L001b{
+  float: left;
+  width: 45px;
+  height: 50px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: 99px;
+  margin-left: -45px;
+  /*Border*/
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#L001d{
+  float: left;
+  width: 50px;
+  height: 90px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: 59px;
+  margin-left: -90px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#L001e{
+  float: left;
+  width: 50px;
+  height: 90px;
+  background-color: lightgray;
+  /*margin*/
+  margin-top: 59px;
+  margin-left: -140px;
+  /*Border*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
