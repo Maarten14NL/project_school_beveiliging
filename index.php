@@ -77,7 +77,34 @@ include 'include/session.php';
                 <div class="v1-filler-1 filler"></div>
             </div>
             <div class="verdieping verdieping__2">
-
+                <div class="L216 lokaal">2.16</div>
+                <div class="L214 lokaal">2.14</div>
+                <div class="L212 lokaal">2.12</div>
+                <div class="L210 lokaal">2.10</div>
+                <div class="L208 lokaal">2.08</div>
+                <div class="L206 lokaal">2.06</div>
+                <div class="L204 lokaal">2.04</div>
+                <div class="L202a lokaal">2.02a</div>
+                <div class="L202b lokaal">2.02b</div>
+                <div class="L202 lokaal">2.02</div>
+                <div class="v2-empty-1 lokaal">--</div>
+                <div class="L201a lokaal">2.01a</div>
+                <div class="L201 lokaal">2.01</div>
+                <div class="L203 lokaal">2.03</div>
+                <div class="L205 lokaal">2.05</div>
+                <div class="L207 lokaal">2.07</div>
+                <div class="L209 lokaal">2.09</div>
+                <div class="L211 lokaal">2.11</div>
+                <div class="v2-empty-2 lokaal">2.--</div>
+                <div class="L213 lokaal">2.13</div>
+                <div class="L215 lokaal">2.15</div>
+                <div class="L217 lokaal">2.17</div>
+                <div class="L217a lokaal">2.17a</div>
+                <div class="L224 lokaal">2.24</div>
+                <div class="L222 lokaal">2.22</div>
+                <div class="L220 lokaal">2.20</div>
+                <div class="L218a lokaal">2.18a</div>
+                <div class="L218b lokaal">2.18b</div>
             </div>
             <div class="verdieping verdieping__3">
                 <div class="fill3 filler"></div>
