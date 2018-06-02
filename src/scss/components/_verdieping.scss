@@ -1,17 +1,26 @@
+$lokaal-color: #d3d3d3;
+$filler-color: #a9a9a9;
 .lokaal {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    background-color: #d3d3d3;
+    background-color: $lokaal-color;
     z-index: 1;
 }
 @import 'verdieping0';
 @import 'verdieping1';
+@import 'verdieping2';
 @import 'verdieping3';
 .filler {
-    background-color: #a9a9a9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $filler-color;
     z-index: -1;
+    &--white {
+        background-color: $lokaal-color;
+    }
 }
 .verdieping {
     display: grid;
@@ -25,8 +34,8 @@
         grid-template-rows: repeat(70, 5px);
     }
     &__2 {
-        grid-template-columns: repeat(200, 5px);
-        grid-template-rows: repeat(110, 5px);
+        grid-template-columns: repeat(120, 5px);
+        grid-template-rows: repeat(80, 5px);
     }
     &__3 {
         grid-template-columns: repeat(34, 5px);

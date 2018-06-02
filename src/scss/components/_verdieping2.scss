@@ -1,0 +1,99 @@
+.L216 {
+    @include gridItem(1, 1, 65, 120);
+}
+.L214 {
+    @include gridItem(11, 1, 35, 45);
+}
+.L212 {
+    @include gridItem(18, 1, 55, 45);
+}
+.L210 {
+    @include gridItem(29, 1, 45, 55);
+}
+.L208 {
+    @include gridItem(38, 1, 65, 55);
+}
+.L206 {
+    @include gridItem(51, 1, 65, 55);
+}
+.L204 {
+    @include gridItem(64, 1, 60, 55);
+}
+.L202a {
+    @include gridItem(76, 1, 40, 30);
+    z-index: 2;
+}
+.L202b {
+    @include gridItem(76, 7, 40, 25);
+    z-index: 2;
+}
+.L202 {
+    @include gridItem(76, 1, 100, 80);
+    justify-content: flex-end;
+}
+.v2-empty-1 {
+    @include gridItem(96, 1, 40, 50);
+}
+.L201a {
+    @include gridItem(96, 11, 40, 30);
+}
+.L201 {
+    @include gridItem(76, 17, 140, 50);
+}
+.L203 {
+    @include gridItem(76, 17, 45, 50, 1);
+}
+.L205 {
+    @include gridItem(67, 17, 45, 50, 1);
+}
+.L207 {
+    @include gridItem(58, 17, 50, 50, 1);
+}
+.L209 {
+    @include gridItem(48, 17, 50, 50, 1);
+}
+.L211 {
+    @include gridItem(38, 17, 45, 50, 1);
+}
+.v2-empty-2 {
+    @include gridItem(29, 17, 50, 65, 1);
+}
+.L213 {
+    @include gridItem(29, 30, 50, 90, 1);
+}
+.L215 {
+    @include gridItem(29, 48, 50, 35, 1);
+}
+.L217 {
+    @include gridItem(29, 55, 50, 65, 1);
+}
+.L217a {
+    @include gridItem(29, 68, 50, 40, 1);
+}
+.L224 {
+    @include gridItem(1, 68, 65, 40);
+}
+.L222 {
+    @include gridItem(1, 55, 65, 65);
+}
+.L220 {
+    @include gridItem(1, 46, 65, 45);
+}
+.L218a {
+    @include gridItem(1, 38, 65, 40);
+}
+.L218b {
+    @include gridItem(1, 30, 65, 40);
+}
+.v2-filler-1 {
+    @include gridItem(1, 1, 140, 270);
+}
+.v2-filler-2 {
+    @include gridItem(14, 55, 25, 65);
+}
+.v2-filler-3 {
+    @include gridItem(14, 68, 25, 40);
+}
+.v2-filler-4 {
+    @include gridItem(29, 12, 235, 25);
+}

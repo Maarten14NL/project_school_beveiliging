@@ -3,3 +3,23 @@
         @content;
     }
 }
+
+@mixin gridItem($start_col, $start_row, $w, $h, $reverseCol: 0, $reverseRow: 0) {
+    $cols: $w / 5;
+    $rows: $h / 5;
+    @if $reverseCol == 0 {
+        grid-column-start: $start_col;
+        grid-column-end: $start_col + $cols;
+    } @else {
+        grid-column-start: $start_col - $cols;
+        grid-column-end: $start_col;
+    }
+
+    @if $reverseRow == 0 {
+        grid-row-start: $start_row;
+        grid-row-end: $start_row + $rows;
+    } @else {
+        grid-row-start: $start_row - $rows;
+        grid-row-end: $start_row;
+    }
+}
