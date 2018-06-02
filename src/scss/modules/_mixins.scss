@@ -4,6 +4,16 @@
     }
 }
 
+/*
+    $start-col = the column number where the item starts
+    $start-row = the row number where the item starts
+    $w = the width (without px)
+    $h = the height (without px)
+
+    $reverseCol = OPTIONAL: if given 1 (default to 0), the start_col will act as end_col, so it calculates where start col should be by the width
+
+    $reverseRow = OPTIONAL: if given 1 (default to 0), the start_row will act as end_row, so it calculates where start row should be by the height
+*/
 @mixin gridItem($start_col, $start_row, $w, $h, $reverseCol: 0, $reverseRow: 0) {
     $cols: $w / 5;
     $rows: $h / 5;
