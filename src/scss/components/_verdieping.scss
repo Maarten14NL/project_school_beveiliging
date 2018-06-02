@@ -15,8 +15,9 @@
 }
 .verdieping {
     display: grid;
+    justify-content: center;
     &__0 {
-        grid-template-columns: repeat(144, 5px);
+        grid-template-columns: repeat(127, 5px);
         grid-template-rows: repeat(60, 5px);
     }
     &__1 {
@@ -28,7 +29,7 @@
         grid-template-rows: repeat(110, 5px);
     }
     &__3 {
-        grid-template-columns: repeat(40, 5px);
-        grid-template-rows: repeat(110, 5px);
+        grid-template-columns: repeat(34, 5px);
+        grid-template-rows: repeat(96, 5px);
     }
 }

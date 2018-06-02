@@ -1,10 +1,33 @@
 .menu{
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
 }
 
 .hidden{
   display: none;
+}
+
+.login-status-container{
+  text-align: right;
+  width: 100%;
+}
+
+.login-status{
+  display: inline-block;
+}
+
+.user-navigation{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.options{
+  border: 1px solid;
+  border-radius: 1vmin 1vmin 0 0;
+  padding: 0 1vmin;
+  &.level_1{
+    width: 33.3%;
+  }
 }
