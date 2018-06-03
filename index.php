@@ -155,13 +155,14 @@ include 'include/session.php';
             </div>
             <div class="user-body">
               <div class="view view_1-1">
-                <input class="form-control" type="text" placeholder="Gebruikersnaam">
-                <input class="form-control" type="text" placeholder="Wachtwoord">
-                <select class="form-control" placeholder="Gebruikerslevel">
-                  <option>Student</option>
-                  <option>Docent</option>
+                <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
+                <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
+                <select class="form-control new-user-level" placeholder="Gebruikerslevel">
+                  <option value="" disabled selected>Select your option</option>
+                  <option value="3">Student</option>
+                  <option value="2">Docent</option>
                 </select>
-                <div class="btn btn-secondary btn-block">Gebruiker Toevoegen</div>
+                <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
               </div>
               <div class="view view_1-2 hidden">
                 <table class="table">
