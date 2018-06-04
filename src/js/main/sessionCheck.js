@@ -4,6 +4,7 @@ $(document).ready(function(){
         var data = JSON.parse(response);
         if (data.loggedIn) {
             login(data.level);
+            loggedInUser = data;
         }
     })
 });

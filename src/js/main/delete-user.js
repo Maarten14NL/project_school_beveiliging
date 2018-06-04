@@ -7,9 +7,10 @@ $('body').on('click', '.level1-btn-delete',function(){
       $.post("include/deleteUser.php" ,{
         id: users[i].id
       }, function(response,status){
-        // console.log(response);
+        console.log(response);
         if(response == "succes"){
           console.log(rowClass)
+          console.log('asd');
           $("."+rowClass).remove();
         }
       })

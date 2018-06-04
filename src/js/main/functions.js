@@ -16,7 +16,7 @@ function login(a_userLevel){
       break;
     case 2:
       $(".user-level_2").removeClass("hidden")
-      $(".view_2-1").removeClass("hidden")
+      $(".view_2-2").removeClass("hidden")
       break;
     case 3:
       $(".user-level_3").removeClass("hidden")

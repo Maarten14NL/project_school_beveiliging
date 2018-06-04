@@ -9,7 +9,7 @@ $("body").on("click", ".options", function(){
     case "1":
       $.post("include/getUsers.php",{
       }, function(response,status){
-        // console.log(response)
+        console.log(response)
         users = JSON.parse(response)
 
         for(var i = 0; i < 2; i++){

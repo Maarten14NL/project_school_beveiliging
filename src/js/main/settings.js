@@ -30,6 +30,7 @@ $('body').on('click', '.settings-update', function(){
         name: $('.settings-username').val(),
         pass: $('.settings-password').val()
       }, function(response,status){
+          console.log(response);
         if(response == "succes"){
         $('.user-settings').modal('hide');
         }

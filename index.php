@@ -220,23 +220,31 @@ include 'include/session.php';
               <div class="options level_2 option_4">Scenario's verwijderen</div>
             </div>
             <div class="user-body">
-              <div class="view view_2-1">
+              <div class="view view_2-1 hidden">
                 <select class="form-control" placeholder="Gebruikerslevel">
                   <option>Brand</option>
                   <option>Gaslek</option>
                 </select>
                 <button type="button" class="btn btn-primary">scenario maken</button>
               </div>
-              <div class="view view_2-2 hidden">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
-                <input class="form-control" type="text">
+              <div class="view view_2-2">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>Naam:</th>
+                              <th> <input type="text" class="js-new-scenario-name" name="scenario-name" value=""> </th>
+                          </tr>
+                      </thead>
+                  </table>
+                  <h3>Voeg stappen toe</h3>
+                  <div class="js-new-scenario-steps">
+                      <h4>Stap <span class="js-scenario-stepnr">1</span></h4>
+                      <input class="js-newstep" type="text" name="" value="">
+                  </div>
+                  <div class="js-new-scenario-newstep hidden">
+                      <h4>Stap <span class="js-scenario-stepnr-copy">1</span></h4>
+                      <input type="text" name="" value="">
+                  </div>
               </div>
               <div class="view view_2-3 hidden">
                 <table class="table">
@@ -333,7 +341,6 @@ include 'include/session.php';
         </div>
       </div>
     </div>
-
     <script src="dest/js/main.js" charset="utf-8"></script>
 </body>
 </html>

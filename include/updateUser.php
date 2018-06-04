@@ -3,16 +3,13 @@
   $id = $_POST['id'];
   $name = $_POST['name'];
   $pass = sha1($_POST['pass']);
-
-  $update = "UPDATE `users` SET `username`='$name', `password` = '$pass' WHERE id=$id";
-
-  // echo json_encode($_POST);
-  // echo $update;
-
-  if (mysqli_query($conn, $update)) {
-      echo 'succes';
-  } else {
-    echo "Error: " . "<br>" . mysqli_error($conn);
-    // echo json_encode('fail');
+  $sql = "UPDATE `users` SET `username`=?, `password` = ? WHERE id = ?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param('ssi',$name, $pass, $id);
+  $result = $stmt->execute();
+  if ($result) {
+    echo 'succes';
   }
+
+
 ?>

@@ -2,12 +2,11 @@
   include 'database.php';
 
   $id = $_POST['id'];
-
-  $delete = "DELETE FROM `users` WHERE `id`=$id";
-
-  if (mysqli_query($conn, $delete)) {
+  $sql = "DELETE FROM `users` WHERE `id`=?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param("i", $id);
+  $result = $stmt->execute();
+  if ($result) {
       echo 'succes';
-  } else {
-    echo "Error: " . "<br>" . mysqli_error($connect);
   }
  ?>
