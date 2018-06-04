@@ -3,6 +3,9 @@
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
+  &-item{
+      cursor: pointer;
+  }
 }
 
 .hidden{

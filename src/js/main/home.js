@@ -1,9 +1,7 @@
+var loggedIn = false;
 $(document).ready(function(){
   console.log("home.js loaded")
-
-  var loggedIn = false;
   var userLevel = 0;
-
   $('body').on('click', '.menu-item', function(){
     var id = $(this).attr("class").split('_')[1];
     console.log(id)
@@ -25,6 +23,10 @@ $(document).ready(function(){
       console.log(data);
       if (data.loggedIn == 1) {
           login(data.level);
+          showFlashMessage('Ingelogd succesvol', 'success')
+      }
+      else {
+          showFlashMessage('Gebruikersnaam of wachtwoord is verkeerd', 'danger')
       }
     })
   })
@@ -42,8 +44,6 @@ $(document).ready(function(){
 
   $('body').on('click', '.level1-btn-edit',function(){
     var row = $(this).parent().parent().attr("class").split("index")[1];
-
-
   })
 
   $("body").on("click", ".options", function(){
@@ -108,7 +108,13 @@ $(document).ready(function(){
       })
     }
   })
-
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            if (!loggedIn) {
+                $('.login').trigger('click');
+            }
+        }
+    });
   function login(a_userLevel){
     $('.login-container').addClass("hidden");
     $('.login-status').text("Welcom: user")
@@ -141,5 +147,6 @@ $(document).ready(function(){
     $(".user-level").addClass("hidden")
     loggedIn = false;
     userLevel = 0;
+    showFlashMessage('Je bent uitgelogd', 'success');
   }
 })

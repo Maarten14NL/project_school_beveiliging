@@ -2,7 +2,8 @@
 session_start();
 include 'database.php'; // Should create a var $con
 
-if (!isset($_SESSION['loggedIn'])) { // If this variable doesn't exist, it creates all the session vars
+// If this variable doesn't exist, it creates all the session vars
+if (!isset($_SESSION['loggedIn'])) {
     resetSession();
 }
 
@@ -43,6 +44,24 @@ function resetSession(){
     $_SESSION['username'] = '';
     $_SESSION['password'] = '';
     $_SESSION['level'] = 0;
+    $_SESSION['flashMessage'] = [
+        'message' => '',
+        'type' => ''
+    ];
+}
+
+function clearFlashMessage(){
+    $_SESSION['flashMessage'] = [
+        'message' => '',
+        'type' => ''
+    ];
+}
+
+function setFlashMessage($mes, $type){
+    $_SESSION['flashMessage'] = [
+        'message' => $mes,
+        'type' => $type
+    ];
 }
 
 function setSession($id, $usn, $pass, $lvl){
