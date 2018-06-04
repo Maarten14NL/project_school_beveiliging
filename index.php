@@ -156,8 +156,7 @@ include 'include/session.php';
           <div class="user-level user-level_1 hidden">
             <div class="user-navigation">
               <div class="options level_1 option_1">Gebruiker Toevoegen</div>
-              <div class="options level_1 option_2">Gebruikers Aanpassen</div>
-              <div class="options level_1 option_3">Gebruikers Verwijderen</div>
+              <div class="options level_1 option_2">Gebruiker Instellingen</div>
             </div>
             <div class="user-body">
               <div class="view view_1-1">
@@ -176,31 +175,12 @@ include 'include/session.php';
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">GebruikersNaam</th>
-                      <th scope="col">GebruikersLevel</th>
+                      <th scope="col">level</th>
+                      <th scope="col"></th>
                       <th scope="col"></th>
                     </tr>
                   </thead>
                   <tbody  class="user-level1-edit">
-                    <tr>
-                      <th>1</th>
-                      <td>Docent</td>
-                      <td>Docent</td>
-                      <td><button type="button" class="btn btn-primary">Verwijderen</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="view view_1-3 hidden">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">GebruikersNaam</th>
-                      <th scope="col">GebruikersLevel</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody  class="user-level1-delete">
                     <tr>
                       <th>1</th>
                       <td>Docent</td>
@@ -296,7 +276,9 @@ include 'include/session.php';
         <tr class="level1-index{{index}}">
           <td>{{id}}</td>
           <td>{{username}}</td>
-          <td><button type="button" class="btn btn-primary level1-btn-{{class}}">{{classText}}</button></td>
+          <td>{{level}}</td>
+          <td><button type="button" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
+          <td><button type="button" class="btn btn-primary level1-btn-delete">verwijderen</button></td>
         </tr>
         {{/.}}
       </template>
@@ -369,6 +351,22 @@ include 'include/session.php';
               <option class="update-user-options update-user-option2" value="2">Docent</option>
             </select>
             <button type="submit" class="btn btn-primary update-users-update">bijwerken</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal scenario" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
           </div>
         </div>
       </div>

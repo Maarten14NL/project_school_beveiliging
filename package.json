@@ -1,20 +1,22 @@
 {
-    "devDependencies": {
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^4.0.0",
-        "gulp-clean-css": "^3.9.0",
-        "gulp-combine-mq": "^0.4.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-folders": "^1.1.0",
-        "gulp-install": "^1.1.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
-        "gulp-sourcemaps": "^2.6.1",
-        "gulp-uglify-es": "^0.1.9",
-        "gulp-wait": "0.0.2"
-    },
-    "dependencies": {
-        "browser-sync": "^2.18.13",
-        "random-org-api": "0.0.2"
-    }
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-folders": "^1.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify-es": "^0.1.9",
+    "gulp-wait": "0.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "express": "^4.16.3",
+    "random-org-api": "0.0.2",
+    "socket.io": "^1.7.3"
+  }
 }

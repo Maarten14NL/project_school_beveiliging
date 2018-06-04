@@ -1,12 +1,13 @@
 var rowSelected = 0;
+var index = 0;
 $('body').on('click', '.level1-btn-edit', function(){
   rowSelected = $(this).parent().parent().attr("class");
-  var index = 0;
   for (var i = 0; i < users.length; i++){
     if(users[i].id == rowSelected.split("index")[1]){
       index = i
     }
   }
+
   $('.update-users').modal('show');
   $('.update-users-username').val(users[index].username)
   $('.update-user-options').removeAttr("selected")
