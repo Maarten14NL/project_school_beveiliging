@@ -2,7 +2,7 @@
 include 'database.php';
 
 $name = $_POST['username'];
-$password = sha1('ripemd160', $_POST['userpassword']);
+$password = sha1($_POST['userpassword']);
 $level = $_POST['userlevel'];
 // echo json_encode($_POST);
 

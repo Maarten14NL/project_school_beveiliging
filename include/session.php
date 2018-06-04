@@ -11,7 +11,7 @@ if ($loggedIn) {
     $id = $_SESSION['userID'];
 
     $sql = 'SELECT username, password FROM users WHERE id=?';
-    $stmt = $con->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->bind_result($name, $pass);

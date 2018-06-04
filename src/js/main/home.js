@@ -40,7 +40,8 @@ $(document).ready(function(){
 
   $('body').on('click', '.level1-btn-edit',function(){
     var row = $(this).parent().parent().attr("class").split("index")[1];
-    
+
+
   })
 
   $("body").on("click", ".options", function(){
