@@ -11,6 +11,7 @@ include 'include/session.php';
     <title></title>
     <script src="dest/js/jquery.min.js"></script>
     <script src="dest/js/bootstrap.min.js"></script>
+    <script src="dest/js/mustache.js"></script>
     <link rel="stylesheet" href="dest/css/bootstrap.min.css">
     <link rel="stylesheet" href="dest/css/app.css">
     <meta charset="utf-8">
@@ -150,8 +151,8 @@ include 'include/session.php';
           <div class="user-level user-level_1 hidden">
             <div class="user-navigation">
               <div class="options level_1 option_1">Gebruiker Toevoegen</div>
-              <div class="options level_1 option_2">Gebruiker Verwijderen</div>
-              <div class="options level_1 option_3">Account Instellingen</div>
+              <div class="options level_1 option_2">Gebruikers Aanpassen</div>
+              <div class="options level_1 option_3">Gebruikers Verwijderen</div>
             </div>
             <div class="user-body">
               <div class="view view_1-1">
@@ -174,7 +175,7 @@ include 'include/session.php';
                       <th scope="col"></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody  class="user-level1-edit">
                     <tr>
                       <th>1</th>
                       <td>Docent</td>
@@ -185,6 +186,24 @@ include 'include/session.php';
                 </table>
               </div>
               <div class="view view_1-3 hidden">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">GebruikersNaam</th>
+                      <th scope="col">GebruikersLevel</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody  class="user-level1-delete">
+                    <tr>
+                      <th>1</th>
+                      <td>Docent</td>
+                      <td>Docent</td>
+                      <td><button type="button" class="btn btn-primary">Verwijderen</button></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -256,6 +275,19 @@ include 'include/session.php';
 
           </div>
         </div>
+    </div>
+
+
+    <div class="templateContainer">
+      <template class="level1-user-template">
+        {{#.}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{username}}</td>
+          <td><button type="button" class="btn btn-primary user-level1-button-{{class}}">{{classText}}</button></td>
+        </tr>
+        {{/.}}
+      </template>
     </div>
 
     <script src="dest/js/main.js" charset="utf-8"></script>

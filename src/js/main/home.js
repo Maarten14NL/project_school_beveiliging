@@ -44,6 +44,43 @@ $(document).ready(function(){
 
     $(".view").addClass("hidden")
     $(".view_"+level+"-"+option).removeClass("hidden")
+
+    console.log(level)
+    switch (level) {
+      case "1":
+        $.post("include/getUsers.php",{
+        }, function(response,status){
+          // console.log(response)
+          response = JSON.parse(response)
+
+          response.map(function(cp,i){
+            if(option == "2"){
+              cp.class = "edit"
+              cp.classText = "aanpassen"
+            }else if(option == "3"){
+              cp.class = "delete"
+              cp.classText = "verwijderen"
+            }
+          })
+
+          for(var i = 0; i < response.length; i++){
+            if(response[i].userlevel == 1){
+              response.splice(i,1)
+            }
+          }
+          console.log(response)
+
+          var template = $(".level1-user-template").html();
+          var renderTemplate = Mustache.render(template, response);
+
+          if(option == "2"){
+            $(".user-level1-edit").html(renderTemplate);
+          }else if(option == "3"){
+            $(".user-level1-delete").html(renderTemplate);
+          }
+        })
+        break;
+    }
   })
 
   $("body").on("click", ".new-user",function(){
