@@ -45,12 +45,12 @@ $(document).ready(function(){
       console.log($(this).attr("class").split(" ")[0])
     }
   })
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
-            if (!loggedIn) {
-                $('.login').trigger('click');
-            }
-        }
-    });
+  $(document).keypress(function(e) {
+      if(e.which == 13) {
+          if (!loggedIn) {
+              $('.login').trigger('click');
+          }
+      }
+  });
 
 })

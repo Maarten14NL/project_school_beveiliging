@@ -1,3 +1,10 @@
+$(".settings-inputs").keypress(function(e) {
+  console.log("enter")
+    if(e.which == 13) {
+      $('.settings-update').trigger('click');
+    }
+});
+
 $('body').on('click', '.settings', function(){
   console.log("settings")
   $('.settings-username').val(loggedInUser.username)
@@ -17,10 +24,15 @@ $('body').on('click', '.settings-update', function(){
     if($('.settings-password').val() != $('.settings-repeat-password').val()){
       console.log("wachtwoorden zijn niet gelijk aan elkaar")
     }else{
+      console.log(loggedInUser)
       $.post("include/updateUser.php" ,{
-        id: loggedInUser.id
+        id: loggedInUser.userID,
+        name: $('.settings-username').val(),
+        pass: $('.settings-password').val()
       }, function(response,status){
-
+        if(response == "succes"){
+        $('.user-settings').modal('hide');
+        }
       })
     }
   }
