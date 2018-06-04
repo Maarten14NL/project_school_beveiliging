@@ -1,7 +1,6 @@
 <?php
 include 'include/database.php';
 include 'include/functions.php';
-include 'include/login.php';
 include 'include/session.php';
 ?>
 <!DOCTYPE html>
