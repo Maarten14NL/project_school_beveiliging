@@ -297,7 +297,7 @@ include 'include/session.php';
         {{#.}}
         <tr class="level1-index{{index}}">
           <td>{{id}}</td>
-          <td>{{username}}</td>
+          <td class="username">{{username}}</td>
           <td>
               <button type="button" class="btn btn-primary ">Aanpassen</button>
               <button type="button" class="btn btn-primary ">Verwijderen</button>
@@ -329,6 +329,38 @@ include 'include/session.php';
               <input type="password" class="form-control settings-inputs settings-repeat-password" >
             </div>
             <button type="submit" class="btn btn-primary settings-update">bijwerken</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal update-users" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>gebruikersnaam</label>
+              <input type="text" class="form-control update-users-inputs update-users-username" >
+            </div>
+            <div class="form-group">
+              <label>wachtwoord</label>
+              <input type="password" class="form-control update-users-inputs update-users-password" >
+            </div>
+            <div class="form-group">
+              <label>herhaling wachtwoord</label>
+              <input type="password" class="form-control update-users-inputs update-users-repeat-password" >
+            </div>
+            <select class="form-control update-user-level">
+              <option class="update-user-options update-user-option1" value="3">Student</option>
+              <option class="update-user-options update-user-option2" value="2">Docent</option>
+            </select>
+            <button type="submit" class="btn btn-primary update-users-update">bijwerken</button>
           </div>
         </div>
       </div>
