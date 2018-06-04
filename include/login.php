@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
-if (isset($_POST['logout'])) {
+if (isset($_POST['logoutSub'])) {
     resetSession();
 }
 if (isset($_POST['loginSub'])) {

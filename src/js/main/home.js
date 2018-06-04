@@ -26,10 +26,10 @@ $(document).ready(function(){
       loggedInUser = data;
       if (data.loggedIn == 1) {
           login(data.level);
-          showFlashMessage('Ingelogd succesvol', 'success')
+          showFlashMessage('U bent succesvol ingelogd', 'success')
       }
       else {
-          showFlashMessage('Gebruikersnaam of wachtwoord is verkeerd', 'danger')
+          showFlashMessage('Uw gebruikersnaam of wachtwoord is incorrect', 'danger')
       }
     })
   })
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
   $('body').on('click', '.lokaal', function(){
     console.log(loggedIn)
-    if(loggedIn == true){    // Save the original method in a private variable
+    if(loggedIn == true){
 
       console.log($(this).attr("class").split(" ")[0])
     }
@@ -52,5 +52,4 @@ $(document).ready(function(){
             }
         }
     });
-
 })

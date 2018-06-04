@@ -32,5 +32,10 @@ function logout(){
   $('.settings').addClass("hidden")
   loggedIn = false;
   userLevel = 0;
-  showFlashMessage('Je bent uitgelogd', 'success');
+
+  $.post("include/login.php",{
+      logoutSub: ''
+  }, function(response,status){
+      showFlashMessage('Je bent uitgelogd', 'success');
+  })
 }

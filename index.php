@@ -92,7 +92,7 @@ include 'include/session.php';
             <div class="verdieping verdieping__2 hidden">
                 <div class="v2-filler-1 filler"></div>
                 <div class="v2-filler-2 filler filler--white"></div>
-                <div class="v2-filler-3 filler">--</div>
+                <div class="v2-filler-3 filler"></div>
                 <div class="v2-filler-4 filler"></div>
                 <div class="L216 lokaal">2.16</div>
                 <div class="L214 lokaal">2.14</div>
@@ -247,7 +247,7 @@ include 'include/session.php';
                       <th scope="col"></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="js-scenario-container">
                     <tr>
                       <th>1</th>
                       <td>Docent</td>
@@ -282,7 +282,6 @@ include 'include/session.php';
         </div>
     </div>
 
-
     <div class="templateContainer">
       <template class="level1-user-template">
         {{#.}}
@@ -293,8 +292,20 @@ include 'include/session.php';
         </tr>
         {{/.}}
       </template>
-    </div>
 
+      <template class="level2-scenario-template">
+        {{#.}}
+        <tr class="level1-index{{index}}">
+          <td>{{id}}</td>
+          <td>{{username}}</td>
+          <td>
+              <button type="button" class="btn btn-primary ">Aanpassen</button>
+              <button type="button" class="btn btn-primary ">Verwijderen</button>
+          </td>
+        </tr>
+        {{/.}}
+      </template>
+    </div>
     <div class="modal user-settings" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
