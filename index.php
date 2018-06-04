@@ -281,10 +281,10 @@ include 'include/session.php';
     <div class="templateContainer">
       <template class="level1-user-template">
         {{#.}}
-        <tr>
+        <tr class="level1-index{{index}}">
           <td>{{id}}</td>
           <td>{{username}}</td>
-          <td><button type="button" class="btn btn-primary user-level1-button-{{class}}">{{classText}}</button></td>
+          <td><button type="button" class="btn btn-primary level1-btn-{{class}}">{{classText}}</button></td>
         </tr>
         {{/.}}
       </template>

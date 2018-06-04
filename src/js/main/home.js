@@ -38,6 +38,11 @@ $(document).ready(function(){
     }
   })
 
+  $('body').on('click', '.level1-btn-edit',function(){
+    var row = $(this).parent().parent().attr("class").split("index")[1];
+    
+  })
+
   $("body").on("click", ".options", function(){
     var level = $(this).attr("class").split(" ")[1].split("_")[1];
     var option = $(this).attr("class").split(" ")[2].split("_")[1];
@@ -45,7 +50,6 @@ $(document).ready(function(){
     $(".view").addClass("hidden")
     $(".view_"+level+"-"+option).removeClass("hidden")
 
-    console.log(level)
     switch (level) {
       case "1":
         $.post("include/getUsers.php",{
@@ -53,30 +57,34 @@ $(document).ready(function(){
           // console.log(response)
           response = JSON.parse(response)
 
-          response.map(function(cp,i){
-            if(option == "2"){
-              cp.class = "edit"
-              cp.classText = "aanpassen"
-            }else if(option == "3"){
-              cp.class = "delete"
-              cp.classText = "verwijderen"
+          for(var i = 0; i < 2; i++){
+            // console.log(i)
+            response.map(function(cp,j){
+              cp.index = j;
+              console.log(i)
+              if(i == 0){
+                cp.class = "edit"
+                cp.classText = "aanpassen"
+              }else if(i == 1){
+                cp.class = "delete"
+                cp.classText = "verwijderen"
+              }
+            })
+
+            for(var j = 0; j < response.length; j++){
+              if(response[j].userlevel == 1){
+                response.splice(j,1)
+              }
             }
-          })
 
-          for(var i = 0; i < response.length; i++){
-            if(response[i].userlevel == 1){
-              response.splice(i,1)
+            var template = $(".level1-user-template").html();
+            var renderTemplate = Mustache.render(template, response);
+
+            if(i == 0){
+              $(".user-level1-edit").html(renderTemplate);
+            }else if(i == 1){
+              $(".user-level1-delete").html(renderTemplate);
             }
-          }
-          console.log(response)
-
-          var template = $(".level1-user-template").html();
-          var renderTemplate = Mustache.render(template, response);
-
-          if(option == "2"){
-            $(".user-level1-edit").html(renderTemplate);
-          }else if(option == "3"){
-            $(".user-level1-delete").html(renderTemplate);
           }
         })
         break;
