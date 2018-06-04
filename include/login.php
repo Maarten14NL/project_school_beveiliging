@@ -17,6 +17,7 @@ if (isset($_POST['loginSub'])) {
     {
         $id = $row['id'];
         $userlevel = $row['userlevel'];
+        echo 'yes';
 
     }
     if ($id != -1 && $userlevel != -1) {
