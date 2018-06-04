@@ -1,0 +1,7 @@
+.steps{
+    display:flex;
+    flex-wrap: wrap;
+    &__step{
+        margin-right: 100px;
+    }
+}

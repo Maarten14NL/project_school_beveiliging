@@ -236,15 +236,33 @@ include 'include/session.php';
                           </tr>
                       </thead>
                   </table>
+                  <div class="buttons-container">
+                    <button class="btn btn-success js-save-new-scenario">Opslaan</button>
+                    <button class="btn btn-success js-addstep">Extra stap</button>
+                  </div>
                   <h3>Voeg stappen toe</h3>
-                  <div class="js-new-scenario-steps">
+                  <div class="js-steps-container steps">
+                      <div class="js-step steps__step">
+                          <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
+                          <input class="js-newstep" type="text" name="" value="">
+                          <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                      </div>
+                  </div>
+                  <div class="js-copystep hidden steps__step">
+                      <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
+                      <input class="js-newstep" type="text" name="" value="">
+                      <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                  </div>
+                  <!-- <div class="js-new-scenario-steps">
                       <h4>Stap <span class="js-scenario-stepnr">1</span></h4>
                       <input class="js-newstep" type="text" name="" value="">
+                      <i style="color: red;" class="far fa-times-circle"></i>
                   </div>
                   <div class="js-new-scenario-newstep hidden">
                       <h4>Stap <span class="js-scenario-stepnr-copy">1</span></h4>
-                      <input type="text" name="" value="">
-                  </div>
+                      <input class="js-newstep" type="text" name="" value="">
+                      <i class="far fa-times-circle"></i>
+                  </div> -->
               </div>
               <div class="view view_2-3 hidden">
                 <table class="table">
