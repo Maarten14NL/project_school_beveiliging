@@ -21,9 +21,11 @@ $(document).ready(function(){
       username: $('.username').val().toLowerCase(),
       password: ""
     }, function(response,status){
-      console.log(response)
-
-      login(1);
+      var data = JSON.parse(response);
+      console.log(data);
+      if (data.loggedIn == 1) {
+          login(data.level);
+      }
     })
   })
 
