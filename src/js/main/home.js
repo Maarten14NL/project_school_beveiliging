@@ -19,7 +19,7 @@ $(document).ready(function(){
     $.post("include/login.php",{
       loginSub: "",
       username: $('.username').val().toLowerCase(),
-      password: $('.password').val().toLowerCase()
+      password: $('.password').val()
     }, function(response,status){
       var data = JSON.parse(response);
       console.log(data);
