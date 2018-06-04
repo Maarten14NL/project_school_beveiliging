@@ -318,15 +318,15 @@ include 'include/session.php';
           <div class="modal-body">
             <div class="form-group">
               <label>gebruikersnaam</label>
-              <input type="text" class="form-control settings-username" >
+              <input type="text" class="form-control settings-inputs settings-username" >
             </div>
             <div class="form-group">
               <label>wachtwoord</label>
-              <input type="password" class="form-control settings-password" >
+              <input type="password" class="form-control settings-inputs settings-password" >
             </div>
-            <div class="form-group settings-repeat-password">
+            <div class="form-group">
               <label>herhaling wachtwoord</label>
-              <input type="password" class="form-control" >
+              <input type="password" class="form-control settings-inputs settings-repeat-password" >
             </div>
             <button type="submit" class="btn btn-primary settings-update">bijwerken</button>
           </div>

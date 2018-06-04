@@ -45,6 +45,7 @@ $(document).ready(function(){
       console.log($(this).attr("class").split(" ")[0])
     }
   })
+<<<<<<< HEAD
     $(document).keypress(function(e) {
         if(e.which == 13) {
             if (!loggedIn) {
@@ -52,4 +53,14 @@ $(document).ready(function(){
             }
         }
     });
+=======
+  $(document).keypress(function(e) {
+      if(e.which == 13) {
+          if (!loggedIn) {
+              $('.login').trigger('click');
+          }
+      }
+  });
+
+>>>>>>> c80056df525450b31260d34517eb6852aed7f498
 })
