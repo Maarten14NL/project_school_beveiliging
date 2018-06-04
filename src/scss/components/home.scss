@@ -31,6 +31,10 @@
   border-radius: 1vmin 1vmin 0 0;
   padding: 0 1vmin;
   &.level_1{
-    width: 33.3%;
+    width: 50%;
   }
+}
+
+td,th{
+  padding: .1rem !important;
 }

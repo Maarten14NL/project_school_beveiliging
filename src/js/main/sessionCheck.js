@@ -3,8 +3,8 @@ $(document).ready(function(){
     }, function(response,status){
         var data = JSON.parse(response);
         if (data.loggedIn) {
-            login(data.level);
             loggedInUser = data;
+            login(data.level);
         }
     })
 });

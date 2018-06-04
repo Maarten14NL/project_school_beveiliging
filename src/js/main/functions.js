@@ -1,8 +1,7 @@
 function login(a_userLevel){
   $('.login-container').addClass("hidden");
-  $('.login-status').text("Welcom: user")
+  $('.login-status').text("Welcom: "+loggedInUser.username + "  ")
   $('.logout').removeClass("hidden")
-  $('.settings').removeClass("hidden")
   loggedIn = true;
   userLevel = a_userLevel;
 
@@ -13,10 +12,12 @@ function login(a_userLevel){
     case 1:
       $(".user-level_1").removeClass("hidden")
       $(".view_1-1").removeClass("hidden")
+      $('.settings').removeClass("hidden")
       break;
     case 2:
       $(".user-level_2").removeClass("hidden")
       $(".view_2-2").removeClass("hidden")
+      $('.settings').removeClass("hidden")
       break;
     case 3:
       $(".user-level_3").removeClass("hidden")
@@ -51,6 +52,11 @@ function updateLevel1Templates(){
       users.map(function(cp,j){
         cp.index = cp.id;
         // console.log(i)
+        if(cp.userlevel == 2){
+          cp.level = "Docent"
+        }else if(cp.userlevel == 3){
+          cp.level = "Student"
+        }
         if(i == 0){
           cp.class = "edit"
           cp.classText = "aanpassen"

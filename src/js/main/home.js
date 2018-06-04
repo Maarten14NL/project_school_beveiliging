@@ -2,6 +2,8 @@ var loggedIn = false;
 var userLevel = 0;
 var loggedInUser = [];
 var users = [];
+var alertActive = false;
+
 $(document).ready(function(){
   console.log("home.js loaded")
   $('body').on('click', '.menu-item', function(){
