@@ -3,6 +3,9 @@ $(document).ready(function(){
 
   var loggedIn = false;
   var userLevel = 0;
+  var loggedInUser = [];
+
+  var users = [];
 
   $('body').on('click', '.menu-item', function(){
     var id = $(this).attr("class").split('_')[1];
@@ -16,13 +19,14 @@ $(document).ready(function(){
     console.log($('.username').val().toLowerCase())
     console.log($('.password').val().toLowerCase())
 
-    $.post("include/login.php",{
+    $.post("include/login.php" ,{
       loginSub: "",
       username: $('.username').val().toLowerCase(),
       password: $('.password').val()
     }, function(response,status){
       var data = JSON.parse(response);
       console.log(data);
+      loggedInUser = data;
       if (data.loggedIn == 1) {
           login(data.level);
       }
@@ -40,10 +44,51 @@ $(document).ready(function(){
     }
   })
 
-  $('body').on('click', '.level1-btn-edit',function(){
+  $('body').on('click', '.settings', function(){
+    console.log("settings")
+    $('.settings-username').val(loggedInUser.username)
+    $('.user-settings').modal('show');
+    console.log(loggedInUser.username)
+  })
+
+  $('body').on('click', '.settings-update', function(){
+    console.log("update")
+    console.log($('.settings-username').val())
+    console.log($('.settings-password').val())
+    console.log($('.settings-repeat-password').val())
+
+    if($('.settings-username').val() == "" && $('.settings-password').val() == "" && $('.settings-repeat-password').val() == ""){
+      console.log("gebruikersnaam en wachtwoord mogen niet leeg zijn");
+    }else{
+      if($('.settings-password').val() != $('.settings-repeat-password').val()){
+        console.log("wachtwoorden zijn niet gelijk aan elkaar")
+      }else{
+        $.post("include/updateUser.php" ,{
+          id: loggedInUser.id
+        }, function(response,status){
+
+        })
+      }
+    }
+  })
+
+  $('body').on('click', '.level1-btn-delete',function(){
+    var rowClass = $(this).parent().parent().attr("class");
     var row = $(this).parent().parent().attr("class").split("index")[1];
-
-
+    console.log(users)
+    for(var i = 0; i < users.length; i++){
+      if(users[i].index == row){
+        $.post("include/deleteUser.php" ,{
+          id: users[i].id
+        }, function(response,status){
+          // console.log(response);
+          if(response == "succes"){
+            console.log(rowClass)
+            $("."+rowClass).remove();
+          }
+        })
+      }
+    }
   })
 
   $("body").on("click", ".options", function(){
@@ -58,13 +103,13 @@ $(document).ready(function(){
         $.post("include/getUsers.php",{
         }, function(response,status){
           // console.log(response)
-          response = JSON.parse(response)
+          users = JSON.parse(response)
 
           for(var i = 0; i < 2; i++){
-            // console.log(i)
-            response.map(function(cp,j){
+            console.log(i)
+            users.map(function(cp,j){
               cp.index = j;
-              console.log(i)
+              // console.log(i)
               if(i == 0){
                 cp.class = "edit"
                 cp.classText = "aanpassen"
@@ -74,14 +119,16 @@ $(document).ready(function(){
               }
             })
 
-            for(var j = 0; j < response.length; j++){
-              if(response[j].userlevel == 1){
-                response.splice(j,1)
+            for(var j = 0; j < users.length; j++){
+              if(users[j].userlevel == 1){
+                users.splice(j,1)
               }
             }
 
+            console.log(users)
+
             var template = $(".level1-user-template").html();
-            var renderTemplate = Mustache.render(template, response);
+            var renderTemplate = Mustache.render(template, users);
 
             if(i == 0){
               $(".user-level1-edit").html(renderTemplate);
@@ -113,6 +160,7 @@ $(document).ready(function(){
     $('.login-container').addClass("hidden");
     $('.login-status').text("Welcom: user")
     $('.logout').removeClass("hidden")
+    $('.settings').removeClass("hidden")
     loggedIn = true;
     userLevel = a_userLevel;
 
@@ -139,6 +187,7 @@ $(document).ready(function(){
     $('.login-status').text("U bent nog niet ingelogd")
     $('.logout').addClass("hidden")
     $(".user-level").addClass("hidden")
+    $('.settings').addClass("hidden")
     loggedIn = false;
     userLevel = 0;
   }

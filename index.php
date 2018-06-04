@@ -12,7 +12,9 @@ include 'include/session.php';
     <script src="dest/js/bootstrap.min.js"></script>
     <script src="dest/js/mustache.js"></script>
     <link rel="stylesheet" href="dest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dest/css/fontawesome-all.css">
     <link rel="stylesheet" href="dest/css/app.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +25,7 @@ include 'include/session.php';
     <div class="login-status-container">
       <div class="login-status">U bent nog niet ingelogd</div>
       <button type="button" class="btn btn-primary logout hidden">uitloggen</button>
+      <i class="fas fa-cog settings hidden"></i>
     </div>
   </nav>
     <!-- <button class="btn">hallo test</button> -->
@@ -287,6 +290,34 @@ include 'include/session.php';
         </tr>
         {{/.}}
       </template>
+    </div>
+
+    <div class="modal user-settings" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>gebruikersnaam</label>
+              <input type="text" class="form-control settings-username" >
+            </div>
+            <div class="form-group">
+              <label>wachtwoord</label>
+              <input type="password" class="form-control settings-password" >
+            </div>
+            <div class="form-group settings-repeat-password">
+              <label>herhaling wachtwoord</label>
+              <input type="password" class="form-control" >
+            </div>
+            <button type="submit" class="btn btn-primary settings-update">bijwerken</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="dest/js/main.js" charset="utf-8"></script>
