@@ -1,40 +1,51 @@
 .menu{
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  &-item{
-      cursor: pointer;
-  }
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    &-item{
+        cursor: pointer;
+    }
 }
 
 .hidden{
-  display: none;
+    display: none;
 }
 
 .login-status-container{
-  text-align: right;
-  width: 100%;
+    text-align: right;
+    width: 100%;
 }
 
 .login-status{
-  display: inline-block;
+    display: inline-block;
 }
 
 .user-navigation{
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .options{
-  border: 1px solid;
-  border-radius: 1vmin 1vmin 0 0;
-  padding: 0 1vmin;
-  &.level_1{
-    width: 50%;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 1vmin 1vmin 0 0;
+    padding: 0 1vmin;
+
+    &.level_1{
+        width: 50%;
+    }
+    &.level_2{
+        width: 25%;
+    }
+    &--active{
+        background-color: var(--secondary);
+        color: white;
+    }
 }
 
 td,th{
-  padding: .1rem !important;
+    padding: .1rem !important;
 }
