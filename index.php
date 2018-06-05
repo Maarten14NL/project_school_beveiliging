@@ -23,14 +23,14 @@ include 'include/session.php';
     <div class="js-flash flash-message">
         hallo
     </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <div class="login-status-container">
-      <div class="login-status">U bent nog niet ingelogd</div>
-      <button type="button" class="btn btn-primary logout hidden">uitloggen</button>
-      <i class="fas fa-cog settings hidden"></i>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="login-status-container">
+            <div class="login-status">U bent nog niet ingelogd</div>
+            <button type="button" class="btn btn-primary logout hidden">uitloggen</button>
+            <i class="fas fa-cog settings hidden"></i>
+        </div>
+    </nav>
     <!-- <button class="btn">hallo test</button> -->
     <div class="row">
         <div class="col-6 container-left">
@@ -147,262 +147,260 @@ include 'include/session.php';
             </div>
         </div>
         <div class="col">
-          <div class="login-container">
-            <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam">
-            <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord">
-            <button type="button" class="btn btn-lg btn-primary login">inloggen</button>
-          </div>
+            <div class="login-container">
+                <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam">
+                <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord">
+                <button type="button" class="btn btn-lg btn-primary login">inloggen</button>
+            </div>
 
-          <div class="user-level user-level_1 hidden">
-            <div class="user-navigation">
-              <div class="options level_1 option_1">Gebruiker Toevoegen</div>
-              <div class="options level_1 option_2">Gebruiker Instellingen</div>
+            <div class="user-level user-level_1 hidden">
+                <div class="user-navigation">
+                    <div class="options level_1 option_1">Gebruiker Toevoegen</div>
+                    <div class="options level_1 option_2">Gebruiker Instellingen</div>
+                </div>
+                <div class="user-body">
+                    <div class="view view_1-1">
+                        <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
+                        <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
+                        <select class="form-control new-user-level" placeholder="Gebruikerslevel">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="3">Student</option>
+                            <option value="2">Docent</option>
+                        </select>
+                        <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
+                    </div>
+                    <div class="view view_1-2 hidden">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">GebruikersNaam</th>
+                                    <th scope="col">level</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="user-level1-edit">
+                                <tr>
+                                    <th>1</th>
+                                    <td>Docent</td>
+                                    <td>Docent</td>
+                                    <td><button type="button" class="btn btn-primary">Verwijderen</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="user-body">
-              <div class="view view_1-1">
-                <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
-                <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
-                <select class="form-control new-user-level" placeholder="Gebruikerslevel">
-                  <option value="" disabled selected>Select your option</option>
-                  <option value="3">Student</option>
-                  <option value="2">Docent</option>
-                </select>
-                <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
-              </div>
-              <div class="view view_1-2 hidden">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">GebruikersNaam</th>
-                      <th scope="col">level</th>
-                      <th scope="col"></th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody class="user-level1-edit">
-                    <tr>
-                      <th>1</th>
-                      <td>Docent</td>
-                      <td>Docent</td>
-                      <td><button type="button" class="btn btn-primary">Verwijderen</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="user-level user-level_2 hidden">
+                <div class="user-navigation">
+                    <div class="options level_2 option_1">Scenario's kiezen</div>
+                    <div class="options level_2 option_2">Scenario's maken</div>
+                    <div class="options level_2 option_3">Scenario instellingen</div>
+                    <!-- <div class="options level_2 option_4">Scenario's verwijderen</div> -->
+                </div>
+                <div class="user-body">
+                    <div class="view view_2-1 hidden">
+                        <div class="row">
+                            <select class="form-control scenario-selector">
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-primary">scenario maken</button>
+                        </div>
+                    </div>
+                    <div class="view view_2-2">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Naam:</th>
+                                    <th> <input type="text" class="js-new-scenario-name" name="scenario-name" value=""> </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="buttons-container">
+                            <button class="btn btn-success js-save-new-scenario">Opslaan</button>
+                            <button class="btn btn-success js-addstep">Extra stap</button>
+                        </div>
+                        <h3>Voeg stappen toe</h3>
+                        <div class="js-steps-container steps">
+                            <div class="js-step steps__step">
+                                <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
+                                <input class="js-newstep" type="text" name="" value="">
+                                <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                            </div>
+                        </div>
+                        <div class="js-copystep hidden steps__step">
+                            <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
+                            <input class="js-newstep" type="text" name="" value="">
+                            <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                        </div>
+                    </div>
+                    <div class="view view_2-3 hidden">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Naam van scenario</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="js-scenario-container">
+                                <tr>
+                                    <th>1</th>
+                                    <td>Docent</td>
+                                    <td><button type="button" class="btn btn-primary">aanpassen</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="user-level user-level_2 hidden">
-            <div class="user-navigation">
-              <div class="options level_2 option_1">Scenario's kiezen</div>
-              <div class="options level_2 option_2">Scenario's maken</div>
-              <div class="options level_2 option_3">Scenario instellingen</div>
-              <!-- <div class="options level_2 option_4">Scenario's verwijderen</div> -->
-            </div>
-            <div class="user-body">
-              <div class="view view_2-1 hidden">
-                <select class="form-control scenario-selector">
-                  <option>Brand</option>
-                  <option>Gaslek</option>
-                </select>
-                <button type="button" class="btn btn-primary">scenario maken</button>
-              </div>
-              <div class="view view_2-2">
-                  <table class="table">
-                      <thead>
-                          <tr>
-                              <th>Naam:</th>
-                              <th> <input type="text" class="js-new-scenario-name" name="scenario-name" value=""> </th>
-                          </tr>
-                      </thead>
-                  </table>
-                  <div class="buttons-container">
-                    <button class="btn btn-success js-save-new-scenario">Opslaan</button>
-                    <button class="btn btn-success js-addstep">Extra stap</button>
-                  </div>
-                  <h3>Voeg stappen toe</h3>
-                  <div class="js-steps-container steps">
-                      <div class="js-step steps__step">
-                          <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
-                          <input class="js-newstep" type="text" name="" value="">
-                          <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
-                      </div>
-                  </div>
-                  <div class="js-copystep hidden steps__step">
-                      <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
-                      <input class="js-newstep" type="text" name="" value="">
-                      <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
-                  </div>
-                  <!-- <div class="js-new-scenario-steps">
-                      <h4>Stap <span class="js-scenario-stepnr">1</span></h4>
-                      <input class="js-newstep" type="text" name="" value="">
-                      <i style="color: red;" class="far fa-times-circle"></i>
-                  </div>
-                  <div class="js-new-scenario-newstep hidden">
-                      <h4>Stap <span class="js-scenario-stepnr-copy">1</span></h4>
-                      <input class="js-newstep" type="text" name="" value="">
-                      <i class="far fa-times-circle"></i>
-                  </div> -->
-              </div>
-              <div class="view view_2-3 hidden">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Naam van scenario</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody class="js-scenario-container">
-                    <tr>
-                      <th>1</th>
-                      <td>Docent</td>
-                      <td><button type="button" class="btn btn-primary">aanpassen</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="user-level user-level_3 hidden">
+            <div class="user-level user-level_3 hidden">
 
-          </div>
+            </div>
         </div>
     </div>
 
     <div class="templateContainer">
-      <template class="level1-user-template">
-        {{#.}}
-        <tr class="level1-index{{index}}">
-          <td>{{id}}</td>
-          <td>{{username}}</td>
-          <td>{{level}}</td>
-          <td><button type="button" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
-          <td><button type="button" class="btn btn-primary level1-btn-delete">verwijderen</button></td>
-        </tr>
-        {{/.}}
-      </template>
+        <template class="level1-user-template">
+            {{#.}}
+            <tr class="level1-index{{index}}">
+                <td>{{id}}</td>
+                <td>{{username}}</td>
+                <td>{{level}}</td>
+                <td><button type="button" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
+                <td><button type="button" class="btn btn-primary level1-btn-delete">verwijderen</button></td>
+            </tr>
+            {{/.}}
+        </template>
 
-      <template class="level2-scenario-template">
-        {{#.}}
-        <tr class="level2-index{{id}}">
-          <td>{{id}}</td>
-          <td class="username">{{name}}</td>
-          <td>
-              <button type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
-              <button type="button" class="btn btn-primary level2-btn-delete">Verwijderen</button>
-          </td>
-        </tr>
-        {{/.}}
-      </template>
+        <template class="level2-scenario-template">
+            {{#.}}
+            <tr class="level2-index{{id}}">
+                <td>{{id}}</td>
+                <td class="username">{{name}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
+                    <button type="button" class="btn btn-primary level2-btn-delete">Verwijderen</button>
+                </td>
+            </tr>
+            {{/.}}
+        </template>
 
-      <template class="level2-scenario-edit-template">
-        {{#.}}
-        <div class="js-scenario-edit-step scenario-edit-container">
-          <h4>Stap <span class="js-scenario-edit-{{index}}">{{index}}</span></h4>
-          <input class="js-scenario-edit-edit" type="text" name="" value="{{description}}">
-          <i style="color: red;" class="far fa-times-circle js-scenario-edit-delete"></i>
-        </div>
-        {{/.}}
-      </template>
+        <template class="level2-scenario-edit-template">
+            {{#.}}
+            <div class="js-scenario-edit-step scenario-edit-container">
+                <h4>Stap <span class="js-scenario-edit-{{index}}">{{index}}</span></h4>
+                <input class="js-scenario-edit-edit" type="text" name="" value="{{description}}">
+                <i style="color: red;" class="far fa-times-circle js-scenario-edit-delete"></i>
+            </div>
+            {{/.}}
+        </template>
     </div>
 
     <div class="modal user-settings" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Settings</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label>gebruikersnaam</label>
-              <input type="text" class="form-control settings-inputs settings-username" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>gebruikersnaam</label>
+                        <input type="text" class="form-control settings-inputs settings-username" >
+                    </div>
+                    <div class="form-group">
+                        <label>wachtwoord</label>
+                        <input type="password" class="form-control settings-inputs settings-password" >
+                    </div>
+                    <div class="form-group">
+                        <label>herhaling wachtwoord</label>
+                        <input type="password" class="form-control settings-inputs settings-repeat-password" >
+                    </div>
+                    <button type="submit" class="btn btn-primary settings-update">bijwerken</button>
+                </div>
             </div>
-            <div class="form-group">
-              <label>wachtwoord</label>
-              <input type="password" class="form-control settings-inputs settings-password" >
-            </div>
-            <div class="form-group">
-              <label>herhaling wachtwoord</label>
-              <input type="password" class="form-control settings-inputs settings-repeat-password" >
-            </div>
-            <button type="submit" class="btn btn-primary settings-update">bijwerken</button>
-          </div>
         </div>
-      </div>
     </div>
 
     <div class="modal update-users" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Settings</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label>gebruikersnaam</label>
-              <input type="text" class="form-control update-users-inputs update-users-username" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>gebruikersnaam</label>
+                        <input type="text" class="form-control update-users-inputs update-users-username" >
+                    </div>
+                    <div class="form-group">
+                        <label>wachtwoord</label>
+                        <input type="password" class="form-control update-users-inputs update-users-password" >
+                    </div>
+                    <div class="form-group">
+                        <label>herhaling wachtwoord</label>
+                        <input type="password" class="form-control update-users-inputs update-users-repeat-password" >
+                    </div>
+                    <select class="form-control update-user-level">
+                        <option class="update-user-options update-user-option1" value="3">Student</option>
+                        <option class="update-user-options update-user-option2" value="2">Docent</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary update-users-update">bijwerken</button>
+                </div>
             </div>
-            <div class="form-group">
-              <label>wachtwoord</label>
-              <input type="password" class="form-control update-users-inputs update-users-password" >
-            </div>
-            <div class="form-group">
-              <label>herhaling wachtwoord</label>
-              <input type="password" class="form-control update-users-inputs update-users-repeat-password" >
-            </div>
-            <select class="form-control update-user-level">
-              <option class="update-user-options update-user-option1" value="3">Student</option>
-              <option class="update-user-options update-user-option2" value="2">Docent</option>
-            </select>
-            <button type="submit" class="btn btn-primary update-users-update">bijwerken</button>
-          </div>
         </div>
-      </div>
     </div>
 
     <div class="modal scenario" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Settings</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="modal scenario-edit" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Settings</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label>name</label>
-              <input type="text" class="form-control update-scenarios-name" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>name</label>
+                        <input type="text" class="form-control update-scenarios-name" >
+                    </div>
+                    <div class="scenario-edit-options-container">
+                    </div>
+                    <button type="submit" class="btn btn-primary update-scenarios-update">bijwerken</button>
+                </div>
             </div>
-            <div class="scenario-edit-options-container">
-            </div>
-            <button type="submit" class="btn btn-primary update-scenarios-update">bijwerken</button>
-          </div>
         </div>
-      </div>
     </div>
 
     <script src="dest/js/main.js" charset="utf-8"></script>
