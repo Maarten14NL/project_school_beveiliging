@@ -207,9 +207,10 @@ include 'include/session.php';
                         </div>
                         <div class="row">
                             <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
+                                <input class="switch__input" type="checkbox">
+                                <span class="switch__span switch__span--round"></span>
                             </label>
+
                         </div>
                         <div class="row">
                             <button type="button" class="btn btn-primary">scenario maken</button>
