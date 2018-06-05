@@ -1,6 +1,6 @@
 function login(a_userLevel){
   $('.login-container').addClass("hidden");
-  $('.login-status').text("Welcom: "+loggedInUser.username + "  ")
+  $('.login-status').text("Welkom: "+loggedInUser.username + "    ")
   $('.logout').removeClass("hidden")
   loggedIn = true;
   userLevel = a_userLevel;
@@ -12,12 +12,16 @@ function login(a_userLevel){
     case 1:
       $(".user-level_1").removeClass("hidden")
       $(".view_1-1").removeClass("hidden")
+      $(".option_1").addClass("options--active")
       $('.settings').removeClass("hidden")
+      updateLevel1Templates();
       break;
     case 2:
       $(".user-level_2").removeClass("hidden")
-      $(".view_2-2").removeClass("hidden")
+      $(".view_2-1").removeClass("hidden")
+      $(".option_1").addClass("options--active")
       $('.settings').removeClass("hidden")
+      updateLevel2Templates();
       break;
     case 3:
       $(".user-level_3").removeClass("hidden")
@@ -33,6 +37,7 @@ function logout(){
   $('.settings').addClass("hidden")
   loggedIn = false;
   userLevel = 0;
+  console.log("logout")
 
   $.post("include/login.php",{
       logoutSub: ''
@@ -83,5 +88,27 @@ function updateLevel1Templates(){
         $(".user-level1-delete").html(renderTemplate);
       }
     }
+  })
+}
+
+function updateLevel2Templates(){
+  $.post("include/getScenarios.php",{
+  }, function(response,status){
+    scenarios = JSON.parse(response)
+    console.log(scenarios)
+
+    $('.scenario-selector').html("")
+    for(var i = 0 ; i < scenarios.length; i++){
+      console.log(scenarios[i].name)
+      $('.scenario-selector').append("<option>" + scenarios[i].name + "</option>")
+    }
+
+    // for(var i = 0; i < 2; i++){
+
+      var template = $(".level2-scenario-template").html();
+      var renderTemplate = Mustache.render(template, scenarios);
+
+      $(".js-scenario-container").html(renderTemplate);
+    // }
   })
 }

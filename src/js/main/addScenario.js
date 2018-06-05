@@ -49,6 +49,7 @@ $('body').on('click', '.js-save-new-scenario',function(){
                 steps: steps
             }, function(response,status){
                 if(response == "succes"){
+                    showFlashMessage('Scenario succesvol toegevoegd', 'success');
                     $('.js-steps-container').html('');
                     $('.js-new-scenario-name').val('');
                     $('.js-copystep').clone().appendTo('.js-steps-container')

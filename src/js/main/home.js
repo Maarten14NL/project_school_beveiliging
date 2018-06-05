@@ -2,6 +2,7 @@ var loggedIn = false;
 var userLevel = 0;
 var loggedInUser = [];
 var users = [];
+var scenarios = [];
 var alertActive = false;
 
 $(document).ready(function(){

@@ -180,7 +180,7 @@ include 'include/session.php';
                       <th scope="col"></th>
                     </tr>
                   </thead>
-                  <tbody  class="user-level1-edit">
+                  <tbody class="user-level1-edit">
                     <tr>
                       <th>1</th>
                       <td>Docent</td>
@@ -196,12 +196,12 @@ include 'include/session.php';
             <div class="user-navigation">
               <div class="options level_2 option_1">Scenario's kiezen</div>
               <div class="options level_2 option_2">Scenario's maken</div>
-              <div class="options level_2 option_3">Scenario's aanpassen</div>
-              <div class="options level_2 option_4">Scenario's verwijderen</div>
+              <div class="options level_2 option_3">Scenario instellingen</div>
+              <!-- <div class="options level_2 option_4">Scenario's verwijderen</div> -->
             </div>
             <div class="user-body">
               <div class="view view_2-1 hidden">
-                <select class="form-control" placeholder="Gebruikerslevel">
+                <select class="form-control scenario-selector">
                   <option>Brand</option>
                   <option>Gaslek</option>
                 </select>
@@ -262,24 +262,6 @@ include 'include/session.php';
                   </tbody>
                 </table>
               </div>
-              <div class="view view_2-4 hidden">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Naam van scenario</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>1</th>
-                      <td>Docent</td>
-                      <td><button type="button" class="btn btn-primary">verwijderen</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </div>
           <div class="user-level user-level_3 hidden">
@@ -303,17 +285,28 @@ include 'include/session.php';
 
       <template class="level2-scenario-template">
         {{#.}}
-        <tr class="level1-index{{index}}">
+        <tr class="level2-index{{id}}">
           <td>{{id}}</td>
-          <td class="username">{{username}}</td>
+          <td class="username">{{name}}</td>
           <td>
-              <button type="button" class="btn btn-primary ">Aanpassen</button>
-              <button type="button" class="btn btn-primary ">Verwijderen</button>
+              <button type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
+              <button type="button" class="btn btn-primary level2-btn-delete">Verwijderen</button>
           </td>
         </tr>
         {{/.}}
       </template>
+
+      <template class="level2-scenario-edit-template">
+        {{#.}}
+        <div class="js-scenario-edit-step scenario-edit-container">
+          <h4>Stap <span class="js-scenario-edit-{{index}}">{{index}}</span></h4>
+          <input class="js-scenario-edit-edit" type="text" name="" value="{{description}}">
+          <i style="color: red;" class="far fa-times-circle js-scenario-edit-delete"></i>
+        </div>
+        {{/.}}
+      </template>
     </div>
+
     <div class="modal user-settings" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -384,7 +377,29 @@ include 'include/session.php';
             </button>
           </div>
           <div class="modal-body">
-            
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal scenario-edit" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>name</label>
+              <input type="text" class="form-control update-scenarios-name" >
+            </div>
+            <div class="scenario-edit-options-container">
+            </div>
+            <button type="submit" class="btn btn-primary update-scenarios-update">bijwerken</button>
           </div>
         </div>
       </div>

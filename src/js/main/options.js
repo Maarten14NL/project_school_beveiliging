@@ -11,5 +11,8 @@ $("body").on("click", ".options", function(){
     case "1":
       updateLevel1Templates();
       break;
+    case "2":
+      updateLevel2Templates();
+      break;
   }
 })
