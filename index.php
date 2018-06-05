@@ -202,18 +202,18 @@ include 'include/session.php';
                 <div class="user-body">
                     <div class="view view_2-1 hidden">
                         <div class="row">
-                            <select class="form-control scenario-selector">
+                            <select class="form-control scenario-selector js-scenarioselect">
                             </select>
                         </div>
-                        <div class="row">
+                        <div class="row row--disfl">
                             <label class="switch">
-                                <input class="switch__input" type="checkbox">
+                                <input class="switch__input js-switch" type="checkbox">
                                 <span class="switch__span switch__span--round"></span>
                             </label>
-
+                            <p>Laat de student de hulpmiddelen zien</p>
                         </div>
                         <div class="row row--disfl">
-                            <button type="button" class="js-start-scnario btn btn-primary">scenario maken</button>
+                            <button type="button" class="js-start-scenario btn btn-primary">scenario maken</button>
                             <h4 class="js-lokaal"></h4>
                         </div>
                     </div>
@@ -372,12 +372,14 @@ include 'include/session.php';
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Settings</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">Afronden</span>
+                    </button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,9 @@
 .flash-message{
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     right: 20px;
     top: -120px;
     padding: 10px 15px;

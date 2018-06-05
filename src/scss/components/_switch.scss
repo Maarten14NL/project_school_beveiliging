@@ -11,6 +11,7 @@ $dotcol-checked: white;
     display: inline-block;
     width: $switch-width;
     height: $switch-height;
+    margin-right: 20px;
     &__input{
         display: none;
         &:checked + .switch__span{

@@ -56,7 +56,6 @@ $('body').on('click', '.js-save-new-scenario',function(){
                     .removeClass('js-copystep').removeClass('hidden')
                     .addClass('js-step').addClass('Uniquetemp')
                     .find('.js-newnr').removeClass('js-newnr').addClass('js-lastnr').html('1');
-
                 }
             })
         }

@@ -99,8 +99,7 @@ function updateLevel2Templates(){
 
     $('.scenario-selector').html("")
     for(var i = 0 ; i < scenarios.length; i++){
-      console.log(scenarios[i].name)
-      $('.scenario-selector').append("<option>" + scenarios[i].name + "</option>")
+      $('.scenario-selector').append('<option data-id="' + scenarios[i].id  + '">' + scenarios[i].name + "</option>")
     }
 
     // for(var i = 0; i < 2; i++){

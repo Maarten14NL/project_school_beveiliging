@@ -1,13 +1,21 @@
-function showFlashMessage(mes, type, secs = 2000){
+function showFlashMessage(mes, type, dismissable = false, secs = 2000){
     var elem = $('.js-flash');
     $(elem).removeClass('alert-danger').removeClass('alert-success')
         .addClass('flash-message--show')
         .addClass('alert-' + type)
         .html(mes);
-    setTimeout(function () {
-        unshowFlashMessage();
-    }, secs);
+    if (dismissable) {
+        $(elem).append('<button class="js-dismiss btn">Ok</button>');
+    }
+    else {
+        setTimeout(function () {
+            unshowFlashMessage();
+        }, secs);
+    }
 }
+$('body').on('click', '.js-dismiss', function(){
+    unshowFlashMessage();
+});
 
 function unshowFlashMessage(){
     var elem = $('.js-flash');

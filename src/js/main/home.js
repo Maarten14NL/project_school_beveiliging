@@ -18,7 +18,6 @@ $(document).ready(function(){
     $('body').on('click', '.login', function(){
         console.log($('.username').val().toLowerCase())
         console.log($('.password').val().toLowerCase())
-
         $.post("include/login.php" ,{
             loginSub: "",
             username: $('.username').val().toLowerCase(),

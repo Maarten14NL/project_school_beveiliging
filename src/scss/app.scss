@@ -9,6 +9,7 @@
 @import 'components/switch';
 @import 'components/flash-message';
 @import 'components/steps';
+@import 'components/scenariomodal';
 
 .fas, .far, .options{
     cursor: pointer;
@@ -20,4 +21,7 @@
     button{
         margin-right: 10px;
     }
+}
+.row{
+    margin-bottom: 10px;
 }
