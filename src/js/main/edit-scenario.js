@@ -30,8 +30,24 @@ $('body').on('click', '.level2-btn-edit', function(){
 })
 
 $('body').on('click', '.update-scenarios-update', function(){
-  console.log("update")
-  $('.scenario-edit').modal('hide');
+  descriptionNames = [];
+  console.log(scenarios[index])
+  for(var i = 1 ; i < (descriptions.length+1); i++){
+    if($('.js-scenario-edit-'+i).val() != ""){
+      descriptionNames.push($('.js-scenario-edit-'+i).val())
+    }
+  }
+
+  console.log(descriptionNames)
+
+  $.post("include/updateScenario.php" ,{
+    scenarioID: scenarios[index].id,
+    name: $('.update-scenarios-name').val(),
+    descriptions: descriptions
+  }, function(response,status){
+    console.log(response)
+    $('.scenario-edit').modal('hide');
+  })
 })
 
 $('body').on('click', '.js-scenario-edit-delete',function(){
