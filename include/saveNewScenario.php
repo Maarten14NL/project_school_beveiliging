@@ -1,7 +1,10 @@
 <?php
 include 'database.php';
+
+
 $name = $_POST['name'];
 $steps= $_POST['steps'];
+
 $sql = 'INSERT INTO scenarios (name) VALUES (?);';
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $name);
