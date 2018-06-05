@@ -13,3 +13,11 @@
 .fas, .far, .options{
     cursor: pointer;
 }
+.row--disfl{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    button{
+        margin-right: 10px;
+    }
+}

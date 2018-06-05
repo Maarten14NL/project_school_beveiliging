@@ -212,8 +212,9 @@ include 'include/session.php';
                             </label>
 
                         </div>
-                        <div class="row">
-                            <button type="button" class="btn btn-primary">scenario maken</button>
+                        <div class="row row--disfl">
+                            <button type="button" class="js-start-scnario btn btn-primary">scenario maken</button>
+                            <h4 class="js-lokaal"></h4>
                         </div>
                     </div>
                     <div class="view view_2-2">
