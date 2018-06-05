@@ -294,15 +294,15 @@ include 'include/session.php';
             {{/.}}
         </template>
 
-        <template class="level2-scenario-edit-template">
-            {{#.}}
-            <div class="js-scenario-edit-step scenario-edit-container">
-                <h4>Stap <span class="js-scenario-edit-{{index}}">{{index}}</span></h4>
-                <input class="js-scenario-edit-edit" type="text" name="" value="{{description}}">
-                <i style="color: red;" class="far fa-times-circle js-scenario-edit-delete"></i>
-            </div>
-            {{/.}}
-        </template>
+      <template class="level2-scenario-edit-template">
+        {{#.}}
+        <div class="js-scenario-edit-step scenario-edit-container">
+          <h4>Stap <span class="js-scenario-edit-{{index}}">{{index}}</span></h4>
+          <input class="js-scenario-edit-edit" type="text" name="" value="{{description}}">
+          <!-- <i style="color: red;" class="far fa-times-circle js-scenario-edit-delete"></i> -->
+        </div>
+        {{/.}}
+      </template>
     </div>
 
     <div class="modal user-settings" tabindex="-1" role="dialog">
