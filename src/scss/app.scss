@@ -56,3 +56,12 @@ a:hover{color: darken($primary, 30);}
 	background: darken($secondary, 10);
     border-color: darken($secondary, 10);
 }
+
+.bg-primary
+{
+	background: $primary !important;
+}
+.bg-secondary
+{
+	background: $secondary !important;
+}

@@ -3,7 +3,7 @@ $switch-height: 22.5px;
 $switch-dot-size: 15px;
 $border-gap: 4px;
 $bgc-unchecked: #ccc;
-$bgc-checked: #2196F3;
+$bgc-checked: $primary;
 $dotcol-unchecked: white;
 $dotcol-checked: white;
 .switch {

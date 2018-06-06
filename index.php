@@ -27,8 +27,9 @@ include 'include/session.php';
 
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="img/RocTeraa-Logo.png" class="teraaloga">
-        <a class="navbar-brand" href="#">Beveiligings Protocol</a>
+        <a class="navbar-brand" href="#">
+            <img src="img/RocTeraa-Logo.png" class="teraaloga">
+        </a>
         <div class="login-status-container">
             <div class="login-status">U bent nog niet ingelogd</div>
             <button type="button" class="btn btn-secondary logout hidden">uitloggen</button>
@@ -173,14 +174,14 @@ include 'include/session.php';
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="loggin-addon1"><i class="fas fa-user"></i></span>
+                            <span class="input-group-text bg-primary text-white" id="loggin-addon1"><i class="fas fa-user"></i></span>
                         </div>
                         <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam" aria-describedby="loggin-addon1">
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="password-addon1"><i class="fas fa-unlock"></i></span>
+                            <span class="input-group-text bg-primary text-white" id="password-addon1"><i class="fas fa-unlock"></i></span>
                         </div>
                     <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord" aria-describedby="password-addon1">
                     </div>
@@ -249,8 +250,13 @@ include 'include/session.php';
                 <div class="user-body">
                     <div class="view view_2-1 hidden m-4 p-4">
                         <div class="row">
-                            <select class="form-control scenario-selector js-scenarioselect">
-                            </select>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <label class="input-group-text bg-primary text-white" for="choosScenario">Kies Scenario</label>
+                              </div>
+                              <select class="form-control scenario-selector js-scenarioselect" id="choosScenario">
+                              </select>
+                            </div>
                         </div>
                         <div class="row row--disfl">
                             <label class="switch">
@@ -399,7 +405,7 @@ include 'include/session.php';
                         <label>herhaling wachtwoord</label>
                         <input type="password" class="form-control settings-inputs settings-repeat-password" >
                     </div>
-                    <button type="submit" class="btn btn-success settings-update">bijwerken</button>
+                    <button type="submit" class="btn btn-secondary settings-update">bijwerken</button>
                     <button type="submit" class="btn btn-danger settings-cancel">cancel</button>
                 </div>
             </div>
