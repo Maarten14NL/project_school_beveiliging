@@ -1,16 +1,33 @@
 .flash-message{
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    right: 20px;
-    top: -120px;
     padding: 10px 15px;
+<<<<<<< HEAD
     z-index: 2000;
+=======
+    z-index: 99;
+>>>>>>> newnotification
     transition: .2s ease;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    transform: translateX(200px);
     &--show{
-        top: 20px;
+        transform: translateX(0px);
+    }
+    &-container{
+        position: fixed;
+        top: 50px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        flex-direction: column;
+        z-index: 10;
+        transition: .2s ease;
     }
     &.alert-success{
         color: #fff;
