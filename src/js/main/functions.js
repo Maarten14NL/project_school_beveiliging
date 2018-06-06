@@ -37,7 +37,7 @@ function logout(){
   $('.settings').addClass("hidden")
   loggedIn = false;
   userLevel = 0;
-  console.log("logout")
+  // console.log("logout")
 
   $.post("include/login.php",{
       logoutSub: ''
@@ -77,6 +77,11 @@ function updateLevel1Templates(){
         }
       }
 
+      $(".new-user-name").val("");
+      $(".new-user-password").val("");
+      $(".new-user-options").removeAttr("selected");
+      $(".new-user-option1").attr("selected","selected");
+
       // console.log(users)
 
       var template = $(".level1-user-template").html();
@@ -95,7 +100,7 @@ function updateLevel2Templates(){
   $.post("include/getScenarios.php",{
   }, function(response,status){
     scenarios = JSON.parse(response)
-    console.log(scenarios)
+    // console.log(scenarios)
 
     $('.scenario-selector').html("")
     for(var i = 0 ; i < scenarios.length; i++){
@@ -110,4 +115,26 @@ function updateLevel2Templates(){
       $(".js-scenario-container").html(renderTemplate);
     // }
   })
+}
+
+var confirmClassOld = "";
+var deleteClassOld = "";
+function confirmModal(title, body, confirmClass, deleteClass){
+  if(deleteClass == undefined){
+    deleteClass = "close-confirm"
+  }
+  if(confirmClass != "" && deleteClassOld != ""){
+    $('.confirm-save-change').removeClass(confirmClassOld)
+    $('.confirm-delete-change').removeClass(deleteClassOld)
+  }
+  $('.confirm-save-change').addClass(confirmClass)
+  $('.confirm-delete-change').addClass(deleteClass)
+
+  confirmClassOld = confirmClass;
+  deleteClassOld = deleteClass;
+
+  $('.confirm-title').text(title)
+  $('.confirm-text').text(body)
+
+  $('.js-confirm').modal("show")
 }

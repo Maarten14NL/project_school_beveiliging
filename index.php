@@ -163,9 +163,9 @@ include 'include/session.php';
                         <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
                         <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
                         <select class="form-control new-user-level" placeholder="Gebruikerslevel">
-                            <option value="" disabled selected>Select your option</option>
-                            <option value="3">Student</option>
-                            <option value="2">Docent</option>
+                            <option class="new-user-options new-user-option1" value="" disabled selected>Select your option</option>
+                            <option class="new-user-options" value="3">Student</option>
+                            <option class="new-user-options" value="2">Docent</option>
                         </select>
                         <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
                     </div>
@@ -405,6 +405,26 @@ include 'include/session.php';
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal js-confirm" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title confirm-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="confirm-text">Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary confirm-save-change">Accepteren</button>
+            <button type="button" class="btn btn-secondary confirm-delete-change" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="dest/js/main.js" charset="utf-8"></script>
