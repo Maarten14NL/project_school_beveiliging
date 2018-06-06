@@ -59,7 +59,7 @@ include 'include/session.php';
                 <div class="menu-item floor_3">Verdieping 3</div>
             </div> -->
 
-            <div class="verdieping verdieping__0 hidden">
+            <div class="verdieping verdieping__0 hidden m-4">
                 <div class="fill1 filler"></div>
                 <div class="fill2 filler"></div>
                 <div class="ingang lokaal">Ingang</div>
@@ -86,7 +86,7 @@ include 'include/session.php';
                 <div class="L001A lokaal">0.01A</div>
                 <div class="L0E1 lokaal">--</div>
             </div>
-            <div class="verdieping verdieping__1 hidden">
+            <div class="verdieping verdieping__1 hidden m-4">
                 <div class="L118 lokaal">1.18</div>
                 <div class="L116 lokaal">1.16</div>
                 <div class="L114 lokaal">1.14</div>
@@ -108,7 +108,7 @@ include 'include/session.php';
                 <div class="L113 lokaal">1.13</div>
                 <div class="v1-filler-1 filler"></div>
             </div>
-            <div class="verdieping verdieping__2 hidden">
+            <div class="verdieping verdieping__2 hidden m-4">
                 <div class="v2-filler-1 filler"></div>
                 <div class="v2-filler-2 filler filler--white"></div>
                 <div class="v2-filler-3 filler"></div>
@@ -142,7 +142,7 @@ include 'include/session.php';
                 <div class="L218a lokaal">2.18a</div>
                 <div class="L218b lokaal">2.18b</div>
             </div>
-            <div class="verdieping verdieping__3 ">
+            <div class="verdieping verdieping__3 m-4 ">
                 <div class="fill3 filler"></div>
                 <div class="L316 lokaal">3.16</div>
                 <div class="L315 lokaal">3.15</div>
@@ -165,26 +165,26 @@ include 'include/session.php';
                 <div class="L3E3 lokaal"></div>
             </div>
         </div>
-        <div class="col m-4 p-4 card">
-            <div class="login-container">
-
+        <div class="col m-4 p-4">
+            <div class="login-container card m-4 p-4">
+                <h5 class="card-title">Login</h5>
                 <div class="form-group">
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="loggin-addon1">@</span>
+                            <span class="input-group-text" id="loggin-addon1"><i class="fas fa-user"></i></span>
                         </div>
                         <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam" aria-describedby="loggin-addon1">
                     </div>
                     
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="password-addon1">@</span>
+                            <span class="input-group-text" id="password-addon1"><i class="fas fa-unlock"></i></span>
                         </div>
                     <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord" aria-describedby="password-addon1">
                     </div>
 
-                    <button type="button" class="btn btn-block btn-secondary login">inloggen</button>
+                    <button type="button" class="btn btn-block btn-secondary login"><I></I>nloggen</button>
                 </div>
             </div>
             <div class="user-level user-level_1 hidden">
