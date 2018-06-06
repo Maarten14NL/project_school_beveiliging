@@ -1,10 +1,12 @@
 $lokaal-color: #d3d3d3;
 $filler-color: #a9a9a9;
+$text-color: black;
 .lokaal {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    color: $text-color;
     background-color: $lokaal-color;
     z-index: 1;
     cursor: pointer;

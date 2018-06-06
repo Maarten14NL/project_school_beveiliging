@@ -39,7 +39,7 @@ include 'include/session.php';
 
     <!-- <button class="btn">hallo test</button> -->
     <div class="row">
-        <div class="col-6-sm container-left m-4 p-4">
+        <div class="col-sm-6">
             <ul class="nav nav-tabs">
               <li class="nav-item">
                 <a class="nav-link active menu-item floor_0" href="#">Begane Grond</a>
@@ -167,7 +167,7 @@ include 'include/session.php';
                 <div class="L3E3 lokaal"></div>
             </div>
         </div>
-        <div class="col m-4 p-4">
+        <div class="col-sm-6">
             <div class="login-container card m-4 p-4">
                 <h5 class="card-title">Login</h5>
                 <div class="form-group">
