@@ -30,7 +30,7 @@ function checkAlert() {
             finished: 1
         }, function(response,status){
             var data = JSON.parse(response);
-            console.log(data);
+            // console.log(data);
             for (var i = 0; i < data.length; i++) {
                 showFlashMessage(data[i].name + " in lokaal: " + data[i].location + " is afgerond", "success", true);
                 $.post("include/finishActiveScenario.php",{
@@ -38,7 +38,7 @@ function checkAlert() {
                     finished: 1,
                     activeid: data[i].active_id
                 }, function(response,status){
-                    
+
                 });
             }
 
@@ -49,7 +49,7 @@ function checkAlert() {
 setTimeout(checkAlert, 1000);
 $('body').on('click', '.js-close-scenario-modal', function(){
     var activeid = $(this).attr('data-activeid');
-    console.log(activeid);
+    // console.log(activeid);
     $.post("include/finishActiveScenario.php",{
         activeid : activeid,
         finished: 1,
@@ -62,7 +62,7 @@ $('body').on('click', '.js-close-scenario-modal', function(){
         });
 });
 $('.scenario').on('hidden.bs.modal', function () {
-    console.log("close")
+    // console.log("close")
     if(loggedInUser.level == 3 && loggedIn == true){
         alertActive = false;
     }
