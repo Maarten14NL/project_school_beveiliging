@@ -298,13 +298,8 @@ include 'include/session.php';
                                         <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
                                     </td>
                                 </tr>
-<<<<<<< Updated upstream
-                                <tr class="js-step steps__step">
-=======
 
-                                <!-- copy trs -->
-                                <tr class="js-copystep hidden steps__step">
->>>>>>> Stashed changes
+                                <tr class="js-step steps__step">
                                     <td>
                                         <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
                                     </td>
