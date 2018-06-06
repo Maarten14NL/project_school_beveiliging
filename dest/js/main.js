@@ -113,7 +113,7 @@ function checkAlert() {
                     finished: 1,
                     activeid: data[i].active_id
                 }, function(response,status){
-                    
+
                 });
             }
 
@@ -342,12 +342,6 @@ function showFlashMessage(mes, type, dismissable = false, secs = 2000){
         $('#' + randStr).append('<button data-id="' + randStr + '" class="js-dismiss btn btn-block">Ok</button>');
     }
 }
-<<<<<<< HEAD
-=======
-// showFlashMessage('halloasdkjasdkjdhaskasdhkjasdhkasdjhsadkjhsdkjhd','success', true);
-// showFlashMessage('halloasdkjasdkjdhaskasdhkjasdhkasdjhsadkjhsdkjhd','danger', true);
-// showFlashMessage('halloasdkjasdkjdhaskasdhkjasdhkasdjhsadkjhsdkjhd','warning', true);
->>>>>>> 564509244f3a61ae57d9bc3683a130fbc8a04fd3
 $('body').on('click', '.js-dismiss', function(){
     var delstr = $(this).data('id');
     deleteFlashMessage(delstr);
