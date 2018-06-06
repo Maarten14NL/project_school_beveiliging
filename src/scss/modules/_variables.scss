@@ -1,34 +1,5 @@
-$game-width: 360px; //Width of the entire game
+$primary: #a0579a;
+$primary-hover: #7a4b76;
 
-// Variables for the dices
-$dice_size: $game-width / 6 - 10px;
-$dice_bgc: #ff1f21; // background color
-$dice_bc: black; // border color
-$dice_bs: 2px; // border size
-$dice_br: 5px; // border radius
-
-// Variables for dice points etc.
-$dice_point_size: 10px;
-$dice_point_bc: white;
-$dice_point_edge_dist: 5px;
-
-// In the full house dice, there are some adjustable things
-$house_triangle_width: 20px; // each border size, total width = this * 2
-$house_triangle_height: 20px;
-$house_square_height: 10px;
-$house_square_width: 20px; // gap is included
-$house_square_gap: 5px;
-$total_height: $house_triangle_height + $house_square_height;
-
-// Variables for the small cards in the street dices (small and large street)
-$street_cards_width: 13px;
-$street_cards_height: 20px;
-$street_cards_left_start: 10px;
-$street_cards_left_gap: 5px;
-$street_cards_top_start: 13px;
-$street_cards_top_gap: 1px;
-$street_cards_big_diff: 3px;
-$street_card_bgc: white;
-$street_card_bc: #ff1f21;
-
-$primary: green;
+$secondary: #0c9a9a;
+$secondary-hover: #0c9a9a;
