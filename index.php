@@ -34,15 +34,31 @@ include 'include/session.php';
             <i class="fas fa-cog settings hidden"></i>
         </div>
     </nav>
+
     <!-- <button class="btn">hallo test</button> -->
     <div class="row">
-        <div class="col-6 container-left">
-            <div class="menu">
+        <div class="col-6-sm container-left m-4 p-4">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active menu-item floor_0" href="#">Begane Grond</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu-item floor_1" href="#">Verdieping 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu-item floor_2" href="#">Verdieping 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu-item floor_3" href="#">Verdieping 3</a>
+              </li>
+            </ul>
+<!--             <div class="menu">
                 <div class="menu-item floor_0">Begane Grond</div>
                 <div class="menu-item floor_1">Verdieping 1</div>
                 <div class="menu-item floor_2">Verdieping 2</div>
                 <div class="menu-item floor_3">Verdieping 3</div>
-            </div>
+            </div> -->
+
             <div class="verdieping verdieping__0 hidden">
                 <div class="fill1 filler"></div>
                 <div class="fill2 filler"></div>
@@ -149,13 +165,28 @@ include 'include/session.php';
                 <div class="L3E3 lokaal"></div>
             </div>
         </div>
-        <div class="col">
+        <div class="col m-4 p-4 card">
             <div class="login-container">
-                <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam">
-                <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord">
-                <button type="button" class="btn btn-block btn-secondary login">inloggen</button>
-            </div>
 
+                <div class="form-group">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="loggin-addon1">@</span>
+                        </div>
+                        <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam" aria-describedby="loggin-addon1">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="password-addon1">@</span>
+                        </div>
+                    <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord" aria-describedby="password-addon1">
+                    </div>
+
+                    <button type="button" class="btn btn-block btn-secondary login">inloggen</button>
+                </div>
+            </div>
             <div class="user-level user-level_1 hidden">
                 <div class="user-navigation">
                     <div class="options level_1 option_1">Gebruiker Toevoegen</div>
