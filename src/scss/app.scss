@@ -27,41 +27,41 @@
 }
 body
 {
-	overflow-x: hidden;
-	    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
 }
-a{color: $primary;}
-a:hover{color: darken($primary, 30);}
+a{
+    color: $primary;
+    &:hover{
+        color: darken($primary, 30);
+    }
+}
 
 .btn-primary
 {
-	background: $primary;
+    background: $primary;
     border-color: $primary;
-}
-
-.btn-primary:hover
-{
-	background: darken($primary, 30);
-    border-color: darken($primary, 30);
+    &:hover{
+        background: darken($primary, 30);
+        border-color: darken($primary, 30);
+    }
 }
 
 .btn-secondary
 {
-	background: $secondary;
+    background: $secondary;
     border-color: $secondary;
-}
-
-.btn-secondary:hover
-{
-	background: darken($secondary, 10);
-    border-color: darken($secondary, 10);
+    &:hover{
+        background: darken($secondary, 10);
+        border-color: darken($secondary, 10);
+    }
 }
 
 .bg-primary
 {
-	background: $primary !important;
+    background: $primary !important;
 }
 .bg-secondary
 {
-	background: $secondary !important;
+    background: $secondary !important;
 }
