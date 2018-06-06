@@ -184,7 +184,7 @@ include 'include/session.php';
                     <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord" aria-describedby="password-addon1">
                     </div>
 
-                    <button type="button" class="btn btn-block btn-secondary login"><I></I>nloggen</button>
+                    <button type="button" class="btn btn-block btn-secondary login"><I></I>Inloggen</button>
                 </div>
             </div>
             <div class="user-level user-level_1 hidden">
@@ -227,12 +227,24 @@ include 'include/session.php';
                 </div>
             </div>
             <div class="user-level user-level_2 hidden">
-                <div class="user-navigation">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="options level_2 option_1 nav-link active" href="#">Scenario's kiezen</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="options level_2 option_2 nav-link" href="#">Scenario's maken</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="options level_2 option_3 nav-link" href="#">Scenario instellingen</a>
+                  </li>
+                </ul>
+
+                <!-- <div class="user-navigation">
                     <div class="options level_2 option_1">Scenario's kiezen</div>
                     <div class="options level_2 option_2">Scenario's maken</div>
                     <div class="options level_2 option_3">Scenario instellingen</div>
-                    <!-- <div class="options level_2 option_4">Scenario's verwijderen</div> -->
-                </div>
+                    <div class="options level_2 option_4">Scenario's verwijderen</div>
+                </div> -->
                 <div class="user-body">
                     <div class="view view_2-1 hidden">
                         <div class="row">
@@ -265,18 +277,42 @@ include 'include/session.php';
                             <button class="btn btn-success js-addstep">Extra stap</button>
                         </div>
                         <h3>Voeg stappen toe</h3>
-                        <div class="js-steps-container steps">
-                            <div class="js-step steps__step">
-                                <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
-                                <input class="js-newstep" type="text" name="" value="">
-                                <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
-                            </div>
-                        </div>
-                        <div class="js-copystep hidden steps__step">
-                            <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
-                            <input class="js-newstep" type="text" name="" value="">
-                            <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
-                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Stap</th>
+                                    <th>Naam</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="js-steps-container steps">
+                                <tr class="js-step steps__step">
+                                    <td>
+                                        <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4> 
+                                    </td>
+                                    <td>
+                                        <input class="js-newstep" type="text" name="" value="">
+                                    </td>
+                                    <td>
+                                        <i style="color: red;" class="far fa-times-circle js-delete-step"></i> 
+                                    </td>
+                                </tr>
+                                
+                                <!-- copy trs -->
+                                <tr class="js-copystep hidden steps__step">
+                                    <td>
+                                        <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
+                                    </td>
+                                    <td>
+                                        <input class="js-newstep" type="text" name="" value="">
+                                    </td>
+                                    <td>
+                                        <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                     <div class="view view_2-3 hidden">
                         <table class="table">

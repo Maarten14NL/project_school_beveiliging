@@ -5,8 +5,8 @@ $("body").on("click", ".options", function(){
 
   $(".view").addClass("hidden")
   $(".view_"+level+"-"+option).removeClass("hidden")
-  $('.options').removeClass('options--active');
-  $(this).addClass('options--active');
+  $('.options').removeClass('active');
+  $(this).addClass('active');
   switch (level) {
     case "1":
       updateLevel1Templates();
