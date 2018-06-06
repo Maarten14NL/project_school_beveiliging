@@ -20,8 +20,11 @@ include 'include/session.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="js-flash flash-message">
+    <!-- <div class="js-flash flash-message">
         hallo
+    </div> -->
+    <div class="js-fl-cont flash-message-container">
+
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -377,7 +380,7 @@ include 'include/session.php';
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close js-close-scenario-modal" data-dismiss="modal" data-activeId="0" aria-label="Close">
                         <span aria-hidden="true">Afronden</span>
                     </button>
                 </div>

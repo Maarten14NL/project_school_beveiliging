@@ -2,7 +2,7 @@
   include 'database.php';
 
   $active_scenarios = [];
-  $sql = "SELECT scenarios.id as scenario_id, active_scenarios.location, active_scenarios.finished, active_scenarios.alerted, active_scenarios.tools, scenarios.name FROM active_scenarios INNER JOIN scenarios ON active_scenarios.scenarios_id = scenarios.id  WHERE finished = 0";
+  $sql = "SELECT scenarios.id as scenario_id,active_scenarios.id as active_id, active_scenarios.location, active_scenarios.finished, active_scenarios.alerted, active_scenarios.tools, scenarios.name FROM active_scenarios INNER JOIN scenarios ON active_scenarios.scenarios_id = scenarios.id  WHERE finished = 0";
   $stmt = $conn->prepare($sql);
   $stmt->execute();
   $result = $stmt->get_result();
