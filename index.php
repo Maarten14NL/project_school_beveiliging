@@ -176,7 +176,7 @@ include 'include/session.php';
                         </div>
                         <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam" aria-describedby="loggin-addon1">
                     </div>
-                    
+
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="password-addon1">@</span>

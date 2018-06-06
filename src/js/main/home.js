@@ -7,12 +7,17 @@ var alertActive = false;
 
 $(document).ready(function(){
     console.log("home.js loaded")
+    $('.verdieping').addClass("hidden")
+    $('.verdieping__0').removeClass("hidden")
+
     $('body').on('click', '.menu-item', function(){
         var id = $(this).attr("class").split('_')[1];
         console.log(id)
 
         $('.verdieping').addClass("hidden")
+        $('.menu-item').removeClass("active")
         $('.verdieping__'+id).removeClass("hidden")
+        $('.floor_'+id).addClass("active")
     })
 
     $('body').on('click', '.login', function(){
