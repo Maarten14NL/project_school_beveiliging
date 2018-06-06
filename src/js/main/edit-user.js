@@ -25,7 +25,7 @@ $('body').on('click', '.update-users-update', function(){
   // console.log($('.update-users-password').val())
   // console.log($('.update-users-repeat-password').val())
 
-  if($('.update-users-username').val() == "" && $('.update-users-password').val() == "" && $('.update-users-repeat-password').val() == ""){
+  if($('.update-users-username').val() == ""){
     console.log("gebruikersnaam en wachtwoord mogen niet leeg zijn");
     showFlashMessage('Gebruikers naam mag niet leeg zijn', 'danger');
   }else{
@@ -53,4 +53,8 @@ $('body').on('click', '.update-users-update', function(){
       })
     }
   }
+})
+
+$('body').on('click','.update-users-cancel',function(){
+  $('.update-users').modal('hide');
 })

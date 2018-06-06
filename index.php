@@ -30,7 +30,7 @@ include 'include/session.php';
         <a class="navbar-brand" href="#">Navbar</a>
         <div class="login-status-container">
             <div class="login-status">U bent nog niet ingelogd</div>
-            <button type="button" class="btn btn-primary logout hidden">uitloggen</button>
+            <button type="button" class="btn btn-secondary logout hidden">uitloggen</button>
             <i class="fas fa-cog settings hidden"></i>
         </div>
     </nav>
@@ -153,7 +153,7 @@ include 'include/session.php';
             <div class="login-container">
                 <input class="form-control form-control-lg username" type="text" placeholder="Gebruikersnaam">
                 <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord">
-                <button type="button" class="btn btn-lg btn-primary login">inloggen</button>
+                <button type="button" class="btn btn-block btn-secondary login">inloggen</button>
             </div>
 
             <div class="user-level user-level_1 hidden">
@@ -216,7 +216,7 @@ include 'include/session.php';
                             <p>Laat de student de hulpmiddelen zien</p>
                         </div>
                         <div class="row row--disfl">
-                            <button type="button" class="js-start-scenario btn btn-primary">scenario maken</button>
+                            <button type="button" class="js-start-scenario btn btn-secondary">scenario maken</button>
                             <h4 class="js-lokaal"></h4>
                         </div>
                     </div>
@@ -281,7 +281,7 @@ include 'include/session.php';
                 <td>{{username}}</td>
                 <td>{{level}}</td>
                 <td><button type="button" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
-                <td><button type="button" class="btn btn-primary level1-btn-delete">verwijderen</button></td>
+                <td><button type="button" class="btn btn-danger level1-btn-delete">verwijderen</button></td>
             </tr>
             {{/.}}
         </template>
@@ -293,7 +293,7 @@ include 'include/session.php';
                 <td class="username">{{name}}</td>
                 <td>
                     <button type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
-                    <button type="button" class="btn btn-primary level2-btn-delete">Verwijderen</button>
+                    <button type="button" class="btn btn-danger level2-btn-delete">Verwijderen</button>
                 </td>
             </tr>
             {{/.}}
@@ -332,7 +332,8 @@ include 'include/session.php';
                         <label>herhaling wachtwoord</label>
                         <input type="password" class="form-control settings-inputs settings-repeat-password" >
                     </div>
-                    <button type="submit" class="btn btn-primary settings-update">bijwerken</button>
+                    <button type="submit" class="btn btn-success settings-update">bijwerken</button>
+                    <button type="submit" class="btn btn-danger settings-cancel">cancel</button>
                 </div>
             </div>
         </div>
@@ -364,7 +365,8 @@ include 'include/session.php';
                         <option class="update-user-options update-user-option1" value="3">Student</option>
                         <option class="update-user-options update-user-option2" value="2">Docent</option>
                     </select>
-                    <button type="submit" class="btn btn-primary update-users-update">bijwerken</button>
+                    <button type="submit" class="btn btn-success update-users-update">bijwerken</button>
+                    <button type="submit" class="btn btn-danger update-users-cancel">cancel</button>
                 </div>
             </div>
         </div>
@@ -423,8 +425,8 @@ include 'include/session.php';
             <p class="confirm-text">Modal body text goes here.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary confirm-save-change">Accepteren</button>
-            <button type="button" class="btn btn-secondary confirm-delete-change" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-success confirm-save-change">Accepteren</button>
+            <button type="button" class="btn btn-danger confirm-delete-change" data-dismiss="modal">Cancel</button>
           </div>
         </div>
       </div>
