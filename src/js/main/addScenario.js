@@ -1,5 +1,6 @@
 $('body').on('propertychange input', '.js-newstep',function(e){
-    var parent = $(this).closest('.js-step')
+    var parent = $(this).closest('.js-step');
+    console.log(parent);
     if ($(parent).is(':last-child')) {
         var nrstr = $('.js-lastnr').html();
         var newnr = parseInt(nrstr) + 1;
@@ -11,7 +12,7 @@ $('body').on('propertychange input', '.js-newstep',function(e){
     }
 });
 function updateSteps(){
-    var count = 1;
+    var count = 0;
     $('.js-stepnr').each(function () {
         $(this).html(count);
         count++;

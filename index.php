@@ -286,18 +286,6 @@ include 'include/session.php';
                                 </tr>
                             </thead>
                             <tbody class="js-steps-container steps">
-                                <tr class="js-step steps__step">
-                                    <td>
-                                        <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4> 
-                                    </td>
-                                    <td>
-                                        <input class="js-newstep" type="text" name="" value="">
-                                    </td>
-                                    <td>
-                                        <i style="color: red;" class="far fa-times-circle js-delete-step"></i> 
-                                    </td>
-                                </tr>
-                                
                                 <!-- copy trs -->
                                 <tr class="js-copystep hidden steps__step">
                                     <td>
@@ -310,7 +298,17 @@ include 'include/session.php';
                                         <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
                                     </td>
                                 </tr>
-
+                                <tr class="js-step steps__step">
+                                    <td>
+                                        <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
+                                    </td>
+                                    <td>
+                                        <input class="js-newstep" type="text" name="" value="">
+                                    </td>
+                                    <td>
+                                        <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
