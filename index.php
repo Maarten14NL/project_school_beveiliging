@@ -27,7 +27,7 @@ include 'include/session.php';
 
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Beveiligings Protocol</a>
         <div class="login-status-container">
             <div class="login-status">U bent nog niet ingelogd</div>
             <button type="button" class="btn btn-secondary logout hidden">uitloggen</button>
@@ -246,7 +246,7 @@ include 'include/session.php';
                     <div class="options level_2 option_4">Scenario's verwijderen</div>
                 </div> -->
                 <div class="user-body">
-                    <div class="view view_2-1 hidden">
+                    <div class="view view_2-1 hidden m-4 p-4">
                         <div class="row">
                             <select class="form-control scenario-selector js-scenarioselect">
                             </select>
@@ -263,7 +263,7 @@ include 'include/session.php';
                             <h4 class="js-lokaal"></h4>
                         </div>
                     </div>
-                    <div class="view view_2-2">
+                    <div class="view view_2-2 m-4 p-4">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -278,7 +278,7 @@ include 'include/session.php';
                         </div>
                         <h3>Voeg stappen toe</h3>
                         <table class="table">
-                            <thead>
+                            <thead class="thead-dark">
                                 <tr>
                                     <th>Stap</th>
                                     <th>Naam</th>
@@ -298,7 +298,13 @@ include 'include/session.php';
                                         <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
                                     </td>
                                 </tr>
+<<<<<<< Updated upstream
                                 <tr class="js-step steps__step">
+=======
+
+                                <!-- copy trs -->
+                                <tr class="js-copystep hidden steps__step">
+>>>>>>> Stashed changes
                                     <td>
                                         <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
                                     </td>
@@ -312,8 +318,8 @@ include 'include/session.php';
                             </tbody>
                         </table>
                     </div>
-                    <div class="view view_2-3 hidden">
-                        <table class="table">
+                    <div class="view view_2-3 hidden m-4 p-4">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
