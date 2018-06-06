@@ -27,6 +27,7 @@ include 'include/session.php';
 
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="img/RocTeraa-Logo.png" class="teraaloga">
         <a class="navbar-brand" href="#">Beveiligings Protocol</a>
         <div class="login-status-container">
             <div class="login-status">U bent nog niet ingelogd</div>
