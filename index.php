@@ -271,14 +271,14 @@ include 'include/session.php';
                         </div>
                     </div>
                     <div class="view view_2-2 m-4 p-4">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Naam:</th>
-                                    <th> <input type="text" class="js-new-scenario-name" name="scenario-name" value=""> </th>
-                                </tr>
-                            </thead>
-                        </table>
+
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text bg-secondary text-white" id="scenario-name">Naam:</span>
+                          </div>
+                          <input type="text" class="js-new-scenario-name" name="scenario-name" value="" aria-describedby="scenario-name">
+                        </div>
+
                         <div class="buttons-container">
                             <button class="btn btn-success js-save-new-scenario">Opslaan</button>
                             <button class="btn btn-success js-addstep">Extra stap</button>
