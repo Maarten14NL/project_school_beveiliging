@@ -1,6 +1,12 @@
+var rowClass;
+var row;
 $('body').on('click', '.level2-btn-delete',function(){
-  var rowClass = $(this).parent().parent().attr("class");
-  var row = $(this).parent().parent().attr("class").split("index")[1];
+  confirmModal("Senario Verwijderen","Weet u zeker dat u dit scenario wilt verwijderen","confirm-scenario-delete");
+  rowClass = $(this).parent().parent().attr("class");
+  row = $(this).parent().parent().attr("class").split("index")[1];
+})
+
+$('body').on('click','.confirm-scenario-delete',function(){
   for(var i = 0; i < scenarios.length; i++){
     if(scenarios[i].id == row){
       $.post("include/deleteScenarios.php" ,{
