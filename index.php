@@ -190,16 +190,15 @@ include 'include/session.php';
                 </div>
             </div>
             <div class="user-level user-level_1 hidden">
-                <ul class="nav nav-tab user-navigation">
+                <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <!-- <a class="options level_2 option_1 nav-link active option2_1">Scenario's kiezen</a> -->
-                    <a class="options level_1 option_1 nav-link active">Gebruiker Toevoegen</a>
+                    <a class="options level_1 option_1 nav-link active" href="#">Gebruiker Toevoegen</a>
                   </li>
                   <li class="nav-item">
-                    <!-- <a class="options level_2 option_2 nav-link  option2_2">Scenario's maken</a> -->
-                    <a class="options level_1 option_2 nav-link">Gebruiker Instellingen</a>
+                    <a class="options level_1 option_2 nav-link" href="#">Gebruiker Instellingen</a>
                   </li>
                 </ul>
+
                 <div class="user-body">
                     <div class="view view_1-1">
                         <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
