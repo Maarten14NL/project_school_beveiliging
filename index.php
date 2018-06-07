@@ -46,7 +46,7 @@ include 'include/session.php';
                     <a class="nav-link menu-item floor_3" href="#">Verdieping 3</a>
                 </li>
             </ul>
-            <?php include 'floor_plans.html'; ?>
+            <?php include 'partials/floor_plans.html'; ?>
         </div>
         <div class="col-sm-6">
             <div class="login-container card m-4 p-4">
@@ -67,13 +67,13 @@ include 'include/session.php';
                     <button type="button" class="btn btn-block btn-secondary login"><I></I>Inloggen</button>
                 </div>
             </div>
-            <?php include 'user_level1.html'; ?>
-            <?php include 'user_level2.html'; ?>
+            <?php include 'partials/user_level1.html'; ?>
+            <?php include 'partials/user_level2.html'; ?>
             <div class="user-level user-level_3 hidden"></div>
         </div>
     </div>
-    <?php include 'templates.html'; ?>
-    <?php include 'modals.html'; ?>
+    <?php include 'partials/templates.html'; ?>
+    <?php include 'partials/modals.html'; ?>
 
     <script src="dest/js/main.js" charset="utf-8"></script>
 </body>
