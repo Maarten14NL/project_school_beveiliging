@@ -7,6 +7,7 @@ function checkAlert() {
             response = JSON.parse(response);
             if(response.length > 0){
                 $('.scenario').modal('show');
+                $(".user-level_3").text("");
                 $('.scenario.modal').find('.modal-title').html(response[0].name + ' in lokaal: ' + response[0].location);
                 alertActive = true;
                 $('.scenario.modal').find('.js-close-scenario-modal').attr('data-activeid', response[0].active_id);
@@ -21,8 +22,12 @@ function checkAlert() {
                         $('.scenario.modal').find('.modal-body').append('Stap ' + step + ": " + steps[i].description + "<br>");
                     }
                 }
+            }else{
+              $(".user-level_3").text("Er zijn geen meldingen");
             }
         })
+    }else if(loggedInUser.level == 3){
+      $(".user-level_3").text("Er zijn geen meldingen");
     }
     if(loggedInUser.level == 2 && loggedIn == true){
         $.post("include/getScenariosActive.php",{
