@@ -1,0 +1,48 @@
+<div class="user-level user-level_1 hidden">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="options level_1 option_1 nav-link active" href="#">Gebruiker Toevoegen</a>
+        </li>
+        <li class="nav-item">
+            <a class="options level_1 option_2 nav-link" href="#">Gebruiker Instellingen</a>
+        </li>
+    </ul>
+    <div class="user-body">
+        <div class="view view_1-1">
+            <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
+            <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
+
+            <div class="input-group mb-3 input-group-prepend">
+                <div class="input-group-prepend">
+                    <label class="input-group-text bg-primary text-white" for="choosScenario">Level</label>
+                </div>
+                <select class="form-control new-user-level" placeholder="Gebruikerslevel">
+                    <option class="new-user-options" value="3">Student</option>
+                    <option class="new-user-options" value="2">Docent</option>
+                </select>
+            </div>
+            <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
+        </div>
+        <div class="view view_1-2 hidden">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">GebruikersNaam</th>
+                        <th scope="col">level</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="user-level1-edit">
+                    <tr>
+                        <th>1</th>
+                        <td>Docent</td>
+                        <td>Docent</td>
+                        <td><button type="button" class="btn btn-primary">Verwijderen</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

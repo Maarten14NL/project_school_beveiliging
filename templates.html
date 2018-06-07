@@ -1,0 +1,35 @@
+<div class="templateContainer">
+    <template class="level1-user-template">
+        {{#.}}
+        <tr class="level1-index{{index}}">
+            <td>{{id}}</td>
+            <td>{{username}}</td>
+            <td>{{level}}</td>
+            <td><button type="button" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
+            <td><button type="button" class="btn btn-danger level1-btn-delete">verwijderen</button></td>
+        </tr>
+        {{/.}}
+    </template>
+
+    <template class="level2-scenario-template">
+        {{#.}}
+        <tr class="level2-index{{id}}">
+            <td>{{id}}</td>
+            <td class="username">{{name}}</td>
+            <td>
+                <button type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
+                <button type="button" class="btn btn-danger level2-btn-delete">Verwijderen</button>
+            </td>
+        </tr>
+        {{/.}}
+    </template>
+
+    <template class="level2-scenario-edit-template">
+        {{#.}}
+        <div class="js-scenario-edit-step scenario-edit-container">
+            <h4>Stap <span class="">{{index}}</span></h4>
+            <input class="js-scenario-edit-edit js-scenario-edit-{{index}}" type="text" name="" value="{{description}}">
+        </div>
+        {{/.}}
+    </template>
+</div>

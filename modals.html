@@ -1,0 +1,127 @@
+<div class="modal user-settings" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>gebruikersnaam</label>
+                    <input type="text" class="form-control settings-inputs settings-username" >
+                </div>
+                <div class="form-group">
+                    <label>wachtwoord</label>
+                    <input type="password" class="form-control settings-inputs settings-password" >
+                </div>
+                <div class="form-group">
+                    <label>herhaling wachtwoord</label>
+                    <input type="password" class="form-control settings-inputs settings-repeat-password" >
+                </div>
+                <button type="submit" class="btn btn-secondary settings-update">bijwerken</button>
+                <button type="submit" class="btn btn-danger settings-cancel">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal update-users" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>gebruikersnaam</label>
+                    <input type="text" class="form-control update-users-inputs update-users-username" >
+                </div>
+                <div class="form-group">
+                    <label>wachtwoord</label>
+                    <input type="password" class="form-control update-users-inputs update-users-password" >
+                </div>
+                <div class="form-group">
+                    <label>herhaling wachtwoord</label>
+                    <input type="password" class="form-control update-users-inputs update-users-repeat-password" >
+                </div>
+
+                <div class="input-group mb-3 input-group-prepend">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text bg-primary text-white" for="choosScenario">Level</label>
+                    </div>
+                    <select class="form-control update-user-level">
+                        <option class="update-user-options update-user-option1" value="3">Student</option>
+                        <option class="update-user-options update-user-option2" value="2">Docent</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success update-users-update">bijwerken</button>
+                <button type="submit" class="btn btn-danger update-users-cancel">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal scenario" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="close js-close-scenario-modal" data-dismiss="modal" data-activeId="0" aria-label="Close">
+                    <span aria-hidden="true">Afronden</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal scenario-edit" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>name</label>
+                    <input type="text" class="form-control update-scenarios-name" >
+                </div>
+                <div class="scenario-edit-options-container">
+                </div>
+                <button type="submit" class="btn btn-primary update-scenarios-update">bijwerken</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal js-confirm" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title confirm-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="confirm-text">Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success confirm-save-change">Accepteren</button>
+                <button type="button" class="btn btn-danger confirm-delete-change" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
