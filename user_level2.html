@@ -1,0 +1,102 @@
+<div class="user-level user-level_2 hidden">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="options level_2 option_1 nav-link activ" href="#">Scenario's kiezen</a>
+        </li>
+        <li class="nav-item">
+            <a class="options level_2 option_2 nav-link" href="#">Scenario's maken</a>
+        </li>
+        <li class="nav-item">
+            <a class="options level_2 option_3 nav-link" href="#">Scenario instellingen</a>
+        </li>
+    </ul>
+    <div class="user-body">
+        <div class="view view_2-1 hidden m-4 p-4">
+            <div class="row">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text bg-primary text-white" for="choosScenario">Kies Scenario</label>
+                    </div>
+                    <select class="form-control scenario-selector js-scenarioselect" id="choosScenario">
+                    </select>
+                </div>
+            </div>
+            <div class="row row--disfl">
+                <label class="switch">
+                    <input class="switch__input js-switch" type="checkbox">
+                    <span class="switch__span switch__span--round"></span>
+                </label>
+                <p>Laat de student de hulpmiddelen zien</p>
+            </div>
+            <div class="row row--disfl">
+                <button type="button" class="js-start-scenario btn btn-secondary">scenario maken</button>
+                <h4 class="js-lokaal"></h4>
+            </div>
+        </div>
+        <div class="view view_2-2 m-4 p-4">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-secondary text-white" id="scenario-name">Naam:</span>
+                </div>
+                <input type="text" class="js-new-scenario-name" name="scenario-name" value="" aria-describedby="scenario-name">
+            </div>
+            <div class="buttons-container">
+                <button class="btn btn-success js-save-new-scenario">Opslaan</button>
+                <button class="btn btn-success js-addstep">Extra stap</button>
+            </div>
+            <h3>Voeg stappen toe</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Stap</th>
+                        <th>Naam</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="js-steps-container steps">
+                    <!-- copy trs -->
+                    <tr class="js-copystep hidden steps__step">
+                        <td>
+                            <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
+                        </td>
+                        <td>
+                            <input class="js-newstep" type="text" name="" value="">
+                        </td>
+                        <td>
+                            <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                        </td>
+                    </tr>
+                    <tr class="js-step steps__step">
+                        <td>
+                            <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
+                        </td>
+                        <td>
+                            <input class="js-newstep" type="text" name="" value="">
+                        </td>
+                        <td>
+                            <i style="color: red;" class="far fa-times-circle js-delete-step"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="view view_2-3 hidden m-4 p-4">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Naam van scenario</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="js-scenario-container">
+                    <tr>
+                        <th>1</th>
+                        <td>Docent</td>
+                        <td><button type="button" class="btn btn-primary">aanpassen</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
