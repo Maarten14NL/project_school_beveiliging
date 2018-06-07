@@ -203,11 +203,20 @@ include 'include/session.php';
                     <div class="view view_1-1">
                         <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
                         <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
-                        <select class="form-control new-user-level" placeholder="Gebruikerslevel">
-                            <option class="new-user-options new-user-option1" value="" disabled selected>Select your option</option>
-                            <option class="new-user-options" value="3">Student</option>
-                            <option class="new-user-options" value="2">Docent</option>
-                        </select>
+
+                        <div class="input-group mb-3 input-group-prepend">
+                          <div class="input-group-prepend">
+                            <label class="input-group-text bg-primary text-white" for="choosScenario">Level</label>
+                          </div>
+                          <select class="form-control new-user-level" placeholder="Gebruikerslevel">
+                              <!-- <option class="new-user-options new-user-option1" value="" disabled selected>Select your option</option> -->
+                              <option class="new-user-options" value="3">Student</option>
+                              <option class="new-user-options" value="2">Docent</option>
+                          </select>
+                        </div>
+                        <!-- <div class="">
+                          <label class="input-group-text bg-primary text-white" for="choosScenario">Kies Scenario</label>
+                      </div> -->
                         <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
                     </div>
                     <div class="view view_1-2 hidden">
@@ -236,13 +245,13 @@ include 'include/session.php';
             <div class="user-level user-level_2 hidden">
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="options level_2 option_1 nav-link active option2_1" href="#">Scenario's kiezen</a>
+                    <a class="options level_2 option_1 nav-link activ" href="#">Scenario's kiezen</a>
                   </li>
                   <li class="nav-item">
-                    <a class="options level_2 option_2 nav-link  option2_2" href="#">Scenario's maken</a>
+                    <a class="options level_2 option_2 nav-link" href="#">Scenario's maken</a>
                   </li>
                   <li class="nav-item">
-                    <a class="options level_2 option_3 nav-link  option2_3" href="#">Scenario instellingen</a>
+                    <a class="options level_2 option_3 nav-link" href="#">Scenario instellingen</a>
                   </li>
                 </ul>
 
@@ -439,10 +448,16 @@ include 'include/session.php';
                         <label>herhaling wachtwoord</label>
                         <input type="password" class="form-control update-users-inputs update-users-repeat-password" >
                     </div>
-                    <select class="form-control update-user-level">
-                        <option class="update-user-options update-user-option1" value="3">Student</option>
-                        <option class="update-user-options update-user-option2" value="2">Docent</option>
-                    </select>
+
+                    <div class="input-group mb-3 input-group-prepend">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-primary text-white" for="choosScenario">Level</label>
+                      </div>
+                      <select class="form-control update-user-level">
+                          <option class="update-user-options update-user-option1" value="3">Student</option>
+                          <option class="update-user-options update-user-option2" value="2">Docent</option>
+                      </select>
+                    </div>
                     <button type="submit" class="btn btn-success update-users-update">bijwerken</button>
                     <button type="submit" class="btn btn-danger update-users-cancel">cancel</button>
                 </div>

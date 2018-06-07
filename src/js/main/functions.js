@@ -7,19 +7,21 @@ function login(a_userLevel){
 
     $(".user-level").addClass("hidden")
     $(".view").addClass("hidden")
+    $(".options").removeClass("active")
+    $('.option1').addClass("active")
 
     switch (userLevel) {
         case 1:
         $(".user-level_1").removeClass("hidden")
         $(".view_1-1").removeClass("hidden")
-        $(".option_1").addClass("options--active")
+        $(".option_1").addClass("active")
         $('.settings').removeClass("hidden")
         updateLevel1Templates();
         break;
         case 2:
         $(".user-level_2").removeClass("hidden")
         $(".view_2-1").removeClass("hidden")
-        $(".option_1").addClass("options--active")
+        $(".option_1").addClass("active")
         $('.settings').removeClass("hidden")
         updateLevel2Templates();
         break;
