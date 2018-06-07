@@ -5,7 +5,9 @@ $("body").on("click", ".options", function(){
 
   $(".view").addClass("hidden")
   $(".view_"+level+"-"+option).removeClass("hidden")
+  // console.log()
   $('.options').removeClass('active');
+
   $(this).addClass('active');
   switch (level) {
     case "1":

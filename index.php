@@ -190,10 +190,16 @@ include 'include/session.php';
                 </div>
             </div>
             <div class="user-level user-level_1 hidden">
-                <div class="user-navigation">
-                    <div class="options level_1 option_1">Gebruiker Toevoegen</div>
-                    <div class="options level_1 option_2">Gebruiker Instellingen</div>
-                </div>
+                <ul class="nav nav-tab user-navigation">
+                  <li class="nav-item">
+                    <!-- <a class="options level_2 option_1 nav-link active option2_1">Scenario's kiezen</a> -->
+                    <a class="options level_1 option_1 nav-link active">Gebruiker Toevoegen</a>
+                  </li>
+                  <li class="nav-item">
+                    <!-- <a class="options level_2 option_2 nav-link  option2_2">Scenario's maken</a> -->
+                    <a class="options level_1 option_2 nav-link">Gebruiker Instellingen</a>
+                  </li>
+                </ul>
                 <div class="user-body">
                     <div class="view view_1-1">
                         <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
@@ -231,13 +237,13 @@ include 'include/session.php';
             <div class="user-level user-level_2 hidden">
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="options level_2 option_1 nav-link active" href="#">Scenario's kiezen</a>
+                    <a class="options level_2 option_1 nav-link active option2_1" href="#">Scenario's kiezen</a>
                   </li>
                   <li class="nav-item">
-                    <a class="options level_2 option_2 nav-link" href="#">Scenario's maken</a>
+                    <a class="options level_2 option_2 nav-link  option2_2" href="#">Scenario's maken</a>
                   </li>
                   <li class="nav-item">
-                    <a class="options level_2 option_3 nav-link" href="#">Scenario instellingen</a>
+                    <a class="options level_2 option_3 nav-link  option2_3" href="#">Scenario instellingen</a>
                   </li>
                 </ul>
 
