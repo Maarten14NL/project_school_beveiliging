@@ -20,7 +20,7 @@ include 'include/session.php';
 </head>
 <body>
     <div class="js-fl-cont flash-message-container"></div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/RocTeraa-Logo.png" class="teraaloga">
         </a>

@@ -1,3 +1,4 @@
+myAudio = new Audio('sounds/PanicAlarm.mp3');
 function checkAlert() {
     if(loggedInUser.level == 3 && !alertActive && loggedIn == true){
         $.post("include/getScenariosActive.php" ,{
@@ -7,6 +8,11 @@ function checkAlert() {
             response = JSON.parse(response);
             if(response.length > 0){
                 $('.scenario').modal('show');
+                myAudio.addEventListener('ended', function() {
+                    this.currentTime = 0;
+                    this.play();
+                }, false);
+                myAudio.play();
                 $(".user-level_3").text("");
                 $('.scenario.modal').find('.modal-title').html(response[0].name + ' in lokaal: ' + response[0].location);
                 alertActive = true;
@@ -54,7 +60,7 @@ function checkAlert() {
 setTimeout(checkAlert, 1000);
 $('body').on('click', '.js-close-scenario-modal', function(){
     var activeid = $(this).attr('data-activeid');
-    // console.log(activeid);
+    myAudio.pause();
     $.post("include/finishActiveScenario.php",{
         activeid : activeid,
         finished: 1,
