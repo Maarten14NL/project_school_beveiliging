@@ -1,4 +1,5 @@
 myAudio = new Audio('sounds/PanicAlarm.mp3');
+var lokaalLocation = '';
 function checkAlert() {
     if(loggedInUser.level == 3 && !alertActive && loggedIn == true){
         $.post("include/getScenariosActive.php" ,{
@@ -7,33 +8,36 @@ function checkAlert() {
         }, function(response,status){
             response = JSON.parse(response);
             if(response.length > 0){
-                $('.scenario').modal('show');
                 myAudio.addEventListener('ended', function() {
                     this.currentTime = 0;
                     this.play();
                 }, false);
-                myAudio.play();
-                $(".user-level_3").text("");
-                $('.scenario.modal').find('.modal-title').html(response[0].name + ' in lokaal: ' + response[0].location);
+                setTimeout(function () {
+                    myAudio.play();
+                }, 100);
+                $('.js-close-scenario-modal').html('Afronden');
+                lokaalLocation = response[0].location;
+                $('.js-alert-title').html(response[0].name + ' in lokaal: ' + lokaalLocation);
+                var floornr = lokaalLocation[1];
+                $('.' + lokaalLocation).addClass('lokaal--blink');
+                setTimeout(function () {
+                    $('.floor_' + floornr).trigger('click');
+                }, 100);
                 alertActive = true;
-                $('.scenario.modal').find('.js-close-scenario-modal').attr('data-activeid', response[0].active_id);
+                $('.js-close-scenario-modal').attr('data-activeid', response[0].active_id);
                 if (!response[0].tools ) {
-                    $('.scenario.modal').find('.modal-body').html('De docent heeft toegang tot deze hulpmiddelen uitgeschakeld');
+                    $('.js-alert-body').html('De docent heeft toegang tot deze hulpmiddelen uitgeschakeld');
                 }
                 else {
                     var steps = response[0].steps;
-                    $('.scenario.modal').find('.modal-body').html('');
+                    $('.js-alert-body').html('');
                     for (var i = 0; i < steps.length; i++) {
                         var step = i + 1;
-                        $('.scenario.modal').find('.modal-body').append('Stap ' + step + ": " + steps[i].description + "<br>");
+                        $('.js-alert-body').append('Stap ' + step + ": " + steps[i].description + "<br>");
                     }
                 }
-            }else{
-              $(".user-level_3").text("Er zijn geen meldingen");
             }
         })
-    }else if(loggedInUser.level == 3){
-      $(".user-level_3").text("Er zijn geen meldingen");
     }
     if(loggedInUser.level == 2 && loggedIn == true){
         $.post("include/getScenariosActive.php",{
@@ -41,7 +45,6 @@ function checkAlert() {
             finished: 1
         }, function(response,status){
             var data = JSON.parse(response);
-            // console.log(data);
             for (var i = 0; i < data.length; i++) {
                 showFlashMessage(data[i].name + " in lokaal: " + data[i].location + " is afgerond", "success", true);
                 $.post("include/finishActiveScenario.php",{
@@ -61,6 +64,11 @@ setTimeout(checkAlert, 1000);
 $('body').on('click', '.js-close-scenario-modal', function(){
     var activeid = $(this).attr('data-activeid');
     myAudio.pause();
+    alertActive = false;
+    $('.' + lokaalLocation).removeClass('lokaal--blink');
+    $('.js-alert-title').html('meldingen');
+    $('.js-alert-body').html('Er zijn geen meldingen op dit moment');
+    $('.js-close-scenario-modal').html('');
     $.post("include/finishActiveScenario.php",{
         activeid : activeid,
         finished: 1,

@@ -4,7 +4,6 @@ var loggedInUser = [];
 var users = [];
 var scenarios = [];
 var alertActive = false;
-
 $(document).ready(function(){
     console.log("home.js loaded")
     $('.verdieping').addClass("hidden")

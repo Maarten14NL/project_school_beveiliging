@@ -69,7 +69,24 @@ include 'include/session.php';
             </div>
             <?php include 'partials/user_level1.html'; ?>
             <?php include 'partials/user_level2.html'; ?>
-            <div class="user-level user-level_3 hidden"></div>
+            <div class="user-level user-level_3 hidden">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title js-alert-title">Meldingen</h5>
+                        </div>
+                        <div class="modal-body js-alert-body">
+                            Er zijn geen meldingen op dit moment
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close js-close-scenario-modal" data-dismiss="modal" data-activeId="0" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
     <?php include 'partials/templates.html'; ?>
