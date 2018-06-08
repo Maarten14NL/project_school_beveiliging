@@ -8,9 +8,24 @@
         </li>
     </ul>
     <div class="user-body">
-        <div class="view view_1-1">
-            <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam">
-            <input class="form-control new-user-password" type="text" placeholder="Wachtwoord">
+        <div class="view view_1-1 m-4 p-4">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="gebruiker-istellingen-gebruiker">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+                <input class="form-control new-user-name" type="text" placeholder="Gebruikersnaam" aria-describedby="gebruiker-istellingen-gebruiker">
+            </div>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="gebruiker-istellingen-wachtwoord">
+                        <i class="fas fa-unlock"></i>
+                    </span>
+                </div>
+            <input class="form-control new-user-password" type="text" placeholder="Wachtwoord" aria-describedby="gebruiker-istellingen-wachtwoord">
+            </div>
 
             <div class="input-group mb-3 input-group-prepend">
                 <div class="input-group-prepend">
@@ -23,7 +38,7 @@
             </div>
             <div class="btn btn-secondary btn-block new-user">Gebruiker Toevoegen</div>
         </div>
-        <div class="view view_1-2 hidden">
+        <div class="view view_1-2 hidden m-4 p-4">
             <table class="table">
                 <thead>
                     <tr>

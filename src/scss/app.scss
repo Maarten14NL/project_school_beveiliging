@@ -65,3 +65,8 @@ a{
 {
     background: $secondary !important;
 }
+.thead-primary{
+    background: $primary;
+    border-color: $primary;
+    color: white;
+}
