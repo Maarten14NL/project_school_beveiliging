@@ -1,13 +1,22 @@
 <div class="user-level user-level_2 hidden">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="options level_2 option_1 nav-link activ" href="#">Scenario's kiezen</a>
+            <a class="options level_2 option_1 nav-link activ" href="#">
+                Scenario's kiezen
+                <i class="fas fa-clipboard-check"></i>
+            </a>
         </li>
         <li class="nav-item">
-            <a class="options level_2 option_2 nav-link" href="#">Scenario's maken</a>
+            <a class="options level_2 option_2 nav-link" href="#">
+                Scenario's maken
+                <i class="fas fa-plus-circle"></i>
+            </a>
         </li>
         <li class="nav-item">
-            <a class="options level_2 option_3 nav-link" href="#">Scenario instellingen</a>
+            <a class="options level_2 option_3 nav-link" href="#">
+                Scenario instellingen
+                <i class="fas fa-cogs"></i>
+            </a>
         </li>
     </ul>
     <div class="user-body">
@@ -40,10 +49,7 @@
                 </div>
                 <input type="text" class="js-new-scenario-name" name="scenario-name" value="" aria-describedby="scenario-name">
             </div>
-            <div class="buttons-container">
-                <button class="btn btn-success js-save-new-scenario">Opslaan</button>
-                <button class="btn btn-success js-addstep">Extra stap</button>
-            </div>
+           
             <h3>Voeg stappen toe</h3>
             <table class="table">
                 <thead class="thead-primary">
@@ -57,7 +63,7 @@
                     <!-- copy trs -->
                     <tr class="js-copystep hidden steps__step">
                         <td>
-                            <h4>Stap <span class="js-stepnr js-newnr">1</span></h4>
+                            <b>Stap <span class="js-stepnr js-newnr">1</span></b>
                         </td>
                         <td>
                             <input class="js-newstep" type="text" name="" value="">
@@ -68,7 +74,7 @@
                     </tr>
                     <tr class="js-step steps__step">
                         <td>
-                            <h4>Stap <span class="js-stepnr js-lastnr">1</span></h4>
+                            <b>Stap <span class="js-stepnr js-lastnr">1</span></b>
                         </td>
                         <td>
                             <input class="js-newstep" type="text" name="" value="">
@@ -79,10 +85,21 @@
                     </tr>
                 </tbody>
             </table>
+
+             <div class="buttons-container">
+                <button class="btn btn-primary js-save-new-scenario">
+                    Opslaan
+                    <i class="fas fa-save"></i>
+                </button>
+                <button class="btn btn-secondary js-addstep">
+                    Extra stap
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+            </div>
         </div>
         <div class="view view_2-3 hidden m-4 p-4">
-            <table class="table table-striped">
-                <thead>
+            <table class="table">
+                <thead class="thead-secondary">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Naam van scenario</th>
