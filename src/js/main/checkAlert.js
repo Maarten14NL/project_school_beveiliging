@@ -21,6 +21,7 @@ function checkAlert() {
                 var floornr = lokaalLocation[1];
                 $('.' + lokaalLocation).addClass('lokaal--blink');
                 setTimeout(function () {
+                    console.log(floornr);
                     $('.floor_' + floornr).trigger('click');
                 }, 100);
                 alertActive = true;
