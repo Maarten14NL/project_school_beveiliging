@@ -3,10 +3,11 @@ include 'database.php';
 $scenario_id = $_POST['scenarioID'];
 $name = $_POST['name'];
 $steps= $_POST['descriptions'];
+echo "name: " . $name . " scneario: " . $scenario_id . "<br>";
 
-$sql = "UPDATE `users` SET `username`=? WHERE id = ?";
+$sql = "UPDATE `scenarios` SET `name`=? WHERE id = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param('ssi',$name, $scenario_id);
+$stmt->bind_param('si',$name, $scenario_id);
 $stmt->execute();
 // $scenario_id = $stmt->insert_id;
 $stmt->close();

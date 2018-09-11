@@ -21,13 +21,11 @@ include 'include/session.php';
 <body>
     <div class="js-fl-cont flash-message-container"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="img/RocTeraa-Logo.png" class="teraaloga">
-        </a>
+        <img src="img/RocTeraa-Logo.png" class="teraaloga">
         <div class="login-status-container">
             <div class="login-status">U bent nog niet ingelogd</div>
             <button type="button" class="btn btn-secondary logout hidden">
-                Uitloggen 
+                Uitloggen
                 <i class="fas fa-sign-out-alt"></i>
             </button>
             <i class="fas fa-cog settings hidden"></i>
@@ -37,16 +35,16 @@ include 'include/session.php';
         <div class="col-sm-6">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active menu-item floor_0" href="#">Begane Grond</a>
+                    <a data-floor="0" class="nav-link active menu-item floor_0" href="#">Begane Grond</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item floor_1" href="#">Verdieping 1</a>
+                    <a data-floor="1" class="nav-link menu-item floor_1" href="#">Verdieping 1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item floor_2" href="#">Verdieping 2</a>
+                    <a data-floor="2" class="nav-link menu-item floor_2" href="#">Verdieping 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-item floor_3" href="#">Verdieping 3</a>
+                    <a data-floor="3" class="nav-link menu-item floor_3" href="#">Verdieping 3</a>
                 </li>
             </ul>
             <?php include 'partials/floor_plans.html'; ?>

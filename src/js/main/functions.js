@@ -39,7 +39,6 @@ function logout(){
     $('.settings').addClass("hidden")
     loggedIn = false;
     userLevel = 0;
-    // console.log("logout")
 
     $.post("include/login.php",{
         logoutSub: ''
@@ -51,14 +50,11 @@ function logout(){
 function updateLevel1Templates(){
     $.post("include/getUsers.php",{
     }, function(response,status){
-        // console.log(response)
         users = JSON.parse(response)
 
         for(var i = 0; i < 2; i++){
-            // console.log(i)
             users.map(function(cp,j){
                 cp.index = cp.id;
-                // console.log(i)
                 if(cp.userlevel == 2){
                     cp.level = "Docent"
                 }else if(cp.userlevel == 3){
@@ -84,8 +80,6 @@ function updateLevel1Templates(){
             $(".new-user-options").removeAttr("selected");
             $(".new-user-option1").attr("selected","selected");
 
-            // console.log(users)
-
             var template = $(".level1-user-template").html();
             var renderTemplate = Mustache.render(template, users);
 
@@ -102,20 +96,16 @@ function updateLevel2Templates(){
     $.post("include/getScenarios.php",{
     }, function(response,status){
         scenarios = JSON.parse(response)
-        // console.log(scenarios)
 
         $('.scenario-selector').html("")
         for(var i = 0 ; i < scenarios.length; i++){
             $('.scenario-selector').append('<option data-id="' + scenarios[i].id  + '">' + scenarios[i].name + "</option>")
         }
 
-        // for(var i = 0; i < 2; i++){
-
         var template = $(".level2-scenario-template").html();
         var renderTemplate = Mustache.render(template, scenarios);
 
         $(".js-scenario-container").html(renderTemplate);
-        // }
     })
 }
 
@@ -167,7 +157,6 @@ function randomString2(len, beforestr = '', arraytocheck = null) {
                 isIn = $.inArray(beforestr + randomString, arraytocheck);
                 count++;
             } while (isIn > -1);
-            console.log('it took ' + count + ' tries');
             return beforestr + randomString;
         } else {
             return beforestr + randomString;

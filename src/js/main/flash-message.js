@@ -52,7 +52,6 @@ function randomString2(len, beforestr = '', arraytocheck = null) {
                 isIn = $.inArray(beforestr + randomString, arraytocheck);
                 count++;
             } while (isIn > -1);
-            console.log('it took ' + count + ' tries');
             return beforestr + randomString;
         } else {
             return beforestr + randomString;

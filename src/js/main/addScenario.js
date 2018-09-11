@@ -54,6 +54,7 @@ $('body').on('click', '.js-save-new-scenario',function(){
                     $('.js-steps-container .steps__step').not('.js-copystep').remove();
                     $('.js-new-scenario-name').val('');
                     copyStep()
+                    updateLevel2Templates();
                 }
             })
         }

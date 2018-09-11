@@ -1,24 +1,24 @@
 <div class="templateContainer">
     <template class="level1-user-template">
         {{#.}}
-        <tr class="level1-index{{index}}">
+        <tr class="templaterow level1-index{{index}}">
             <td>{{id}}</td>
             <td>{{username}}</td>
             <td>{{level}}</td>
-            <td><button type="button" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
-            <td><button type="button" class="btn btn-danger level1-btn-delete">verwijderen</button></td>
+            <td><button type="button" data-id="{{id}}" class="btn btn-primary level1-btn-edit">aanpassen</button></td>
+            <td><button type="button" data-id="{{id}}" class="btn btn-danger level1-btn-delete">verwijderen</button></td>
         </tr>
         {{/.}}
     </template>
 
     <template class="level2-scenario-template">
         {{#.}}
-        <tr class="level2-index{{id}}">
+        <tr class="templaterow level2-index{{id}}">
             <td>{{id}}</td>
             <td class="username">{{name}}</td>
             <td>
-                <button type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
-                <button type="button" class="btn btn-danger level2-btn-delete">Verwijderen</button>
+                <button data-id="{{id}}" type="button" class="btn btn-primary level2-btn-edit">Aanpassen</button>
+                <button data-id="{{id}}" type="button" class="btn btn-danger level2-btn-delete">Verwijderen</button>
             </td>
         </tr>
         {{/.}}

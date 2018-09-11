@@ -4,56 +4,49 @@ var loggedInUser = [];
 var users = [];
 var scenarios = [];
 var alertActive = false;
-$(document).ready(function(){
-    console.log("home.js loaded")
+$(document).ready(function () {
     $('.verdieping').addClass("hidden")
     $('.verdieping__0').removeClass("hidden")
 
-    $('body').on('click', '.menu-item', function(){
-        var id = $(this).attr("class").split('_')[1];
-        console.log(id)
-
+    $('body').on('click', '.menu-item', function () {
+        var id = $(this).data('floor');
         $('.verdieping').addClass("hidden")
         $('.menu-item').removeClass("active")
-        $('.verdieping__'+id).removeClass("hidden")
-        $('.floor_'+id).addClass("active")
+        $('.verdieping__' + id).removeClass("hidden")
+
+        $('.floor_' + id).addClass("active")
     })
 
-    $('body').on('click', '.login', function(){
-        console.log($('.username').val().toLowerCase())
-        console.log($('.password').val().toLowerCase())
-        $.post("include/login.php" ,{
+    $('body').on('click', '.login', function () {
+        $.post("include/login.php", {
             loginSub: "",
             username: $('.username').val().toLowerCase(),
             password: $('.password').val()
-        }, function(response,status){
+        }, function (response, status) {
             var data = JSON.parse(response);
-            console.log(data);
             loggedInUser = data;
             if (data.loggedIn == 1) {
                 login(data.level);
                 showFlashMessage('U bent succesvol ingelogd', 'success')
-            }
-            else {
+            } else {
                 showFlashMessage('Uw gebruikersnaam of wachtwoord is incorrect', 'danger')
             }
         })
     })
 
-    $('body').on('click', '.logout', function(){
+    $('body').on('click', '.logout', function () {
         logout();
     })
 
-    $('body').on('click', '.lokaal', function(){
-        console.log(loggedIn)
-        if(loggedIn == true){
+    $('body').on('click', '.lokaal', function () {
+        if (loggedIn == true) {
             var lokaalnr = $(this).attr("class").split(" ")[0];
             $('.js-lokaal').html(lokaalnr);
         }
     })
 
-    $(document).keypress(function(e) {
-        if(e.which == 13) {
+    $(document).keypress(function (e) {
+        if (e.which == 13) {
             if (!loggedIn) {
                 $('.login').trigger('click');
             }
