@@ -8,20 +8,41 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <label>gebruikersnaam</label>
-                    <input type="text" class="form-control settings-inputs settings-username" >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="change-name">
+                        <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control settings-inputs settings-username"placeholder="Gebruikersnaam" aria-describedby="change-name">  
                 </div>
-                <div class="form-group">
-                    <label>wachtwoord</label>
-                    <input type="password" class="form-control settings-inputs settings-password" >
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="chane-pass">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" class="form-control settings-inputs settings-password" placeholder="Wachtwoord" aria-describedby="chane-pass">  
                 </div>
-                <div class="form-group">
-                    <label>herhaling wachtwoord</label>
-                    <input type="password" class="form-control settings-inputs settings-repeat-password" >
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="change-pass-reapeat">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" class="form-control settings-inputs settings-repeat-password" placeholder="Herhaal Wachtwoord" aria-describedby="change-pass-reapeat">  
                 </div>
-                <button type="submit" class="btn btn-secondary settings-update">bijwerken</button>
-                <button type="submit" class="btn btn-danger settings-cancel">cancel</button>
+
+                <button type="submit" class="btn btn-secondary settings-update">
+                    Bijwerken
+                    <i class="fas fa-save"></i>
+                </button>
+                <button type="submit" class="btn btn-danger settings-cancel">
+                    Cancel
+                    <i class="fas fa-ban"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -37,17 +58,31 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <label>gebruikersnaam</label>
-                    <input type="text" class="form-control update-users-inputs update-users-username" >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="change-name">
+                        <i class="fas fa-user"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control update-users-inputs update-users-username" placeholder="Gebruikersnaam" aria-describedby="change-name">  
                 </div>
-                <div class="form-group">
-                    <label>wachtwoord</label>
-                    <input type="password" class="form-control update-users-inputs update-users-password" >
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="chane-pass">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" class="form-control update-users-inputs update-users-password" placeholder="Wachtwoord" aria-describedby="chane-pass">  
                 </div>
-                <div class="form-group">
-                    <label>herhaling wachtwoord</label>
-                    <input type="password" class="form-control update-users-inputs update-users-repeat-password" >
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-primary text-white" id="change-pass-reapeat">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                  </div>
+                  <input type="password" class="form-control update-users-inputs update-users-repeat-password" placeholder="Herhaal Wachtwoord" aria-describedby="change-pass-reapeat">  
                 </div>
 
                 <div class="input-group mb-3 input-group-prepend">
@@ -59,8 +94,14 @@
                         <option class="update-user-options update-user-option2" value="2">Docent</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-success update-users-update">bijwerken</button>
-                <button type="submit" class="btn btn-danger update-users-cancel">cancel</button>
+                <button type="submit" class="btn btn-secondary update-users-update">
+                    Bijwerken
+                    <i class="fas fa-save"></i>
+                </button>
+                <button type="submit" class="btn btn-danger update-users-cancel">
+                    Cancel
+                    <i class="fas fa-ban"></i>
+                </button>
             </div>
         </div>
     </div>

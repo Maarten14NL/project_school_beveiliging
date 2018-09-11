@@ -26,7 +26,10 @@ include 'include/session.php';
         </a>
         <div class="login-status-container">
             <div class="login-status">U bent nog niet ingelogd</div>
-            <button type="button" class="btn btn-secondary logout hidden">uitloggen</button>
+            <button type="button" class="btn btn-secondary logout hidden">
+                Uitloggen 
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
             <i class="fas fa-cog settings hidden"></i>
         </div>
     </nav>
@@ -64,7 +67,10 @@ include 'include/session.php';
                         </div>
                         <input class="form-control form-control-lg password" type="password" placeholder="Wachtwoord" aria-describedby="password-addon1">
                     </div>
-                    <button type="button" class="btn btn-block btn-secondary login"><I></I>Inloggen</button>
+                    <button type="button" class="btn btn-block btn-secondary login">
+                        Inloggen
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
                 </div>
             </div>
             <?php include 'partials/user_level1.html'; ?>
