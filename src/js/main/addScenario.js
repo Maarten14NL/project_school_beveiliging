@@ -28,6 +28,8 @@ $('body').on('click', '.js-save-new-scenario',function(){
     // Gets the name from the input
     var name = $('.js-new-scenario-name').val();
     var steps = [];
+    var sound = $('#scenario-newsound').val();
+    console.log(sound);
     // If the name is empty it gives a flash message
     if (name == '') {
         showFlashMessage('Vul eerst een naam in', 'danger');
@@ -47,8 +49,10 @@ $('body').on('click', '.js-save-new-scenario',function(){
         else{
             $.post("include/saveNewScenario.php" ,{
                 name: name,
-                steps: steps
+                steps: steps,
+                sound: sound
             }, function(response,status){
+                console.log(response);
                 if(response == "succes"){
                     showFlashMessage('Scenario succesvol toegevoegd', 'success');
                     $('.js-steps-container .steps__step').not('.js-copystep').remove();

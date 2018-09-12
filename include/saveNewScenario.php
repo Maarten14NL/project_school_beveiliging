@@ -4,10 +4,11 @@ include 'database.php';
 
 $name = $_POST['name'];
 $steps= $_POST['steps'];
+$sound = $_POST['sound'];
 
-$sql = 'INSERT INTO scenarios (name) VALUES (?);';
+$sql = 'INSERT INTO scenarios (name, sound) VALUES (?,?);';
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $name);
+$stmt->bind_param("ss", $name, $sound);
 $stmt->execute();
 $scenario_id = $stmt->insert_id;
 $stmt->close();

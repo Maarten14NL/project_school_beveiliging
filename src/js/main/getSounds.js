@@ -5,7 +5,7 @@ function getfiles() {
             var decoded = JSON.parse(response);
             files = decoded;
             files.map(function(elem, index) {
-                $('#scenario-newsound').append('<option value="' + elem + '">'+elem+'</option>');
+                $('.js-new-scenario-sound').append('<option value="' + elem + '">'+elem+'</option>');
             })
         }
     });

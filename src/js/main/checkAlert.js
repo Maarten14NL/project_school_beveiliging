@@ -1,4 +1,5 @@
-myAudio = new Audio('sounds/PanicAlarm.mp3');
+// myAudio = new Audio('sounds/PanicAlarm.mp3');
+var myAudio;
 var lokaalLocation = '';
 function checkAlert() {
     if (loggedInUser.level == 3 && !alertActive && loggedIn == true) {
@@ -8,6 +9,7 @@ function checkAlert() {
         }, function (response, status) {
             response = JSON.parse(response);
             if (response.length > 0) {
+                myAudio = new Audio("sounds/" + response[0].sound);
                 myAudio.addEventListener('ended', function () {
                     this.currentTime = 0;
                     this.play();
