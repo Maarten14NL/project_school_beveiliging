@@ -9,6 +9,7 @@ $('body').on('click', '.level2-btn-edit', function(){
         }
     }
     console.log(scenarios[index].id);
+    $('#scenario-editsound').val(scenarios[index].sound)
     $.post("include/getScenerioDesc.php" ,{
         id: scenarios[index].id
     }, function(response,status){
@@ -21,6 +22,7 @@ $('body').on('click', '.level2-btn-edit', function(){
 
         var template = $(".level2-scenario-edit-template").html();
         var renderTemplate = Mustache.render(template, descriptions);
+        console.log(descriptions)
 
         $(".scenario-edit-options-container").html(renderTemplate);
 
