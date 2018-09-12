@@ -28,17 +28,17 @@ $('body').on('click', '.update-users-update', function(){
         }else if($('.update-users-password').val() != $('.update-users-repeat-password').val()){
             showFlashMessage('Uw wachtwoorden zijn niet gelijk aan elkaar', 'danger');
         }else{
-            console.log($('.update-user-level').val());
             $.post("include/updateUser.php" ,{
                 id: users[index].id,
                 name: $('.update-users-username').val(),
                 pass: $('.update-users-password').val(),
                 level: $('.update-user-level').val()
             }, function(response,status){
-                console.log(response);
                 if(response == "succes"){
                     $('.update-users').modal('hide');
                     users[index].username = $('.update-users-username').val();
+                    showFlashMessage('Gebruiker is succesvol aangepast', 'success');
+                    $('.update-users-inputs').val('');
                     updateLevel1Templates();
                 }
             })

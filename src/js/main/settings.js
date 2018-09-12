@@ -29,6 +29,8 @@ $('body').on('click', '.settings-update', function(){
             }, function(response,status){
                 if(response == "succes"){
                     $('.user-settings').modal('hide');
+                    $('.settings-inputs').val('');
+                    showFlashMessage('Opties opgeslagen', 'success');
                 }
             });
         }
