@@ -2,12 +2,13 @@
 include 'database.php';
 $scenario_id = $_POST['scenarioID'];
 $name = $_POST['name'];
-$steps= $_POST['descriptions'];
+$steps = $_POST['descriptions'];
+$sound = $_POST['sound'];
 echo "name: " . $name . " scneario: " . $scenario_id . "<br>";
 
-$sql = "UPDATE `scenarios` SET `name`=? WHERE id = ?";
+$sql = "UPDATE `scenarios` SET `name`=?, `sound` =? WHERE id = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param('si',$name, $scenario_id);
+$stmt->bind_param('ssi',$name, $sound, $scenario_id);
 $stmt->execute();
 // $scenario_id = $stmt->insert_id;
 $stmt->close();
@@ -16,7 +17,6 @@ $sql = "DELETE FROM `scenario_descriptions` WHERE `scenarios_id`=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $scenario_id);
 $stmt->execute();
-// $scenario_id = $stmt->insert_id;
 $stmt->close();
 
 $name = '';

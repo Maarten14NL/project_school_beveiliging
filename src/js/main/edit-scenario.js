@@ -2,8 +2,6 @@ var rowSelected = 0;
 var index = 0;
 var descriptions = [];
 $('body').on('click', '.level2-btn-edit', function(){
-
-    // rowSelected = $(this).parent().parent().attr("class");
     rowSelected = $(this).data('id');
     for (var i = 0; i < scenarios.length; i++){
         if(scenarios[i].id == rowSelected){
@@ -39,10 +37,12 @@ $('body').on('click', '.update-scenarios-update', function(){
         }
     }
     console.log($('.update-scenarios-name').val());
+    var sound = $('#scenario-editsound').val();
     $.post("include/updateScenario.php" ,{
         scenarioID: scenarios[index].id,
         name: $('.update-scenarios-name').val(),
-        descriptions: descriptionNames
+        descriptions: descriptionNames,
+        sound: sound
     }, function(response,status){
         $('.scenario-edit').modal('hide');
         updateLevel2Templates();
