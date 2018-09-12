@@ -1,5 +1,5 @@
 var flashMessages = [];
-function showFlashMessage(mes, type, dismissable = false, secs = 2000){
+function showFlashMessage(mes, type, dismissable = false, secs = 2000, dismissClass = "", todo= ""){
     var randStr = randomString2(20);
     $('.js-fl-cont').append('<div id="' + randStr + '" class="js-flash alert-' + type + ' flash-message">'+ mes + '</div>');
     setTimeout(function () {
@@ -11,7 +11,7 @@ function showFlashMessage(mes, type, dismissable = false, secs = 2000){
         }, secs);
     }
     else{
-        $('#' + randStr).append('<button data-id="' + randStr + '" class="js-dismiss btn btn-block">Ok</button>');
+        $('#' + randStr).append('<button data-todo="' + todo + '" data-id="' + randStr + '" class="js-dismiss ' + dismissClass + ' btn btn-block">Ok</button>');
     }
 }
 $('body').on('click', '.js-dismiss', function(){

@@ -1,9 +1,7 @@
 <?php
 include 'database.php';
 $id = $_POST['activeid'];
-$finished = $_POST['finished'];
-$alerted = $_POST['alerted'];
-if ($finished == 1 && $alerted == 1) {
+if (isset($_POST['del'])) {
     $sql = "DELETE FROM active_scenarios WHERE id=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('i', $id);
@@ -12,6 +10,8 @@ if ($finished == 1 && $alerted == 1) {
     echo "1";
 }
 else{
+    $finished = $_POST['finished'];
+    $alerted = $_POST['alerted'];
     $sql = "UPDATE active_scenarios SET finished = ?, alerted = ? WHERE id=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('iii', $finished, $alerted, $id);
