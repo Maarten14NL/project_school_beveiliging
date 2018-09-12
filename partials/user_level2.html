@@ -43,11 +43,25 @@
             </div>
         </div>
         <div class="view view_2-2 m-4 p-4">
-            <div class="input-group mb-3">
+            <div class="input-group">
+                <!-- Name -->
                 <div class="input-group-prepend">
                     <span class="input-group-text bg-secondary text-white" id="scenario-name">Naam:</span>
                 </div>
                 <input type="text" class="js-new-scenario-name" name="scenario-name" value="" aria-describedby="scenario-name">
+
+                <!-- Sound -->
+                <div class="input-group-prepend">
+                    <span class="input-group-text bg-secondary text-white" id="scenario-sound">Geluid:</span>
+                </div>
+                <select id="scenario-newsound" class="js-new-scenario-sound" name="scenario-sound" aria-describedby="scenario-sound">
+
+                </select>
+                <div class="input-group-append">
+
+                </div>
+            </div>
+            <div class="input-group mb-3">
             </div>
 
             <h3>Voeg stappen toe</h3>
@@ -86,7 +100,7 @@
                 </tbody>
             </table>
 
-             <div class="buttons-container">
+            <div class="buttons-container">
                 <button class="btn btn-primary js-save-new-scenario">
                     Opslaan
                     <i class="fas fa-save"></i>
