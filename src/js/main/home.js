@@ -45,6 +45,12 @@ $(document).ready(function () {
         }
     })
 
+    $('body').on('click','.js-preview-sound',function(){
+      var select = $(this).closest(".input-group").find('select');
+      myAudio = new Audio('sounds/' + select.val());
+      myAudio.play()
+    })
+
     $(document).keypress(function (e) {
         if (e.which == 13) {
             if (!loggedIn) {
