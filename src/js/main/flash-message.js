@@ -18,11 +18,17 @@ $('body').on('click', '.js-dismiss', function(){
     var delstr = $(this).data('id');
     deleteFlashMessage(delstr);
 });
-
 function deleteFlashMessage(id){
-    $('#' + id).removeClass('flash-message--show');
+    // $('#' + id).removeClass('flash-message--show');
+    var h = $('#' + id).height() - 20;
+    var hmin = h * -1;
+    var w = $('#' + id).width() + 50;
+    $('#' + id).css('transform', 'translateX(' + w + 'px)');
     setTimeout(function () {
-        $('#' + id).remove();
+        $('#' + id).css('margin', hmin + 'px');
+        setTimeout(function () {
+            $('#' + id).remove();
+        }, 200);
     }, 200);
 }
 

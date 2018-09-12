@@ -1,6 +1,11 @@
 // myAudio = new Audio('sounds/PanicAlarm.mp3');
 var myAudio;
 var lokaalLocation = '';
+$(document).ready(function() {
+    $.post("include/changeScenarioAlerted.php",{}, function(response,status){
+        console.log(response);
+    });
+});
 function checkAlert() {
     if (loggedInUser.level == 3 && !alertActive && loggedIn == true) {
         $.post("include/getScenariosActive.php", {
