@@ -37,6 +37,9 @@ function logout(){
     $('.logout').addClass("hidden")
     $(".user-level").addClass("hidden")
     $('.settings').addClass("hidden")
+    myAudio.pause();
+    alertActive = false;
+    $('.' + lokaalLocation).removeClass('lokaal--blink');
     loggedIn = false;
     userLevel = 0;
 
