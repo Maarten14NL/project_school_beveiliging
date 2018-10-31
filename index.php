@@ -33,7 +33,7 @@ include 'include/session.php';
     </nav>
     <div class="row">
         <div class="col-sm-6">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs extra-border">
                 <li class="nav-item">
                     <a data-floor="0" class="nav-link active menu-item floor_0" href="#">Begane Grond</a>
                 </li>

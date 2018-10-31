@@ -10,7 +10,23 @@
 @import 'components/flash-message';
 @import 'components/steps';
 @import 'components/scenariomodal';
-
+$px: 30px;
+.extra-border{
+    position: relative;
+    &:after{
+        position: absolute;
+        content: '';
+        right: 0;
+        width: $px;
+        height: 1px;
+        bottom: -1px;
+        border-bottom: 1px solid #dee2e6;
+        margin-right: $px * -1;
+    }
+}
+.nav-link{
+    transition: .2s ease;
+}
 .fas, .far, .options{
     cursor: pointer;
 }
