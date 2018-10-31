@@ -3,7 +3,8 @@
   $finished = $_POST['finished'];
   $alerted = $_POST['alerted'];
   $active_scenarios = [];
-  $sql = "SELECT scenarios.id as scenario_id,scenarios.sound as sound, active_scenarios.id as active_id, active_scenarios.location, active_scenarios.finished, active_scenarios.alerted, active_scenarios.tools, scenarios.name FROM active_scenarios INNER JOIN scenarios ON active_scenarios.scenarios_id = scenarios.id  WHERE finished = ? AND alerted = ?";
+  $sql = "SELECT scenarios.id as scenario_id, scenarios.sound as sound, active_scenarios.sound as soundActive, active_scenarios.id as active_id, active_scenarios.location, active_scenarios.finished, active_scenarios.alerted, active_scenarios.tools, scenarios.name FROM active_scenarios
+    INNER JOIN scenarios ON active_scenarios.scenarios_id = scenarios.id  WHERE finished = ? AND alerted = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('ii', $finished, $alerted);
   $stmt->execute();

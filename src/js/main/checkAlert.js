@@ -15,13 +15,18 @@ function checkAlert() {
             response = JSON.parse(response);
             if (response.length > 0) {
                 myAudio = new Audio("sounds/" + response[0].sound);
-                myAudio.addEventListener('ended', function () {
-                    this.currentTime = 0;
-                    this.play();
-                }, false);
-                setTimeout(function () {
-                    myAudio.play();
-                }, 100);
+                console.log("RESPONSE HERE");
+                console.log(response[0].soundActive)
+                console.log(response[0].sound)
+                if(response[0].soundActive == 1){
+                  myAudio.addEventListener('ended', function () {
+                      this.currentTime = 0;
+                      this.play();
+                  }, false);
+                  setTimeout(function () {
+                      myAudio.play();
+                  }, 100);
+                }
                 $('.js-close-scenario-modal').html('Afronden');
                 lokaalLocation = response[0].location;
                 $('.js-alert-title').html(response[0].name + ' in lokaal: ' + lokaalLocation);

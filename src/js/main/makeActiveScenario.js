@@ -9,15 +9,20 @@ $('body').on('click', '.js-start-scenario', function(){
         var lokaalnr = $('.js-lokaal').html();
         var scenarioId = $('.js-scenarioselect').find(":selected").data('id');
         var tools = 0;
+        var sound = 0;
         if ($('.js-switch').is(':checked')) {
             tools = 1;
+        }
+        if ($('.js-soundSwitch').is(':checked')) {
+            sound = 1;
         }
         if (lokaalnr != "") {
             if (scenarioId >= 1) {
                 $.post("include/makeActiveScenario.php",{
                     lokaalnr: lokaalnr,
                     scenarioId: scenarioId,
-                    tools: tools
+                    tools: tools,
+                    sound: sound
                     }, function(response,status){
                         if (response == 'success') {
                             showFlashMessage('Scenario is succesvol aangemaakt', 'success');
