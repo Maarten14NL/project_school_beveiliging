@@ -1,6 +1,5 @@
 <?php
 include 'database.php';
-echo json_encode($_POST);
 $scenario_id = $_POST['scenarioID'];
 $name = $_POST['name'];
 $steps = $_POST['descriptions'];
@@ -22,10 +21,11 @@ $stmt->execute();
 $stmt->close();
 
 $name = '';
-$sql = 'INSERT INTO scenario_descriptions (description, detail, scenarios_id) VALUES (?, ?);';
+$sql = 'INSERT INTO scenario_descriptions (description, detail, scenarios_id) VALUES (?, ?, ?)';
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssi", $name, $detial, $scenario_id);
+$stmt->bind_param("ssi", $name, $detail, $scenario_id);
 foreach ($steps as $key => $value) {
+  echo $key;
     $name = $value;
     $detail = $details[$key];
     $stmt->execute();
