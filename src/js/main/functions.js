@@ -17,13 +17,13 @@ function login(a_userLevel){
         $(".option_1").addClass("active")
         $('.settings').removeClass("hidden")
         updateLevel1Templates();
+        updateLevel2Templates();
         break;
         case 2:
         $(".user-level_2").removeClass("hidden")
         $(".view_2-1").removeClass("hidden")
         $(".option_1").addClass("active")
         $('.settings').removeClass("hidden")
-        updateLevel2Templates();
         break;
         case 3:
         $(".user-level_3").removeClass("hidden")

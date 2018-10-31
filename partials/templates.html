@@ -28,7 +28,19 @@
         {{#.}}
         <div class="js-scenario-edit-step scenario-edit-container">
             <h4>Stap <span class="">{{index}}</span></h4>
-            <input class="js-scenario-edit-edit js-scenario-edit-{{index}}" type="text" name="" value="{{description}}">
+
+            <div class="form-group row edit-row">
+              <label class="col-form-label edit-tag">Stap</label>
+              <div>
+                <input class="js-scenario-edit-edit js-scenario-edit-{{index}} form-control" type="text" name="" value="{{description}}">
+              </div>
+            </div>
+            <div class="form-group row edit-row">
+              <label class="col-form-label edit-tag">Info</label>
+              <div class="edit-row-row">
+                <input class="form-control js-scenario-edit-detail-{{index}}" type="text" name="" value="{{detail}}">
+              </div>
+            </div>
         </div>
         {{/.}}
     </template>

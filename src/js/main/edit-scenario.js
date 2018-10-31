@@ -33,19 +33,24 @@ $('body').on('click', '.level2-btn-edit', function(){
 
 $('body').on('click', '.update-scenarios-update', function(){
     descriptionNames = [];
+    descriptionDescription = [];
     for(var i = 1 ; i < (descriptions.length+1); i++){
         if($('.js-scenario-edit-'+i).val() != ""){
+          console.log($('.js-scenario-edit-'+i).val())
             descriptionNames.push($('.js-scenario-edit-'+i).val())
+            descriptionDescription.push($('.js-scenario-edit-detail-'+i).val())
         }
     }
-    console.log($('.update-scenarios-name').val());
+    console.log(descriptionDescription);
     var sound = $('#scenario-editsound').val();
     $.post("include/updateScenario.php" ,{
         scenarioID: scenarios[index].id,
         name: $('.update-scenarios-name').val(),
         descriptions: descriptionNames,
-        sound: sound
+        sound: sound,
+        details: descriptionDescription
     }, function(response,status){
+      console.log(response)
         $('.scenario-edit').modal('hide');
         updateLevel2Templates();
     })
