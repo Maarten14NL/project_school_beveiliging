@@ -16,6 +16,12 @@ function updateSteps(){
         $(this).html(count);
         count++;
     });
+
+    count = 0;
+    $('.js-stepbijznr').each(function () {
+        $(this).html(count);
+        count++;
+    });
 }
 
 // When the "extra stap" button is pressed, a new step is copied in
@@ -28,6 +34,7 @@ $('body').on('click', '.js-save-new-scenario',function(){
     // Gets the name from the input
     var name = $('.js-new-scenario-name').val();
     var steps = [];
+    var stepDetails = [];
     var sound = $('#scenario-newsound').val();
     console.log(sound);
     // If the name is empty it gives a flash message
@@ -42,7 +49,12 @@ $('body').on('click', '.js-save-new-scenario',function(){
                 steps.push(tempval);
             }
         });
-
+        $('.js-newstepbijz').each(function () {
+            var tempval = $(this).val();
+            stepDetails.push(tempval);
+        });
+        console.log(stepDetails);
+        stepDetails.shift();
         if (steps.length == 0) {
             showFlashMessage('Vul minstens 1 stap in', 'danger');
         }
@@ -50,7 +62,8 @@ $('body').on('click', '.js-save-new-scenario',function(){
             $.post("include/saveNewScenario.php" ,{
                 name: name,
                 steps: steps,
-                sound: sound
+                sound: sound,
+                details: stepDetails
             }, function(response,status){
                 console.log(response);
                 if(response == "succes"){
@@ -65,15 +78,20 @@ $('body').on('click', '.js-save-new-scenario',function(){
     }
 });
 function copyStep(){
-    $('.js-copystep').clone().appendTo('.js-steps-container')
-    .removeClass('js-copystep').removeClass('hidden')
-    .addClass('js-step');
+    $('#copystep').clone().appendTo('.js-steps-container')
+      .removeClass('js-copystep').removeClass('hidden')
+      .addClass('js-step').attr('id', '');
+    $('#copystepbijz').clone().appendTo('.js-stepsbijz-container')
+      .removeClass('js-copystepbijz').removeClass('hidden')
+      .addClass('js-stepbijz').attr('id', '');
     updateSteps();
 }
 $('body').on('click', '.js-delete-step',function(){
     var parent = $(this).closest('.js-step');
     if (!$(parent).is(':first-child')) {
+        var index = $(parent).index();
         $(parent).remove();
+        $('.js-stepbijz:eq(' + (index - 1) + ')').remove();
         updateSteps();
     }
     else {
