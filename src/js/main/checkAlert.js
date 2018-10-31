@@ -85,8 +85,13 @@ function getCurrentScenario(userLevel){
                 $('.js-alert-body').html('');
                 for (var i = 0; i < steps.length; i++) {
                     var step = i + 1;
-                    $('.js-alert-body').append('Stap ' + step + ": " + steps[i].description + "<br>");
+                    $('.js-alert-body').append('<div data-toggle="tooltip" data-placement="top" title="' + steps[i].detail + '">Stap ' + step + ": " + steps[i].description + "</div>");
+                    if (steps[i].detail != "") {
+
+                      $('.js-alert-body').append('<div class="cursive">&nbsp;' + steps[i].detail + '</div>');
+                    }
                 }
+                  $('[data-toggle="tooltip"]').tooltip()
             }
           }
       }else if(userLevel == 2){
