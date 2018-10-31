@@ -48,7 +48,7 @@ function getCurrentScenario(userLevel){
             myAudio.addEventListener('ended', function () {
                 this.currentTime = 0;
                 this.play();
-            }, false);
+            }, false); 
             setTimeout(function () {
                 myAudio.play();
             }, 100);
