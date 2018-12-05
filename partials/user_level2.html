@@ -16,7 +16,18 @@
     <div class="user-body">
         <div class="view view_2-1 hidden m-4 p-4">
             <div class="row">
-                <div class="input-group mb-3">v 
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <label class="input-group-text bg-primary text-white" for="choosScenario">Kies categorie</label>
+                  </div>
+                  <select id="scenario-choosecategory" class="form-control" name="scenario-category" style="">
+                    <option value="0">Dienstverlening</option>
+                    <option value="1">represief</option>
+                    <option value="2">Preventief</option>
+                  </select>
+              </div>
+
+                <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <label class="input-group-text bg-primary text-white" for="choosScenario">Kies Scenario</label>
                     </div>
@@ -39,7 +50,7 @@
                 <p>Alarm aan of uit</p>
             </div>
             <div class="row row--disfl">
-                <button type="button" class="js-start-scenario btn btn-secondary">scenario maken</button>
+                <button type="button" class="js-start-scenario btn btn-secondary">scenario activeren</button>
                 <h4 class="js-lokaal"></h4>
             </div>
         </div>

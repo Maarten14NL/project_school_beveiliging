@@ -41,3 +41,6 @@ $('body').on('click', '.js-start-scenario', function(){
         }
     }
 })
+$('body').on('change', '#scenario-choosecategory', function(){
+  updateLevel2Templates(1);
+});

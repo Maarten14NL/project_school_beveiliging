@@ -19,7 +19,7 @@ if (isset($_POST['loginSub'])) {
         $userlevel = $row['userlevel'];
     }
     if ($id != -1 && $userlevel != -1) {
-        setSession($id, $name, $pass, $userlevel);
+        setSession_revised(1, $id, $name, $pass, $userlevel);
     }
     else{
         resetSession();

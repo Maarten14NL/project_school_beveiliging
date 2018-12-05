@@ -9,21 +9,21 @@ function login(a_userLevel){
     $(".view").addClass("hidden")
     $(".options").removeClass("active")
     $('.option1').addClass("active")
-
+    updateLevel1Templates();
     switch (userLevel) {
         case 1:
-        $(".user-level_1").removeClass("hidden")
-        $(".view_1-1").removeClass("hidden")
-        $(".option_1").addClass("active")
-        $('.settings').removeClass("hidden")
-        updateLevel1Templates();
-        updateLevel2Templates();
+          $(".user-level_1").removeClass("hidden")
+          $(".view_1-1").removeClass("hidden")
+          $(".option_1").addClass("active")
+          $('.settings').removeClass("hidden")
+          updateLevel2Templates();
         break;
         case 2:
-        $(".user-level_2").removeClass("hidden")
-        $(".view_2-1").removeClass("hidden")
-        $(".option_1").addClass("active")
-        $('.settings').removeClass("hidden")
+          $(".user-level_2").removeClass("hidden")
+          $(".view_2-1").removeClass("hidden")
+          $(".option_1").addClass("active")
+          $('.settings').removeClass("hidden")
+          updateLevel2Templates(1);
         break;
         case 3:
         $(".user-level_3").removeClass("hidden")
@@ -37,12 +37,15 @@ function logout(){
     $('.logout').addClass("hidden")
     $(".user-level").addClass("hidden")
     $('.settings').addClass("hidden")
-    myAudio.pause();
+    if (typeof myAudio !== 'undefined') {
+        myAudio.pause();
+    }
     alertActive = false;
-    $('.' + lokaalLocation).removeClass('lokaal--blink');
+    if (lokaalLocation != '') {
+      $('.' + lokaalLocation).removeClass('lokaal--blink');
+    }
     loggedIn = false;
     userLevel = 0;
-
     $.post("include/login.php",{
         logoutSub: ''
     }, function(response,status){
@@ -95,21 +98,43 @@ function updateLevel1Templates(){
     })
 }
 
-function updateLevel2Templates(){
+function updateLevel2Templates(cat = 0){
+  if (cat) {
+    var category = $('#scenario-choosecategory').val();
+    $.post("include/getScenarios.php",{
+      category: category
+    }, function(response,status){
+      console.log(response);
+      scenarios = JSON.parse(response)
+
+      $('.scenario-selector').html("")
+      for(var i = 0 ; i < scenarios.length; i++){
+        $('.scenario-selector').append('<option data-id="' + scenarios[i].id  + '">' + scenarios[i].name + "</option>")
+      }
+
+      var template = $(".level2-scenario-template").html();
+      var renderTemplate = Mustache.render(template, scenarios);
+
+      $(".js-scenario-container").html(renderTemplate);
+    })
+  }
+  else{
     $.post("include/getScenarios.php",{
     }, function(response,status){
-        scenarios = JSON.parse(response)
+      console.log(response);
+      scenarios = JSON.parse(response)
 
-        $('.scenario-selector').html("")
-        for(var i = 0 ; i < scenarios.length; i++){
-            $('.scenario-selector').append('<option data-id="' + scenarios[i].id  + '">' + scenarios[i].name + "</option>")
-        }
+      $('.scenario-selector').html("")
+      for(var i = 0 ; i < scenarios.length; i++){
+        $('.scenario-selector').append('<option data-id="' + scenarios[i].id  + '">' + scenarios[i].name + "</option>")
+      }
 
-        var template = $(".level2-scenario-template").html();
-        var renderTemplate = Mustache.render(template, scenarios);
+      var template = $(".level2-scenario-template").html();
+      var renderTemplate = Mustache.render(template, scenarios);
 
-        $(".js-scenario-container").html(renderTemplate);
+      $(".js-scenario-container").html(renderTemplate);
     })
+  }
 }
 
 var confirmClassOld = "";

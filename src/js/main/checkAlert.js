@@ -48,7 +48,7 @@ function getCurrentScenario(userLevel){
             myAudio.addEventListener('ended', function () {
                 this.currentTime = 0;
                 this.play();
-            }, false); 
+            }, false);
             setTimeout(function () {
                 myAudio.play();
             }, 100);
@@ -95,8 +95,8 @@ function getCurrentScenario(userLevel){
             }
           }
       }else if(userLevel == 2){
-        $(".modal-header").text("Meldingen");
-        $('.modal-body').text("Er zijn geen meldingen op dit moment");
+        $(".js-alert-title").text("Meldingen");
+        $('.js-alert-body').text("Er zijn geen meldingen op dit moment");
 
       }
   })

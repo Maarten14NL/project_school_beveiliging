@@ -1,7 +1,7 @@
 <div class="user-level user-level_1 hidden">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a data-option="1" data-level="1" class="options level_1 option_1 nav-link active" href="#">
+            <a data-option="1" data-level="1" class="options level_1 option_1 nav-link" href="#">
                 Gebruiker Toevoegen
                 <i class="fas fa-plus-circle"></i>
             </a>
@@ -19,7 +19,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a data-option="4" data-level="1" class="options level_2 option_3 nav-link" href="#">
+            <a data-option="4" data-level="1" class="options level_2 option_3 nav-link active" href="#">
                 Scenario instellingen
                 <i class="fas fa-cogs"></i>
             </a>
@@ -89,23 +89,33 @@
             </table>
         </div>
         <div class="view view_1-3 m-4 p-4">
+            <div class="input-group" style="margin-bottom: 15px;">
+              <!-- category -->
+              <div class="input-group-prepend" >
+                  <span class="input-group-text bg-secondary text-white" id="scenario-category">Categorie:</span>
+              </div>
+              <select id="scenario-newcategory" class="form-control" name="scenario-category" aria-describedby="scenario-category" style="margin-right: 15px;">
+                <option value="0">Dienstverlening</option>
+                <option value="1">represief</option>
+                <option value="2">Preventief</option>
+              </select>
+
+              <!-- Sound -->
+              <div class="input-group-prepend">
+                  <span class="input-group-text bg-secondary text-white" id="scenario-sound">Geluid:</span>
+              </div>
+              <select id="scenario-newsound" class="js-new-scenario-sound form-control" name="scenario-sound" aria-describedby="scenario-sound">
+              </select>
+              <div class="input-group-append">
+                  <button class="btn btn-secondary js-preview-sound"><i class="fas fa-volume-up"></i></button>
+              </div>
+            </div>
             <div class="input-group">
                 <!-- Name -->
                 <div class="input-group-prepend">
                     <span class="input-group-text bg-secondary text-white" id="scenario-name">Naam:</span>
                 </div>
                 <input type="text" class="js-new-scenario-name form-control" name="scenario-name" value="" aria-describedby="scenario-name">
-
-                <!-- Sound -->
-                <div class="input-group-prepend">
-                    <span class="input-group-text bg-secondary text-white" id="scenario-sound">Geluid:</span>
-                </div>
-                <select id="scenario-newsound" class="js-new-scenario-sound form-control" name="scenario-sound" aria-describedby="scenario-sound">
-
-                </select>
-                <div class="input-group-append">
-                    <button class="btn btn-secondary js-preview-sound"><i class="fas fa-volume-up"></i></button>
-                </div>
             </div>
             <div class="input-group mb-3">
             </div>
