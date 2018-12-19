@@ -1,7 +1,6 @@
 <?php
 include 'include/database.php';
 include 'include/session.php';
-dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>
