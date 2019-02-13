@@ -142,9 +142,27 @@
                       </div>
                   </div>
                 </div>
+                <div class="js-scenario-edit-step scenario-edit-container hidden">
+                    <h4>Stap <span class="">{{index}}</span></h4>
+
+                    <div class="form-group row edit-row">
+                      <label class="col-form-label edit-tag">Stap</label>
+                      <div class="edit-row-row">
+                        <input class="js-scenario-edit-edit js-scenario-edit-{{index}} form-control" type="text" name="" value="{{description}}">
+                      </div>
+                    </div>
+                    <div class="form-group row edit-row">
+                      <label class="col-form-label edit-tag">Info</label>
+                      <div class="edit-row-row">
+                        <input class="form-control js-scenario-edit-detail-{{index}} js-scenario-edit-detail" type="text" name="" value="{{detail}}">
+                      </div>
+                    </div>
+                </div>
                 <div class="scenario-edit-options-container">
+
                 </div>
                 <button type="submit" class="btn btn-primary update-scenarios-update">bijwerken</button>
+                <button type="submit" class="btn btn-secondary update-scenarios-add">Stap toevoegen</button>
             </div>
         </div>
     </div>

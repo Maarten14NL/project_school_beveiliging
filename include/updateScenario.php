@@ -8,9 +8,16 @@ $sound = $_POST['sound'];
 $category = $_POST['category'];
 // echo "name: " . $name . " scneario: " . $scenario_id . "<br>";
 
+// echo json_encode($_POST);
+// die();
+
 $sql = "UPDATE `scenarios` SET `name`=?, `sound` =?, `category` = ? WHERE id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param('ssii', $name, $sound, $category, $scenario_id);
+if (!($stmt = $conn->prepare($sql))) {
+    echo "Prepare failed: (" . $conn->errno . ") " . $conn->error;
+}
+if (!$stmt->bind_param('ssii', $name, $sound, $category, $scenario_id)) {
+    echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
+}
 $stmt->execute();
 // $scenario_id = $stmt->insert_id;
 $stmt->close();

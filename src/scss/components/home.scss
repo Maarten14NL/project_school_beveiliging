@@ -20,6 +20,9 @@
 }
 
 .hidden{
+  &.scenario-edit-container{
+    display: none;
+  }
     display: none;
 }
 
